@@ -1,0 +1,17 @@
+{{> header}}
+<div class="container pt">
+    <div class="row">	
+        <div class="col-lg-8 col-lg-offset-2">
+            <h1 class="centered">Projects</h1>
+            <hr/>
+            {{#collections.projects}}
+            <div class="project">
+                <h3><a href="{{url}}">{{title}}</a></h3>
+                <p><img src="{{image}}" alt="{{title}}"/></p>
+                {{{contents}}}
+            </div>
+            {{/collections.projects}}
+        </div>
+    </div>
+</div>
+{{> footer}}

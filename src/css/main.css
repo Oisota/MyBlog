@@ -1,0 +1,248 @@
+/*
+ * Author: Carlos Alvarez
+ * URL: http://alvarez.is
+ *
+ * Project Name: STANLEY - Free Bootstrap 3 Theme
+ * Version: 1.0
+ * URL: http://blacktie.co
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body {
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #555;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Titles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #333;
+}
+
+h1 {
+    font-size: 35px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+/* Paragraph & Typographic */
+p {
+    line-height: 28px;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.centered {
+    text-align: center;
+}
+
+/* Links */
+a {
+    color: #5588bb;
+    word-wrap: break-word;
+
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover,
+a:focus {
+    color: #7b7b7b;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:before,
+a:after {
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+.navbar {
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+.navbar-inverse {
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.navbar-inverse {
+    background-color: #225588;
+    border-color: #225588;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #222222;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: transparent;
+}
+
+.progress-bar-theme {
+    background-color: #1abc9c;
+}
+
+
+/* Helpers */
+
+.mt {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.pt {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+/* +++++ WRAP SECTIONS +++++ */
+
+#ww {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: #f2f2f2;
+}
+
+
+#footer {
+    background-color: #2f2f2f;
+    padding-top: 50px;
+    padding-bottom: 50px; 
+}
+
+#footer p {
+    color: white;
+}
+
+#footer h4 {
+    color: white;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
+#footer hr {
+    padding-bottom: 10px;
+}
+
+/* +++++ Color Wraps / Blog Page +++++ */
+.grey {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f2f2f2;
+}
+
+.white {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #ffffff;
+}
+
+.blog-date {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #d2d2d2;
+    font-weight: 700;
+}
+
+.blog-author {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.blog-quote {
+    font-size: 22px;
+    padding-top: 30px;
+}
+
+.glyphicon {
+    font-size: 40px;
+    color: #1abc9c;
+}
+
+/* My Styles */
+.post {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #ffffff;
+}
+
+.post:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.post-title {
+    color: #333333;
+}
+
+.project {
+    overflow: auto;
+}
+
+.project img {
+    margin-right: 1em;
+    width: 266px;
+    height: 200px;
+    float: left;
+}
+
+.social a[href*='github.com']:before {
+    content: url('/assets/icons/github.png'); 
+    margin-right: 6px; 
+    vertical-align: -3px;
+}
+
+.social a[href*='linkedin.com']:before {
+    content: url('/assets/icons/linkedin.png'); 
+    margin-right: 6px; 
+    vertical-align: -3px;
+}
+
+.social a[href*='plus.google.com']:before {
+    content: url('/assets/icons/googleplus.png'); 
+    margin-right: 6px; 
+    vertical-align: -3px;
+}

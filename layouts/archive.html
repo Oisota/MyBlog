@@ -1,0 +1,18 @@
+{{> header}}
+<div class="container pt">
+    <div class="row">	
+        <div class="col-lg-8 col-lg-offset-2">
+            <h1 class="centered">Archive</h1>
+            <hr/>
+            <div class="list-group">
+                {{#collections.posts}}
+                <a href="/{{path}}" class="list-group-item">{{title}}<span class="badge">{{date}}</span></a>
+                {{/collections.posts}}
+                {{^collections.posts}}
+                <h2 class="centered"><small>No Posts Here</small></h2>
+                {{/collections.posts}}
+            </div>
+        </div>
+    </div>
+</div>
+{{> footer}}

@@ -1,0 +1,23 @@
+{
+  "name": "derek-website",
+  "version": "0.1.0",
+  "license": "GPL-3.0",
+  "repository": "https://github.com/Oisota/oisota.github.io",
+  "description": "This is a script I use to generate my website",
+  "dependencies": {
+    "metalsmith": "^2.2.0",
+    "metalsmith-collections": "^0.7.0",
+    "metalsmith-filemetadata": "^1.0.0",
+    "metalsmith-ignore": "^0.1.2",
+    "metalsmith-layouts": "^1.6.5",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-metallic": "^1.0.0",
+    "metalsmith-pagination": "^1.4.0",
+    "metalsmith-permalinks": "^0.5.0",
+    "mustache": "^2.2.1"
+  },
+  "scripts": {
+    "build": "node index.js",
+    "start": "http-server build"
+  }
+}
