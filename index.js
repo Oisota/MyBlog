@@ -45,7 +45,11 @@ Metalsmith(__dirname)
     .use(markdown())
     .use(ignore('projects/*')) //don't generate separate project pages
     .use(permalinks({
-        relative: false
+        relative: false,
+        linksets: [{
+            match: { collection: 'posts' },
+            pattern: 'posts/:date/:title',
+        }]
     }))
     .use(layouts({
         engine: 'mustache',
