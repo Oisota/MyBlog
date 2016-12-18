@@ -13,14 +13,14 @@ Metalsmith(__dirname)
             title: 'Derek Morey',
             author: 'Derek Morey',
             author_email: 'derek.o.morey@gmail.com',
-            profile_pic: 'assets/me.jpg'
+            profile_pic: '/assets/me.jpg'
         },
         navlinks: [
             {title: 'Home', path: '/'},
             {title: 'About', path: '/about/'},
-            {title: 'projects', path: '/projects/'},
-            {title: 'archive', path: '/archive/'},
-            {title: 'contact', path: '/contact/'}
+            {title: 'Projects', path: '/projects/'},
+            {title: 'Archive', path: '/archive/'},
+            {title: 'Contact', path: '/contact/'}
         ]
     })
     .source('src')
