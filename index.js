@@ -27,12 +27,12 @@ Metalsmith(__dirname)
     .destination('build')
     .clean(true)
     .use(fileMetadata([
-        {pattern: 'posts/*', metadata: {layout: 'post.html'}},
+        {pattern: 'blog/*', metadata: {layout: 'post.html'}},
         {pattern: 'projects/*', metadata: {layout: 'project.html'}}
     ]))
     .use(collections({
-        posts: {
-            pattern: 'posts/*',
+        blog: {
+            pattern: 'blog/*',
             sortBy: 'date',
             reverse: true
         },
@@ -47,8 +47,8 @@ Metalsmith(__dirname)
     .use(permalinks({
         relative: false,
         linksets: [{
-            match: { collection: 'posts' },
-            pattern: 'posts/:date/:title',
+            match: { collection: 'blog' },
+            pattern: 'blog/:date/:title',
         }]
     }))
     .use(layouts({

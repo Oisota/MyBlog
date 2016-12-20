@@ -5,12 +5,12 @@
             <h1 class="centered">Archive</h1>
             <hr/>
             <div class="list-group">
-                {{#collections.posts}}
+                {{#collections.blog}}
                 <a href="/{{path}}" class="list-group-item">{{title}}<span class="badge">{{date}}</span></a>
-                {{/collections.posts}}
-                {{^collections.posts}}
+                {{/collections.blog}}
+                {{^collections.blog}}
                 <h2 class="centered"><small>No Posts Here</small></h2>
-                {{/collections.posts}}
+                {{/collections.blog}}
             </div>
         </div>
     </div>
