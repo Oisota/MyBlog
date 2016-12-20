@@ -5,8 +5,19 @@
             <div class="col-lg-8 col-lg-offset-2">
                 {{> post-content}}
                 <ul class="pager">
-                    <li class="previous"><a href="/{{previous.path}}">previous</a></li>
-                    <li class="next"><a href="/{{next.path}}">next</a></li>
+                    {{#previous}}
+                    <li class="previous"><a href="/{{path}}">previous</a></li>
+                    {{/previous}}
+                    {{^previous}}
+                    <li class="previous disabled"><a>previous</a></li>
+                    {{/previous}}
+
+                    {{#next}}
+                    <li class="next"><a href="/{{path}}">next</a></li>
+                    {{/next}}
+                    {{^next}}
+                    <li class="next disabled"><a>next</a></li>
+                    {{/next}}
                 </ul>
             </div>
         </div>
