@@ -2,7 +2,7 @@
   "name": "derek-website",
   "version": "0.1.0",
   "license": "GPL-3.0",
-  "repository": "https://github.com/Oisota/oisota.github.io",
+  "repository": "https://github.com/Oisota/MyBlog",
   "description": "This is a script I use to generate my website",
   "dependencies": {
     "metalsmith": "^2.2.0",
