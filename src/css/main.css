@@ -246,3 +246,16 @@ hr {
     margin-right: 6px; 
     vertical-align: -3px;
 }
+
+.post-content pre {
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+
+pre {
+    overflow: auto;
+}
+
+pre code {
+    white-space: pre;
+}
