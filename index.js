@@ -13,7 +13,8 @@ Metalsmith(__dirname)
             title: 'Derek Morey',
             author: 'Derek Morey',
             author_email: 'derek.o.morey@gmail.com',
-            profile_pic: '/assets/me.jpg'
+            profile_pic: '/assets/me.jpg',
+            url: 'https://oisota.github.io/'
         },
         navlinks: [
             {title: 'Home', path: '/'},
