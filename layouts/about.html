@@ -5,6 +5,17 @@
             <h1 class="centered">About</h1>
             <hr/>
             {{{contents}}}
+
+            <h2 class="centered">Skills</h2>
+            {{#skills}}
+            <div class="skill-group">
+                <h3>{{level}}</h3>
+                <hr/>
+                {{#items}}
+                <div class="chip">{{.}}</div>
+                {{/items}}
+            </div>
+            {{/skills}}
         </div>
     </div>
 </div>
