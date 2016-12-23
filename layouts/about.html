@@ -2,20 +2,39 @@
 <div class="container pt">
     <div class="row">	
         <div class="col-lg-8 col-lg-offset-2">
+
             <h1 class="centered">About</h1>
             <hr/>
             {{{contents}}}
 
-            <h2 class="centered">Skills</h2>
-            {{#skills}}
-            <div class="skill-group">
-                <h3>{{level}}</h3>
-                <hr/>
-                {{#items}}
-                <div class="chip">{{.}}</div>
-                {{/items}}
+            <h2 class="centered">Experience</h2>
+            <div class="exper-group">
+            {{#experience}}
+                <div class="exper-item">
+                    <h3>{{company}} <small>{{job}}, {{date}}</small></h3>
+                    <hr/>
+                    <ul class="list-group">
+                        {{#description}}
+                        <li class="list-group-item">{{.}}</li>
+                        {{/description}}
+                    </ul>
+                </div>
+            {{/experience}}
             </div>
+
+            <h2 class="centered">Skills</h2>
+            <div class="skill-group">
+            {{#skills}}
+                <div class="skill-item">
+                    <h3>{{level}}</h3>
+                    <hr/>
+                    {{#items}}
+                    <div class="chip">{{.}}</div>
+                    {{/items}}
+                </div>
             {{/skills}}
+            </div>
+
         </div>
     </div>
 </div>
