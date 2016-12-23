@@ -7,9 +7,9 @@
             <hr/>
             {{{contents}}}
 
-            <h2 class="centered">Experience</h2>
             <div class="exper-group">
-            {{#experience}}
+                <h2 class="centered">Experience</h2>
+                {{#experience}}
                 <div class="exper-item">
                     <h3>{{company}} <small>{{job}}, {{date}}</small></h3>
                     <hr/>
@@ -19,12 +19,12 @@
                         {{/description}}
                     </ul>
                 </div>
-            {{/experience}}
+                {{/experience}}
             </div>
 
-            <h2 class="centered">Skills</h2>
             <div class="skill-group">
-            {{#skills}}
+                <h2 class="centered">Skills</h2>
+                {{#skills}}
                 <div class="skill-item">
                     <h3>{{level}}</h3>
                     <hr/>
@@ -32,7 +32,7 @@
                     <div class="chip">{{.}}</div>
                     {{/items}}
                 </div>
-            {{/skills}}
+                {{/skills}}
             </div>
 
         </div>
