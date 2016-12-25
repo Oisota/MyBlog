@@ -1,12 +1,11 @@
-<div class="post-content">
+<div class="blog-content">
     <p class="blog-author">
-    <img src="{{{site.profile_pic}}}" width="50px" height="50px" alt="{{site.author}}" class="img-circle">
-    {{site.author}}
+        <img src="{{{site.profile_pic}}}" width="50px" height="50px" alt="{{site.author}}" class="img-circle">
+        {{site.author}}
     </p>
-    <p class="blog-date">{{date}}</p>
-    <h1>
-        <a href="{{{path}}}" class="post-title">{{title}}</a>
-    </h1>
+    <span class="blog-date">{{date}}</span>
+    <a class="comment-count" href="{{{site.url}}}{{{path}}}#disqus_thread">comments</a>
+    <h1 class="blog-title"><a href="/{{{path}}}">{{title}}</a></h1>
     <hr>
     {{{contents}}}
 </div>

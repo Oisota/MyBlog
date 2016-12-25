@@ -169,23 +169,19 @@ hr {
 }
 
 /* +++++ Color Wraps / Blog Page +++++ */
-.grey {
+.grey, .white {
     padding-top: 60px;
     padding-bottom: 60px;
-    background-color: #f2f2f2;
 }
+.grey { background-color: #f2f2f2; }
+.white { background-color: #ffffff; }
 
-.white {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: #ffffff;
-}
-
-.blog-date {
+.blog-date, .comment-count {
     font-size: 12px;
     text-transform: uppercase;
-    color: #d2d2d2;
+    color: #808080;
     font-weight: 700;
+    margin-right: 2em;
 }
 
 .blog-author {
@@ -198,12 +194,22 @@ hr {
     padding-top: 30px;
 }
 
-.glyphicon {
-    font-size: 40px;
-    color: #1abc9c;
+.blog-title {
+    margin-bottom: 0.2em;
 }
 
-/* My Styles */
+.blog-title a {
+    color: #333333;
+}
+
+.comment-count:before, .blog-date:before {
+    font-family: "Glyphicons Halflings";
+    margin-top: 0.3em;
+    margin-right: 0.3em;
+}
+.comment-count:before { content: "\e111"; }
+.blog-date:before { content: "\e023"; }
+
 .post {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -214,10 +220,19 @@ hr {
     background-color: #f2f2f2;
 }
 
-.post-title {
-    color: #333333;
+/* Code blocks */
+.blog-content pre {
+    margin-top: -5px;
+    margin-bottom: 20px;
+}
+pre {
+    overflow: auto;
+}
+pre code {
+    white-space: pre;
 }
 
+/* Projects */
 .project {
     overflow: auto;
 }
@@ -229,37 +244,17 @@ hr {
     float: left;
 }
 
-.social a[href*='github.com']:before {
-    content: url('/assets/icons/github.png'); 
+/* Social Media Links */
+.social a:before {
     margin-right: 6px; 
     vertical-align: -3px;
 }
+.social a[href*='github.com']:before { content: url('/assets/icons/github.ico'); }
+.social a[href*='linkedin.com']:before { content: url('/assets/icons/linkedin.ico'); }
+.social a[href*='gab.ai']:before { content: url('/assets/icons/gab.ico'); }
+.social a[href*='plus.google.com']:before { content: url('/assets/icons/gplus.ico'); }
 
-.social a[href*='linkedin.com']:before {
-    content: url('/assets/icons/linkedin.png'); 
-    margin-right: 6px; 
-    vertical-align: -3px;
-}
-
-.social a[href*='plus.google.com']:before {
-    content: url('/assets/icons/googleplus.png'); 
-    margin-right: 6px; 
-    vertical-align: -3px;
-}
-
-.post-content pre {
-    margin-top: -5px;
-    margin-bottom: 20px;
-}
-
-pre {
-    overflow: auto;
-}
-
-pre code {
-    white-space: pre;
-}
-
+/* Experience/Skills */
 .chip {
     display: inline-block;
     height: 32px;
