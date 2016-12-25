@@ -5,6 +5,7 @@ const Metalsmith = require('metalsmith'),
       ignore = require('metalsmith-ignore'),
       metallic = require('metalsmith-metallic'),
       fileMetadata = require('metalsmith-filemetadata'),
+      dateFormatter = require('metalsmith-date-formatter'),
       collections = require('metalsmith-collections');
 
 Metalsmith(__dirname)
@@ -51,6 +52,14 @@ Metalsmith(__dirname)
             match: { collection: 'blog' },
             pattern: 'blog/:date/:title',
         }]
+    }))
+    .use(dateFormatter({
+        dates: [
+            {
+                key: 'date',
+                format: 'dddd, MMMM Do YYYY'
+            }
+        ]
     }))
     .use(layouts({
         engine: 'mustache',
