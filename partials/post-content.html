@@ -3,9 +3,11 @@
         <img src="{{{site.profile_pic}}}" width="50px" height="50px" alt="{{site.author}}" class="img-circle">
         {{site.author}}
     </p>
-    <span class="blog-date">{{date}}</span>
-    <a class="comment-count" href="{{{site.url}}}{{{path}}}#disqus_thread">comments</a>
-    <h1 class="blog-title"><a href="/{{{path}}}">{{title}}</a></h1>
+    <p>
+        <span class="blog-date">{{date}}</span>
+        <a class="comment-count" href="{{{site.url}}}{{{path}}}#disqus_thread">comments</a>
+    </p>
+    <h1 class="blog-title"><a  href="/{{{path}}}">{{title}}</a></h1>
     <hr>
     {{{contents}}}
 </div>
