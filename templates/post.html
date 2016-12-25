@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% from "macros.html" import post_content, comment_count %}
+
+{% block content %}
+<div class="white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                {{ post_content (site, title, date, path, contents) }}
+                <ul class="pager">
+                    {% if previous %}
+                    <li class="previous"><a href="/{{previous.path}}">previous</a></li>
+                    {% else %}
+                    <li class="previous disabled"><a>previous</a></li>
+                    {% endif %}
+
+                    {% if next %}
+                    <li class="next"><a href="/{{next.path}}">next</a></li>
+                    {% else %}
+                    <li class="next disabled"><a>next</a></li>
+                    {% endif %}
+                </ul>
+                <div id="disqus_thread"></div>
+                <noscript>
+                    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+var disqus_config = function () {
+    this.page.url = '{{site.url | safe}}{{path | safe}}';
+    this.page.identifier = '{{site.url | safe}}{{path | safe}}';
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//derekmorey-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', (new Date()).getTime());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+{{ comment_count() }}
+{% endblock %}

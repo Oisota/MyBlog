@@ -6,7 +6,10 @@ const Metalsmith = require('metalsmith'),
       metallic = require('metalsmith-metallic'),
       fileMetadata = require('metalsmith-filemetadata'),
       dateFormatter = require('metalsmith-date-formatter'),
-      collections = require('metalsmith-collections');
+      collections = require('metalsmith-collections'),
+      nunjucks = require('nunjucks');
+
+nunjucks.configure('./templates', {watch: false});
 
 Metalsmith(__dirname)
     .metadata({
@@ -62,9 +65,8 @@ Metalsmith(__dirname)
         ]
     }))
     .use(layouts({
-        engine: 'mustache',
-        layouts: 'layouts',
-        partials: 'partials'
+        engine: 'nunjucks',
+        directory: 'templates'
     }))
     .build((err, files) => {
         if (err) {

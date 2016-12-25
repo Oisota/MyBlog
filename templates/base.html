@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{site.title}}</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="/css/solarized-dark.css" rel="stylesheet">
+        <link href="/css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">{{site.author}}</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        {% for link in navlinks %}
+                        <li><a href="{{link.path}}">{{link.title}}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        {% block content %}
+        {% endblock %}
+
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h4>About</h4>
+                        <hr/>
+                        <p>Programmer, Gamer, Musician</p>
+                        <p>
+                            <a href="/about/">About</a>, 
+                            <a href="/projects/">Projects</a>,
+                            <a href="/archive/">Archive</a>,
+                            <a href="/contact/">Contact</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-4 social">
+                        <h4>Social</h4>
+                        <hr/>
+                        <p>
+                            <a href="https://github.com/Oisota">Github</a><br/>
+                            <a href="https://linkedin.com/in/derek-o-morey">LinkedIn</a><br/>
+                            <a href="https://gab.ai/DerekMorey">Gab</a><br/>
+                        </p>
+                    </div>
+                    <div class="col-lg-4">
+                        <h4>Theme</h4>
+                        <hr/>
+                        <p><a href="http://blacktie.co/demo/stanley/">Stanley</a>, a Bootstrap theme by <a href="blacktie.co">BlackTie.co</a> modified by <a href="/">{{site.author}}</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        {% block scripts %}
+        {% endblock %}
+    </body>
+</html>

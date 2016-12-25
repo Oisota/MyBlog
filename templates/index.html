@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% from "macros.html" import post_content, comment_count %}
+
+{% block content %}
+<div id="ww">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 centered">
+                <img src="{{site.profile_pic | safe}}" alt="{{site.author}}" class="img-circle">
+                <h1>{{site.author}}</h1>
+                {{contents | safe}}
+            </div>
+        </div>
+    </div>
+</div>
+{% for post in collections.blog %}
+<div class="post">
+    <div class="container">
+        <div class="row">	
+            <div class="col-lg-8 col-lg-offset-2">
+                {{ post_content(site, post.title, post.date, post.path, post.contents) }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
+
+{% block scripts %}
+{{ comment_count() }}
+{% endblock %}
