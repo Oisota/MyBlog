@@ -1,34 +1,26 @@
-{% extends "base.html" %}
+{% extends "standard.html" %}
 
 {% from "macros.html" import post_content, comment_count %}
 
-{% block content %}
-<div class="white">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                {{ post_content (site, title, date, path, contents) }}
-                <ul class="pager">
-                    {% if previous %}
-                    <li class="previous"><a href="/{{previous.path}}">previous</a></li>
-                    {% else %}
-                    <li class="previous disabled"><a>previous</a></li>
-                    {% endif %}
+{% block std_content %}
+{{ post_content (site, title, date, path, contents) }}
+<ul class="pager">
+    {% if previous %}
+    <li class="previous"><a href="/{{previous.path}}">previous</a></li>
+    {% else %}
+    <li class="previous disabled"><a>previous</a></li>
+    {% endif %}
 
-                    {% if next %}
-                    <li class="next"><a href="/{{next.path}}">next</a></li>
-                    {% else %}
-                    <li class="next disabled"><a>next</a></li>
-                    {% endif %}
-                </ul>
-                <div id="disqus_thread"></div>
-                <noscript>
-                    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-                </noscript>
-            </div>
-        </div>
-    </div>
-</div>
+    {% if next %}
+    <li class="next"><a href="/{{next.path}}">next</a></li>
+    {% else %}
+    <li class="next disabled"><a>next</a></li>
+    {% endif %}
+</ul>
+<div id="disqus_thread"></div>
+<noscript>
+    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 {% endblock %}
 
 {% block scripts %}

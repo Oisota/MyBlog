@@ -1,19 +1,13 @@
-{% extends "base.html" %}
+{% extends "standard.html" %}
 
-{% block content %}
-<div class="container pt">
-    <div class="row">	
-        <div class="col-lg-8 col-lg-offset-2">
-            <h1 class="centered">Archive</h1>
-            <hr/>
-            <div class="list-group">
-                {% for post in collections.blog %}
-                <a href="/{{post.path}}" class="list-group-item">{{post.title}}<span class="badge">{{post.date}}</span></a>
-                {% else %}
-                <h2 class="centered"><small>No Posts Here</small></h2>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
+{% block std_content %}
+<h1 class="centered">Archive</h1>
+<hr/>
+<div class="list-group">
+    {% for post in collections.blog %}
+    <a href="/{{post.path}}" class="list-group-item">{{post.title}}<span class="badge">{{post.date}}</span></a>
+    {% else %}
+    <h2 class="centered"><small>No Posts Here</small></h2>
+    {% endfor %}
 </div>
 {% endblock %}

@@ -166,6 +166,16 @@ hr {
 .grey { background-color: #f2f2f2; }
 .white { background-color: #ffffff; }
 
+.alt-grey-white {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #ffffff;
+}
+
+.alt-grey-white:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
 .blog-date, .comment-count {
     font-size: 12px;
     text-transform: uppercase;
@@ -199,16 +209,6 @@ hr {
 }
 .comment-count:before { content: "\e111"; }
 .blog-date:before { content: "\e023"; }
-
-.post {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: #ffffff;
-}
-
-.post:nth-child(even) {
-    background-color: #f2f2f2;
-}
 
 /* Code blocks */
 .blog-content pre {
@@ -252,7 +252,6 @@ pre code {
 .social a[href*='github.com']:before { content: url('/assets/icons/github.ico'); }
 .social a[href*='linkedin.com']:before { content: url('/assets/icons/linkedin.ico'); }
 .social a[href*='gab.ai']:before { content: url('/assets/icons/gab.ico'); }
-.social a[href*='plus.google.com']:before { content: url('/assets/icons/gplus.ico'); }
 
 /* Experience/Skills */
 .chip {

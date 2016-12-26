@@ -1,43 +1,35 @@
-{% extends "base.html" %}
+{% extends "standard.html" %}
 
-{% block content %}
-<div class="container pt">
-    <div class="row">	
-        <div class="col-lg-8 col-lg-offset-2">
+{% block std_content %}
+<h1 class="centered">About</h1>
+<hr/>
+{{contents | safe}}
 
-            <h1 class="centered">About</h1>
-            <hr/>
-            {{contents | safe}}
-
-            <div class="exper-group">
-                <h2 class="centered">Experience</h2>
-                {% for job in experience %}
-                <div class="exper-item">
-                    <h3>{{job.company}} <small>{{job.job}}, {{job.date}}</small></h3>
-                    <hr/>
-                    <ul class="list-group">
-                        {% for item in job.description %}
-                        <li class="list-group-item">{{item}}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                {% endfor %}
-            </div>
-
-            <div class="skill-group">
-                <h2 class="centered">Skills</h2>
-                {% for skill in skills %}
-                <div class="skill-item">
-                    <h3>{{skill.level}}</h3>
-                    <hr/>
-                    {% for item in skill.items %}
-                    <div class="chip">{{item}}</div>
-                    {% endfor %}
-                </div>
-                {% endfor %}
-            </div>
-
-        </div>
+<div class="exper-group">
+    <h2 class="centered">Experience</h2>
+    {% for job in experience %}
+    <div class="exper-item">
+        <h3>{{job.company}} <small>{{job.job}}, {{job.date}}</small></h3>
+        <hr/>
+        <ul class="list-group">
+            {% for item in job.description %}
+            <li class="list-group-item">{{item}}</li>
+            {% endfor %}
+        </ul>
     </div>
+    {% endfor %}
+</div>
+
+<div class="skill-group">
+    <h2 class="centered">Skills</h2>
+    {% for skill in skills %}
+    <div class="skill-item">
+        <h3>{{skill.level}}</h3>
+        <hr/>
+        {% for item in skill.items %}
+        <div class="chip">{{item}}</div>
+        {% endfor %}
+    </div>
+    {% endfor %}
 </div>
 {% endblock %}
