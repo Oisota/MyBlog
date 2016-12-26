@@ -1,13 +1,13 @@
 {% extends "standard.html" %}
 
-{% block std_content %}
+{% block content %}
 <h1 class="centered">Archive</h1>
 <hr/>
 <div class="list-group">
-    {% for post in collections.blog %}
+    {% for post in collections.blog -%}
     <a href="/{{post.path}}" class="list-group-item">{{post.title}}<span class="badge">{{post.date}}</span></a>
-    {% else %}
+    {% else -%}
     <h2 class="centered"><small>No Posts Here</small></h2>
-    {% endfor %}
+    {% endfor -%}
 </div>
 {% endblock %}

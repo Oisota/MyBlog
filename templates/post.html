@@ -2,20 +2,20 @@
 
 {% from "macros.html" import post_content, comment_count %}
 
-{% block std_content %}
+{% block content %}
 {{ post_content (site, title, date, path, contents) }}
 <ul class="pager">
-    {% if previous %}
+    {% if previous -%}
     <li class="previous"><a href="/{{previous.path}}">previous</a></li>
-    {% else %}
+    {% else -%}
     <li class="previous disabled"><a>previous</a></li>
-    {% endif %}
+    {% endif -%}
 
-    {% if next %}
+    {% if next -%}
     <li class="next"><a href="/{{next.path}}">next</a></li>
-    {% else %}
+    {% else -%}
     <li class="next disabled"><a>next</a></li>
-    {% endif %}
+    {% endif -%}
 </ul>
 <div id="disqus_thread"></div>
 <noscript>

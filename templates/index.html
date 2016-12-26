@@ -2,7 +2,7 @@
 
 {% from "macros.html" import post_content, comment_count %}
 
-{% block content %}
+{% block base %}
 <div class="alt-grey-white">
     <div class="container">
         <div class="row">
@@ -14,7 +14,7 @@
         </div>
     </div>
 </div>
-{% for post in collections.blog %}
+{% for post in collections.blog -%}
 <div class="alt-grey-white">
     <div class="container">
         <div class="row">	
@@ -24,7 +24,7 @@
         </div>
     </div>
 </div>
-{% endfor %}
+{% endfor -%}
 {% endblock %}
 
 {% block scripts %}

@@ -21,15 +21,15 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        {% for link in navlinks %}
+                        {% for link in navlinks -%}
                         <li><a href="{{link.path}}">{{link.title}}</a></li>
-                        {% endfor %}
+                        {% endfor -%}
                     </ul>
                 </div>
             </div>
         </div>
 
-        {% block content %}
+        {% block base %}
         {% endblock %}
 
         <div id="footer">
