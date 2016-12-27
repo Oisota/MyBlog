@@ -1,5 +1,9 @@
 {% extends "standard.html" %}
 
+{% block title %}
+About
+{% endblock %}
+
 {% block content %}
 <h1 class="centered">About</h1>
 <hr/>
@@ -9,7 +13,7 @@
     <h2 class="centered">Experience</h2>
     {% for job in experience -%}
     <div class="exper-item">
-        <h3>{{job.company}} <small>{{job.job}}, {{job.date}}</small></h3>
+        <h3>{{job.company}} <small>{{job.title}}, {{job.date}}</small></h3>
         <hr/>
         <ul class="list-group">
             {% for item in job.description -%}

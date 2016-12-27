@@ -2,6 +2,10 @@
 
 {% from "macros.html" import post_content, comment_count %}
 
+{% block title %}
+{{title}}
+{% endblock %}
+
 {% block content %}
 {{ post_content (site, title, date, path, contents) }}
 <ul class="pager">
