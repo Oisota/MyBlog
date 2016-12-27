@@ -1,7 +1,7 @@
 ---
 layout: about.html
 experience:
-    - job: IT Intern
+    - title: IT Intern
       company: JBT Corporation
       date: summer 2015
       description: 
@@ -49,4 +49,4 @@ I love developing software and learning about new tools and technologies.
 I'm interested in all things related to programming, especially free and open source software.
 I'm currently in the job market looking for a software developer position in the Cleveland area.
 My relevant skills and experience are listed below. 
-My full resume can be downloaded by clicking <a href="/assets/resume.pdf" download>here</a>.
+My full resume can be downloaded by clicking <a href="/assets/derek-morey-resume.pdf" download>here</a>.
