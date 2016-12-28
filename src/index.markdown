@@ -1,5 +1,6 @@
 ---
 layout: index.html
+title: Derek Morey
 ---
 Hello and welcome to my blog.
 I'm a recent graduate of Cleveland State University with a degree in computer science.

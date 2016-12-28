@@ -1,12 +1,6 @@
 {% extends "standard.html" %}
 
-{% block title %}
-Archive
-{% endblock %}
-
 {% block content %}
-<h1 class="centered">Archive</h1>
-<hr/>
 <div class="list-group">
     {% for post in collections.blog -%}
     <a href="/{{post.path}}" class="list-group-item">{{post.title}}<span class="badge">{{post.date}}</span></a>

@@ -14,7 +14,6 @@ nunjucks.configure('./templates', {watch: false});
 Metalsmith(__dirname)
     .metadata({
         site: {
-            title: 'Derek Morey',
             author: 'Derek Morey',
             author_email: 'derek.o.morey@gmail.com',
             profile_pic: '/assets/me.jpg',
@@ -57,12 +56,10 @@ Metalsmith(__dirname)
         }]
     }))
     .use(dateFormatter({
-        dates: [
-            {
-                key: 'date',
-                format: 'dddd, MMMM Do YYYY'
-            }
-        ]
+        dates: [{
+            key: 'date',
+            format: 'dddd, MMMM Do YYYY'
+        }]
     }))
     .use(layouts({
         engine: 'nunjucks',

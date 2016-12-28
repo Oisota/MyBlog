@@ -1,5 +1,6 @@
 ---
 layout: about.html
+title: About
 experience:
     - title: IT Intern
       company: JBT Corporation

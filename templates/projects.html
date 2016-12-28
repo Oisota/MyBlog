@@ -1,12 +1,6 @@
 {% extends "standard.html" %}
 
-{% block title %}
-Projects
-{% endblock %}
-
 {% block content %}
-<h1 class="centered">Projects</h1>
-<hr/>
 {% for proj in collections.projects -%}
 <div class="project">
     <p><img src="{{proj.image}}" alt="{{proj.title}}"/></p>
