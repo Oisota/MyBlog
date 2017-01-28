@@ -202,6 +202,10 @@ hr {
     color: #333333;
 }
 
+.blog-title a:hover {
+    color: #808080;
+}
+
 .comment-count:before, .blog-date:before {
     font-family: "Glyphicons Halflings";
     margin-top: 0.3em;

@@ -44,6 +44,7 @@ skills:
         - MS SQL Server
         - C#/.NET
         - Rust
+        - MongoDB
 ---
 I am graduate of Cleveland State University with a bachelor's degree in computer science.
 I love developing software and learning about new tools and technologies.
