@@ -7,6 +7,7 @@ const Metalsmith = require('metalsmith'),
       fileMetadata = require('metalsmith-filemetadata'),
       dateFormatter = require('metalsmith-date-formatter'),
       collections = require('metalsmith-collections'),
+      drafts = require('metalsmith-drafts'),
       nunjucks = require('nunjucks');
 
 nunjucks.configure('./templates', {watch: false});
@@ -30,6 +31,7 @@ Metalsmith(__dirname)
     .source('src')
     .destination('build')
     .clean(true)
+    .use(drafts())
     .use(fileMetadata([
         {pattern: 'blog/*', metadata: {layout: 'post.html'}},
         {pattern: 'projects/*', metadata: {layout: 'project.html'}}
@@ -52,7 +54,7 @@ Metalsmith(__dirname)
         relative: false,
         linksets: [{
             match: { collection: 'blog' },
-            pattern: 'blog/:date/:title',
+            pattern: 'blog/:date/:title'
         }]
     }))
     .use(dateFormatter({
@@ -66,9 +68,6 @@ Metalsmith(__dirname)
         directory: 'templates'
     }))
     .build((err, files) => {
-        if (err) {
-            throw err;
-        } else {
-            console.log('W00T, it WORKED!');
-        }
+        if (err) { throw err; } 
+        else { console.log('W00T, it WORKED!'); }
     });
