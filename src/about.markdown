@@ -33,11 +33,11 @@ skills:
         - LaTex
         - Shell Scripting
         - Functional Programming
-        - Standard ML
         - Java
         - OOP
     - level: Beginner
       items:
+        - OCaml
         - Node.js
         - PHP
         - SQL
