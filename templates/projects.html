@@ -3,9 +3,9 @@
 {% block content %}
 {% for proj in collections.projects -%}
 <div class="project">
-    <p><img src="{{proj.image}}" alt="{{proj.title}}"/></p>
-    <h3><a href="{{proj.url}}">{{proj.title}}</a></h3>
-    {{proj.contents | safe }}
+	<p><img src="{{proj.image}}" alt="{{proj.title}}"/></p>
+	<h3><a href="{{proj.url}}">{{proj.title}}</a></h3>
+	{{proj.contents | safe }}
 </div>
 {% endfor -%}
 {% endblock %}

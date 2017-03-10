@@ -2,10 +2,10 @@
 
 {% block content %}
 <div class="list-group">
-    {% for post in collections.blog -%}
-    <a href="/{{post.path}}" class="list-group-item">{{post.title}}<span class="badge">{{post.date}}</span></a>
-    {% else -%}
-    <h2 class="centered"><small>No Posts Here</small></h2>
-    {% endfor -%}
+	{% for post in collections.blog -%}
+	<a href="/{{post.path}}" class="list-group-item">{{post.title}}<span class="badge">{{post.date}}</span></a>
+	{% else -%}
+	<h2 class="centered"><small>No Posts Here</small></h2>
+	{% endfor -%}
 </div>
 {% endblock %}
