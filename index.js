@@ -1,14 +1,14 @@
-const Metalsmith = require('metalsmith'),
-      markdown = require('metalsmith-markdown'),
-      layouts = require('metalsmith-layouts'),
-      permalinks = require('metalsmith-permalinks'),
-      ignore = require('metalsmith-ignore'),
-      metallic = require('metalsmith-metallic'),
-      fileMetadata = require('metalsmith-filemetadata'),
-      dateFormatter = require('metalsmith-date-formatter'),
-      collections = require('metalsmith-collections'),
-      drafts = require('metalsmith-drafts'),
-      nunjucks = require('nunjucks');
+const Metalsmith = require('metalsmith');
+const markdown = require('metalsmith-markdown');
+const layouts = require('metalsmith-layouts');
+const permalinks = require('metalsmith-permalinks');
+const ignore = require('metalsmith-ignore');
+const metallic = require('metalsmith-metallic');
+const fileMetadata = require('metalsmith-filemetadata');
+const dateFormatter = require('metalsmith-date-formatter');
+const collections = require('metalsmith-collections');
+const drafts = require('metalsmith-drafts');
+const nunjucks = require('nunjucks');
 
 nunjucks.configure('./templates', {watch: false});
 
