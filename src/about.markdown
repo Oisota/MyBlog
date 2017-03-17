@@ -2,6 +2,11 @@
 layout: about.html
 title: About
 experience:
+    - title: Tutor
+      company: Varsity Tutors
+      date: February 2017 - present
+      description:
+        - computer science tutor for high school and college students utilizing Varsity Tutor's online platform
     - title: IT Intern
       company: JBT Corporation
       date: summer 2015
