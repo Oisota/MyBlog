@@ -11,12 +11,11 @@ The problem I chose to solve is somewhat contrived, but I think it illustrates s
 The problem being: remove all elements from an array that are less than 100, square every element, and then sum the array.
 
 In order to properly compare the different styles, I ended up splitting the code into four JavaScript files.
-One file contains an array generation function and the other 3 files contain solutions to the problem.
+One file contains an array generation function and the other three contain the solutions to the problem.
 
 Here is the script used to generate the array:
 
 ```javascript
-'use strict';
 const gen = require('random-seed');
 
 const seed = 'Go Go Power Rangers';
@@ -30,11 +29,11 @@ module.exports = () => {
 ```
 
 I used [random-seed](https://www.npmjs.com/package/random-seed) as the random number generator.
-Using this module and seeding the generator with the same value ensures that the 3 examples all operate on the exact same array.
+Using this module and seeding the generator with the same value ensures that each example operates on the exact same array.
 
 The first script is a naive imperative implementation.
 Its what you would write if you thought about doing each task sequentially without giving much thought to performance.
-It uses 3 for loops to accomplish each task and ends up being 13 lines of code not counting the array generation and the console statement.
+It uses three `for` loops to accomplish each task and ends up being 13 lines of code not counting the array generation and the console statement.
 
 ```javascript
 const gen_array = require('./array_gen');
@@ -60,7 +59,7 @@ console.log(sum);
 This approach loses out on some performance by iterating through the array three times.
 Although, by having separate loops, it is more clear what the code is actually doing as the steps to solve the problem are clearly illustrated by the code.
 
-The next script is a somewhat optimized version of the above example using only a single for loop.
+The next script is a somewhat optimized version of the above example using only a single `for` loop.
 This reduces the line count to only 7 lines.
 
 ```javascript
@@ -98,49 +97,37 @@ console.log(sum);
 
 ### Readability
 In my opinion, the functional approach is many times more readable than the imperative approach.
-This is because the imperative examples have explicit iteration using for loops while the functional example has implicit iteration using higher order functions.
-The extraneous noise of the for loop syntax obscures what the code is actually doing and leads to less readable code.
-It isn't immediately obvious just by looking, what exactly a for loop is doing.
-This is because problem being solved isn't about setting up a counter variable and then indexing off of it.
+This is because the imperative examples have explicit iteration using `for` loops while the functional example has implicit iteration using higher order functions.
+The extraneous noise of the `for` loop syntax obscures what the code is actually doing and leads to less readable code.
+At first glance, it isn't immediately obvious what a `for` loop is doing. 
+The problem being solved isn't about setting up a counter variable and then indexing off of it.
 It is about filtering some data, then transforming it, and then reducing it to a single value.
-Contrast this with `map`, `filter`, and `reduce` where the meaning of the code is immediately clear, assuming one is familiar with these functions.
-This is because `map`, `filter`, and `reduce` carry semantic meaning with their names.
+Contrast `for` loops with `map`, `filter`, and `reduce` where the meaning of the code is much clearer.
+This is due to the semantic meaning behind the names of these functions.
 `map` transforms lists, `filter` filters elements out of a list based upon a condition, and `reduce` reduces lists to a single value.
-The semantic meaning behind these functions allow code to express its intent much more clearly than using for loops.
+The semantic meaning behind these functions allow code to express its intent much more clearly than using `for` loops.
 
 ### Performance
-I wrote the following script to compare the time it takes each script to execute.
+I used the `time` command to time the exeuction of each script.
 This gives a rough idea of the performance of each style.
 Each script uses the same array generated with the script from above.
 
-```bash
-#!/bin/bash
-printf "imperative naive\n"
-time node imperative_naive.js
-printf "\nimperative optimized\n"
-time node imperative_opt.js
-printf "\nfunctional\n"
-time node functional.js
-```
-
-Running the script yields the following output:
-
 ```no-highlight
-imperative naive
+$ time node imperative_naive.js
 328070766
 
 real0m2.823s
 user0m2.788s
 sys0m0.036s
 
-imperative optimized
+$ time node imperative_optimized.js
 328070766
 
 real0m2.744s
 user0m2.720s
 sys0m0.024s
 
-functional
+$ time node functional.js
 328070766
 
 real0m3.370s
@@ -161,5 +148,7 @@ Although each approach solves the problem, they differ in terms of both readabil
 The imperative style yielded code that was less readable but more performant while the functional style yielded the oppisite, more readable, less performant.
 Taking into account the size of the array used, I would argue that in most situations, the functional style should be preferred over the imperative.
 The functional approach requires less lines of code and is more readable.
-It also is more maintainable due to being able to chain more methods together.
-That being said, if you do find yourself having to operate an exceptionally large piece of data, imperative programming won't be pretty, but it will be fast.
+It also is more maintainable due to the composability of the array methods.
+Methods can be easily chained together to further manipulate the array.
+Changing the behaviour of the imperative examples requires more consideration.
+That being said, if you have to operate an exceptionally large piece of data and are concerned with performance, imperative programming won't be pretty, but it will be fast.
