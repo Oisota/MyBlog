@@ -16,40 +16,34 @@ experience:
         - wrote several utility programs to help automate tasks
         - worked with another intern to develop a custom content management solution utilizing Microsoft SharePoint, C#/.NET, and HTML/CSS/JS
 skills:
-    - level: Expert
+    - level: Languages
       items:
-        - Javascript
+        - Javascript/Node.js
         - Python
         - C
+        - Java
+        - HTML
+        - CSS
+        - LaTex
+        - Shell Scripting
+        - SQL
+    - level: Frameworks/Libraries
+      items:
+        - Bootstrap
         - Backbone.js
-        - Linux
+        - jQuery
+        - Flask
+        - Pygame
+        - Express.js
+    - level: Tools
+      items:
+        - SSH
         - Git
         - Vim
         - tmux
-        - Pygame
-    - level: Intermediate
-      items:
-        - Bootstrap
-        - jQuery
-        - Flask
-        - HTML
-        - CSS
-        - SSH
-        - LaTex
-        - Shell Scripting
-        - Functional Programming
-        - Java
-        - OOP
-    - level: Beginner
-      items:
-        - OCaml
-        - Node.js
-        - PHP
-        - SQL
-        - MS SQL Server
-        - C#/.NET
-        - Rust
-        - MongoDB
+        - Linux
+        - Make
+        - SQLite
 ---
 I am graduate of Cleveland State University with a bachelor's degree in computer science.
 I love developing software and learning about new tools and technologies.
