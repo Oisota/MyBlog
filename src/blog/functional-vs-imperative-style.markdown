@@ -77,7 +77,7 @@ for (let i=0; i<x.length; i++) {
 console.log(sum);
 ```
 
-This example yields better performance but it comes at the cost of some readability as all the operations are jumbled together in the single loop.
+This example yields better performance but it comes at the cost of readability and maintainability as all the operations are jumbled together in the single loop.
 
 The final script solves the problem in a functional style and makes use of the array prototype functions `map`, `reduce`, and `filter`.
 It is the smallest and most readable at only 4 lines of code.
@@ -98,14 +98,13 @@ console.log(sum);
 ### Readability
 In my opinion, the functional approach is many times more readable than the imperative approach.
 This is because the imperative examples have explicit iteration using `for` loops while the functional example has implicit iteration using higher order functions.
-The extraneous noise of the `for` loop syntax obscures what the code is actually doing and leads to less readable code.
+The extraneous noise of the `for` loop syntax obscures the meaning of the code and makes it less readable.
 At first glance, it isn't immediately obvious what a `for` loop is doing. 
 The problem being solved isn't about setting up a counter variable and then indexing off of it.
 It is about filtering some data, then transforming it, and then reducing it to a single value.
-Contrast `for` loops with `map`, `filter`, and `reduce` where the meaning of the code is much clearer.
-This is due to the semantic meaning behind the names of these functions.
+Contrast `for` loops with `map`, `filter`, and `reduce` where the meaning of the code is much clearer due to the semantic meaning associated with these functions.
 `map` transforms lists, `filter` filters elements out of a list based upon a condition, and `reduce` reduces lists to a single value.
-The semantic meaning behind these functions allow code to express its intent much more clearly than using `for` loops.
+The semantic meaning behind these functions allow the code to express its intent much more clearly than with `for` loops.
 
 ### Performance
 I used the `time` command to time the exeuction of each script.
@@ -150,5 +149,5 @@ Taking into account the size of the array used, I would argue that in most situa
 The functional approach requires less lines of code and is more readable.
 It also is more maintainable due to the composability of the array methods.
 Methods can be easily chained together to further manipulate the array.
-Changing the behaviour of the imperative examples requires more consideration.
-That being said, if you have to operate an exceptionally large piece of data and are concerned with performance, imperative programming won't be pretty, but it will be fast.
+Changing the behaviour of the imperative examples requires more consideration, especially for the second example.
+That being said, if you have to operate an exceptionally large piece of data and performance is a concern, an imperative style may be a better choice.
