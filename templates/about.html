@@ -22,7 +22,7 @@
 	<h2 class="centered">Skills</h2>
 	{% for skill in skills -%}
 	<div class="skill-item">
-		<h3>{{skill.level}}</h3>
+		<h3>{{skill.title}}</h3>
 		<hr/>
 		{% for item in skill.items | sort -%}
 		<div class="chip">{{item}}</div>
