@@ -23,9 +23,13 @@ Metalsmith(__dirname)
 	navlinks: [
 		{title: 'Home', path: '/'},
 		{title: 'About', path: '/about/'},
-		{title: 'Projects', path: '/projects/'},
 		{title: 'Archive', path: '/archive/'},
 		{title: 'Contact', path: '/contact/'}
+	],
+	sociallinks: [
+		{title: 'Github', url: 'https://github.com/Oisota'},
+		{title: 'LinkedIn', url: 'https://linkedin.com/in/derek-o-morey'},
+		{title: 'Gab', url: 'https://gab.ai/DerekMorey'}
 	]
 })
 .source('src')
@@ -34,22 +38,16 @@ Metalsmith(__dirname)
 .use(drafts())
 .use(fileMetadata([
 	{pattern: 'blog/*', metadata: {layout: 'post.html'}},
-	{pattern: 'projects/*', metadata: {layout: 'project.html'}}
 ]))
 .use(collections({
 	blog: {
 		pattern: 'blog/*',
 		sortBy: 'date',
 		reverse: true
-	},
-	projects: {
-		pattern: 'projects/*',
-	  sortBy: 'title'
 	}
 }))
 .use(metallic())
 .use(markdown())
-.use(ignore('projects/*')) //don't generate separate project pages
 .use(permalinks({
 	relative: false,
 	linksets: [{
