@@ -2,32 +2,4 @@
 
 {% block content %}
 {{contents | safe}}
-
-<div class="exper-group">
-	<h2 class="centered">Experience</h2>
-	{% for job in experience -%}
-	<div class="exper-item">
-		<h3>{{job.title}} <small>{{job.company}}, {{job.date}}</small></h3>
-		<hr/>
-		<ul class="list-group">
-			{% for item in job.description -%}
-			<li class="list-group-item">{{item}}</li>
-			{% endfor -%}
-		</ul>
-	</div>
-	{% endfor -%}
-</div>
-
-<div class="skill-group">
-	<h2 class="centered">Skills</h2>
-	{% for skill in skills -%}
-	<div class="skill-item">
-		<h3>{{skill.title}}</h3>
-		<hr/>
-		{% for item in skill.items | sort -%}
-		<div class="chip">{{item}}</div>
-		{% endfor -%}
-	</div>
-	{% endfor -%}
-</div>
 {% endblock %}
