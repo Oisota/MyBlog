@@ -51,20 +51,22 @@
 						<h4>Derek Morey</h4>
 						<hr/>
 						<p>
-						<a href="/">Home</a> |
-						<a href="/about/">About</a> |
-						<a href="/projects/">Projects</a> |
-						<a href="/archive/">Archive</a> |
-						<a href="/contact/">Contact</a>
+						{% for link in navlinks -%}
+						{% if loop.last -%}
+						<a href="{{link.path}}">{{link.title}}</a>
+						{% else -%}
+						<a href="{{link.path}}">{{link.title}}</a> |
+						{% endif -%}
+						{% endfor -%}
 						</p>
 					</div>
 					<div class="col-lg-4 social">
 						<h4>Social</h4>
 						<hr/>
 						<p>
-						<a href="https://github.com/Oisota">Github</a>
-						<a href="https://linkedin.com/in/derek-o-morey">LinkedIn</a>
-						<a href="https://gab.ai/DerekMorey">Gab</a>
+						{% for link in sociallinks -%}
+						<a href="{{link.url}}">{{link.title}}</a>
+						{% endfor %}
 						</p>
 					</div>
 					<div class="col-lg-4">

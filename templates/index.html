@@ -3,19 +3,8 @@
 {% from "macros.html" import post_content, comment_count %}
 
 {% block base %}
-<div class="alt-grey-white">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2 centered">
-				<img src="{{site.profile_pic | safe}}" alt="{{site.author}}" class="img-circle">
-				<h1>{{site.author}}</h1>
-				{{contents | safe}}
-			</div>
-		</div>
-	</div>
-</div>
 {% for post in collections.blog -%}
-<div class="alt-grey-white">
+<div class="alt-white-grey">
 	<div class="container">
 		<div class="row">	
 			<div class="col-lg-8 col-lg-offset-2">
