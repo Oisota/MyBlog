@@ -21,7 +21,7 @@
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						{% for link in navlinks -%}
+						{% for link in links.nav -%}
 						<li><a href="{{link.path}}">{{link.title}}</a></li>
 						{% endfor -%}
 					</ul>
@@ -51,7 +51,7 @@
 						<h4>Derek Morey</h4>
 						<hr/>
 						<p>
-						{% for link in navlinks -%}
+						{% for link in links.nav -%}
 						{% if loop.last -%}
 						<a href="{{link.path}}">{{link.title}}</a>
 						{% else -%}
@@ -64,7 +64,7 @@
 						<h4>Social</h4>
 						<hr/>
 						<p>
-						{% for link in sociallinks -%}
+						{% for link in links.social -%}
 						<a href="{{link.url}}">{{link.title}}</a>
 						{% endfor %}
 						</p>

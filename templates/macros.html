@@ -1,9 +1,5 @@
 {% macro post_content(site, title, date, path, contents) %}
 <div class="blog-content">
-	<p class="blog-author">
-		<img src="{{site.profile_pic | safe}}" width="50px" height="50px" alt="{{site.author}}" class="img-circle">
-		{{site.author}}
-	</p>
 	<p>
 		<span class="blog-date">{{date}}</span>
 		<a class="comment-count" href="{{site.url | safe}}{{path | safe}}#disqus_thread">comments</a>

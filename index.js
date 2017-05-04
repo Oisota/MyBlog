@@ -8,6 +8,7 @@ const fileMetadata = require('metalsmith-filemetadata');
 const dateFormatter = require('metalsmith-date-formatter');
 const collections = require('metalsmith-collections');
 const drafts = require('metalsmith-drafts');
+const excerpts = require('metalsmith-excerpts');
 const nunjucks = require('nunjucks');
 
 nunjucks.configure('./templates', {watch: false});
@@ -17,27 +18,28 @@ Metalsmith(__dirname)
 	site: {
 		author: 'Derek Morey',
 		author_email: 'derek.o.morey@gmail.com',
-		profile_pic: '/assets/me.jpg',
 		url: 'https://oisota.github.io/'
 	},
-	navlinks: [
-		{title: 'Home', path: '/'},
-		{title: 'About', path: '/about/'},
-		{title: 'Archive', path: '/archive/'},
-		{title: 'Contact', path: '/contact/'}
-	],
-	sociallinks: [
-		{title: 'Github', url: 'https://github.com/Oisota'},
-		{title: 'LinkedIn', url: 'https://linkedin.com/in/derek-o-morey'},
-		{title: 'Gab', url: 'https://gab.ai/DerekMorey'}
-	]
+	links: {
+		nav: [
+			{title: 'Home', path: '/'},
+			{title: 'About', path: '/about/'},
+			{title: 'Archive', path: '/archive/'},
+			{title: 'Contact', path: '/contact/'}
+		],
+		social: [
+			{title: 'Github', url: 'https://github.com/Oisota'},
+			{title: 'LinkedIn', url: 'https://linkedin.com/in/derek-o-morey'},
+			{title: 'Gab', url: 'https://gab.ai/DerekMorey'}
+		]
+	}
 })
 .source('src')
 .destination('build')
 .clean(true)
 .use(drafts())
 .use(fileMetadata([
-	{pattern: 'blog/*', metadata: {layout: 'post.html'}},
+	{pattern: 'blog/*', metadata: {layout: 'post.html'}}
 ]))
 .use(collections({
 	blog: {
@@ -48,6 +50,7 @@ Metalsmith(__dirname)
 }))
 .use(metallic())
 .use(markdown())
+.use(excerpts())
 .use(permalinks({
 	relative: false,
 	linksets: [{

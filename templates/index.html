@@ -8,7 +8,8 @@
 	<div class="container">
 		<div class="row">	
 			<div class="col-lg-8 col-lg-offset-2">
-				{{ post_content(site, post.title, post.date, post.path, post.contents) }}
+				{{ post_content(site, post.title, post.date, post.path, post.excerpt) }}
+				<a href="{{post.path}}">Continue Reading...</a>
 			</div>
 		</div>
 	</div>

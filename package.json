@@ -9,6 +9,7 @@
     "metalsmith-collections": "^0.7.0",
     "metalsmith-date-formatter": "^1.0.2",
     "metalsmith-drafts": "0.0.1",
+    "metalsmith-excerpts": "^1.2.0",
     "metalsmith-filemetadata": "^1.0.0",
     "metalsmith-ignore": "^0.1.2",
     "metalsmith-layouts": "^1.6.5",
