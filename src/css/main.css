@@ -24,7 +24,6 @@ h1 {
 	margin-bottom: 30px;
 }
 
-
 /* Paragraph & Typographic */
 p {
 	line-height: 28px;
@@ -32,15 +31,10 @@ p {
 	font-size: 16px;
 }
 
-.centered {
-	text-align: center;
-}
-
 /* Links */
 a {
 	color: #5588bb;
 	word-wrap: break-word;
-
 	-webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
 	-moz-transition: color 0.1s ease-in, background 0.1s ease-in;
 	-ms-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -73,7 +67,7 @@ hr {
 	padding: 0;
 }
 
-
+/* Navigation */
 .navbar {
 	text-transform: uppercase;
 	margin-bottom: 0px;
@@ -117,9 +111,8 @@ hr {
 
 
 /* Helpers */
-.mt {
-	margin-top: 40px;
-	margin-bottom: 40px;
+.centered {
+	text-align: center;
 }
 
 .pt {
@@ -127,13 +120,7 @@ hr {
 	padding-bottom: 50px;
 }
 
-/* +++++ WRAP SECTIONS +++++ */
-#ww {
-	padding-top: 70px;
-	padding-bottom: 70px;
-	background-color: #f2f2f2;
-}
-
+/* Footer */
 #footer {
 	background-color: #2f2f2f;
 	padding-top: 50px;
@@ -154,14 +141,7 @@ hr {
 	padding-bottom: 10px;
 }
 
-/* +++++ Color Wraps / Blog Page +++++ */
-.grey, .white {
-	padding-top: 60px;
-	padding-bottom: 60px;
-}
-.grey { background-color: #f2f2f2; }
-.white { background-color: #ffffff; }
-
+/* Color Wraps */
 .alt-white-grey {
 	padding-top: 60px;
 	padding-bottom: 60px;
@@ -172,6 +152,7 @@ hr {
 	background-color: #f2f2f2;
 }
 
+/* Blog Posts */
 .blog-date, .comment-count {
 	font-size: 12px;
 	text-transform: uppercase;
@@ -202,13 +183,19 @@ hr {
 	color: #808080;
 }
 
-.comment-count:before, .blog-date:before {
+.comment-count:before, 
+.blog-date:before {
 	font-family: "Glyphicons Halflings";
 	margin-top: 0.3em;
 	margin-right: 0.3em;
 }
 .comment-count:before { content: "\e111"; }
 .blog-date:before { content: "\e023"; }
+
+.blog-pager {
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
 
 /* Code blocks */
 .blog-content pre {
@@ -233,32 +220,4 @@ pre code {
 
 .social a {
 	margin-right: 2em;
-}
-
-/* Experience/Skills */
-.chip {
-	display: inline-block;
-	height: 32px;
-	font-size: 14px;
-	font-weight: 500;
-	color: rgba(0,0,0,0.6);
-	line-height: 32px;
-	padding: 0 12px;
-	border-radius: 16px;
-	background-color: #e4e4e4;
-	margin-bottom: 5px;
-	margin-right: 5px;
-}
-
-.exper-group, .skill-group {
-	margin-top: 4em;
-}
-
-.exper-item, .skill-item {
-	margin-bottom: 3em;
-}
-
-.post-pager {
-	padding-top: 2em;
-	padding-bottom: 2em;
 }
