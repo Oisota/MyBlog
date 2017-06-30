@@ -15,7 +15,7 @@ This definition, although correct, is vague and does not fully explain the FP st
 A better definition is that functional programming is programming using pure functions and without mutating state.
 I think this is a much better description of what FP promotes.
 When you write functional code, you write pure functions that don't mutate state.
-I'll now explain what this means, how you can apply these concepts in your code, and why you would want to in the first place.
+I'll now explain what this means, how you can apply these concepts in your code, and why you would want to do so in the first place.
 
 Immutable Data
 --------------
