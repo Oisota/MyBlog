@@ -2,16 +2,12 @@
 
 {% from "macros.html" import post_content, comment_count %}
 
-{% block base %}
+{% block content %}
 {% for post in collections.blog -%}
 <div class="alt-white-grey">
-	<div class="container">
-		<div class="row">	
-			<div class="col-lg-8 col-lg-offset-2">
-				{{ post_content(site, post.title, post.date, post.path, post.excerpt) }}
-				<a href="{{post.path}}">Continue Reading...</a>
-			</div>
-		</div>
+	<div class="content">
+		{{ post_content(site, post.title, post.date, post.path, post.excerpt) }}
+		<a href="{{post.path}}">Continue Reading...</a>
 	</div>
 </div>
 {% endfor -%}

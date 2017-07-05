@@ -6,24 +6,26 @@
 {% endblock %}
 
 {% block content %}
-{{ post_content (site, title, date, path, contents) }}
-<ul class="pager blog-pager">
-	{% if previous -%}
-	<li class="previous"><a href="/{{previous.path}}">previous</a></li>
-	{% else -%}
-	<li class="previous disabled"><a>previous</a></li>
-	{% endif -%}
+<div class="content">
+	{{ post_content (site, title, date, path, contents) }}
+	<div class="pager">
+		{% if previous -%}
+		<a class="previous" href="/{{previous.path}}">previous</a>
+		{% else -%}
+		<a class="previous disabled">previous</a>
+		{% endif -%}
 
-	{% if next -%}
-	<li class="next"><a href="/{{next.path}}">next</a></li>
-	{% else -%}
-	<li class="next disabled"><a>next</a></li>
-	{% endif -%}
-</ul>
-<div id="disqus_thread"></div>
-<noscript>
-	Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
+		{% if next -%}
+		<a class="next" href="/{{next.path}}">next</a>
+		{% else -%}
+		<a class="next disabled">next</a>
+		{% endif -%}
+	</div>
+	<div id="disqus_thread"></div>
+	<noscript>
+		Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+	</noscript>
+</div>
 {% endblock %}
 
 {% block scripts %}
