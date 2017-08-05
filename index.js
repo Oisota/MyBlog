@@ -9,6 +9,7 @@ const dateFormatter = require('metalsmith-date-formatter');
 const collections = require('metalsmith-collections');
 const drafts = require('metalsmith-drafts');
 const excerpts = require('metalsmith-excerpts');
+const sass = require('metalsmith-sass');
 const nunjucks = require('nunjucks');
 
 nunjucks.configure('./templates', {watch: false});
@@ -37,6 +38,9 @@ Metalsmith(__dirname)
 .source('src')
 .destination('build')
 .clean(true)
+.use(sass({
+	outputDir: 'css'
+}))
 .use(drafts())
 .use(fileMetadata([
 	{pattern: 'blog/*', metadata: {layout: 'post.html'}}
