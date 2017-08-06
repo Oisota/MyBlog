@@ -17,31 +17,27 @@
 				<div></div>
 			</span>
 		</div>
-		<div id="leftbar" class="left">
-			<header>
+		<div id="leftbar" class="left vbox">
+			<header class="vbox">
 				<img height="150px" width="150px" src="/assets/me.jpg" alt="Me" />
 				<h1><a href="/">{{site.author}}</a></h1>
 			</header>
-			<nav>
-				<ul>
-					{% for link in links.nav -%}
-					<li><a href="{{link.path}}">{{link.title}}</a></li>
-					{% endfor -%}
-				</ul>
+			<nav class="vbox">
+				{% for link in links.nav -%}
+				<a href="{{link.path}}">{{link.title}}</a>
+				{% endfor -%}
 			</nav>
-			<footer>
-				<ul class="social">
-					{% for link in links.social -%}
-					<li><a href="{{link.url}}">{{link.title}}</a></li>
-					{% endfor %}
-				</ul>
+			<footer class="social vbox">
+				{% for link in links.social -%}
+				<a href="{{link.url}}">{{link.title}}</a>
+				{% endfor %}
 			</footer>
 		</div>
 
-		<div class="container">
+		<main>
 			{% block content %}
 			{% endblock %}
-		</div>
+		</main>
 
 		<script charset="utf-8">
 (() => {
