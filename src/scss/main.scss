@@ -76,6 +76,12 @@ hr {
 	padding: 0;
 }
 
+p code {
+	color: $black;
+	background: $lightgrey;
+	padding: 0.2em;
+}
+
 /* Helpers */
 .centered {
 	text-align: center;
@@ -237,20 +243,6 @@ main {
 	margin-bottom: 0.2em; 
 	a { color: $black; }
 	a:hover { color: #808080; }
-}
-
-/* ---- Code blocks ---- */
-.blog-content {
-	pre {
-		margin-top: -5px;
-		margin-bottom: 20px;
-	}
-	pre {
-		overflow: auto;
-		code {
-			white-space: pre;
-		}
-	}
 }
 
 /* ---- Pager ---- */
