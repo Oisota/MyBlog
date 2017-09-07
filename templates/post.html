@@ -8,7 +8,7 @@
 {% block content %}
 <div class="content">
 	{{ post_content (site, title, date, path, contents) }}
-	<div class="pager">
+	<div class="pager hbox">
 		{% if previous -%}
 		<a class="previous" href="/{{previous.path}}">previous</a>
 		{% else -%}
@@ -30,16 +30,18 @@
 
 {% block scripts %}
 <script>
-var disqus_config = function () {
-	this.page.url = '{{site.url | safe}}{{path | safe}}';
-	this.page.identifier = '{{site.url | safe}}{{path | safe}}';
-};
-(function() { // DON'T EDIT BELOW THIS LINE
-	var d = document, s = d.createElement('script');
-	s.src = '//derekmorey-1.disqus.com/embed.js';
-	s.setAttribute('data-timestamp', (new Date()).getTime());
-	(d.head || d.body).appendChild(s);
-})();
+if (window.location.host.split(':')[0] !== 'localhost') { 
+	var disqus_config = function () {
+		this.page.url = '{{site.url | safe}}{{path | safe}}';
+		this.page.identifier = '{{site.url | safe}}{{path | safe}}';
+	};
+	(function() { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = '//derekmorey-1.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', (new Date()).getTime());
+		(d.head || d.body).appendChild(s);
+	})();
+}
 </script>
 {{ comment_count() }}
 {% endblock %}

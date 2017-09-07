@@ -6,18 +6,30 @@
 		<title>{{title}}</title>
 		<link href="/css/solarized-dark.css" rel="stylesheet">
 		<link href="/css/main.css" rel="stylesheet">
+		<!--
+			TODO figure out if fontawesome script can be either:
+				placed at bottom of body or bundle the icons with site
+				and import them in the css
+		-->
 		<script src="https://use.fontawesome.com/b1cdb9069f.js"></script>
 	</head>
 	<body>
 		<div class="topbar">
-			<h1>{{site.author}}</h1>
-			<span id="menu-btn" class="menu-btn">
-				<div></div>
-				<div></div>
-				<div></div>
-			</span>
+			<header class="hbox">
+				<h1>{{site.author}}</h1>
+				<span id="menu-btn" class="menu-btn">
+					<div></div>
+					<div></div>
+					<div></div>
+				</span>
+			</header>
+			<nav id="topbar-nav" class="vbox">
+				{% for link in links.nav -%}
+				<a href="{{link.path}}">{{link.title}}</a>
+				{% endfor -%}
+			</nav>
 		</div>
-		<div id="leftbar" class="left vbox">
+		<div class="left vbox">
 			<header class="vbox">
 				<img height="150px" width="150px" src="/assets/me.jpg" alt="Me" />
 				<h1><a href="/">{{site.author}}</a></h1>
@@ -43,12 +55,12 @@
 (() => {
 	let menuOpen = false;
 	document.getElementById('menu-btn').addEventListener('click', (event) => {
-		const leftbar = document.getElementById('leftbar');
+		const topbar = document.getElementById('topbar-nav');
 		if (menuOpen) {
-			leftbar.style.display = 'none';
+			topbar.style.display = 'none';
 			menuOpen = false;
 		} else {
-			leftbar.style.display = 'flex';
+			topbar.style.display = 'flex';
 			menuOpen = true;
 		}
 	});

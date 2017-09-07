@@ -15,7 +15,6 @@ $navbar-width: 25em;
 
 /* ---- Main ---- */
 html, body {
-	height: 100%;
 	margin: 0;
 	padding: 0;
 }
@@ -87,10 +86,6 @@ p code {
 	text-align: center;
 }
 
-.pt {
-	padding-top: 5em;
-}
-
 .content {
 	margin: auto;
 	padding-left: 2em;
@@ -111,6 +106,10 @@ p code {
 	display: flex;
 	flex-direction: column;
 }
+.hbox {
+	display: flex;
+	flex-direction: row;
+}
 
 /* Color Wraps */
 .alt-white-grey {
@@ -122,6 +121,7 @@ p code {
 .alt-white-grey:nth-child(odd) {
 	background-color: $lightgrey;
 }
+
 /* ---- Top Bar ---- */
 .topbar {
 	display: none;
@@ -247,8 +247,6 @@ main {
 
 /* ---- Pager ---- */
 .pager {
-	display: flex;
-	flex-direction: row;
 	justify-content: space-between;
 	padding-top: 1em;
 	padding-bottom: 4em;
@@ -271,11 +269,13 @@ main {
 
 /* ---- Forms and Buttons ---- */
 .form-group input, .form-group textarea {
+	display: block;
+	box-sizing: border-box;
 	width: 100%;
 	font-size: 14pt;
-	border-radius: 0.1em;
+	border-radius: 0.2em;
 	border: 1px solid #CCCCCC;
-	padding: 0.2em;
+	padding: 0.3em;
 }
 .form-group label {
 	font-size: 1.2em;
@@ -299,19 +299,13 @@ main {
 }
 
 /* ---- Mobile Layout ---- */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 	.topbar {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
+		display: block;
 		background: $blue;
-		margin: 0;
-		padding: 0.3em;
-		position: fixed;
-		top: 0;
-		bottom: 0;
-		width: 100%;
-		height: 3em;
+		header { 
+			justify-content: space-between;
+		}
 		h1 {
 			color: $white;
 			padding: 0;
@@ -319,23 +313,29 @@ main {
 			margin-left: 0.1em;
 		}
 	}
+	#topbar-nav {
+		display: none;
+		background: $blue;
+		a {
+			width: 100%;
+			text-align: center;
+			color: $white;
+			margin: 1em;
+		}
+	}
 	.menu-btn {
+		margin-top: 0.2em;
 		margin-right: 0.8em;
 		div {
 			width: 30px;
 			height: 4px;
-			margin-top: 6px;
-			background: white;
+			margin-top: 0.4em;
+			background: $white;
 			border-radius: 2px;
 		}
 	}
-	.left {
-		display: none;
-		width: 75%;
-	}
-	main {
-		margin-left: 0;
-	}
+	.left { display: none; }
+	main { margin-left: 0; }
 	.content {
 		padding-top: 2em;
 		padding-left: 0.5em;
