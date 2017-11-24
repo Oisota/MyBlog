@@ -135,9 +135,11 @@ p code {
 	bottom: 0;
 	width: $navbar-width;
 	background: $blue;
+	overflow-y: scroll;
 
 	header, nav, footer {
-		flex: 1;
+		flex-grow: 1;
+		flex-shrink: 0;
 		align-items: center;
 	}
 
