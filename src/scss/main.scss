@@ -135,37 +135,36 @@ p code {
 	bottom: 0;
 	width: $navbar-width;
 	background: $blue;
-	overflow-y: scroll;
+	overflow-y: auto;
 
-	header, nav, footer {
+	nav, footer {
 		flex-grow: 1;
 		flex-shrink: 0;
 		align-items: center;
 	}
 
-	/* ---- Left Nav Header ---- */
-	header {
-		justify-content: center;
-		a {
-			color: $white;
-			text-decoration: none;
-		}
+	/* ---- Left Nav Navigation ---- */
+	nav {
+		padding-top: 1.5em;
+		justify-content: flex-start;
+		text-transform: uppercase;
 		img {
 			border-radius: 50%;
 		}
-	}
-	/* ---- Left Nav Navigation ---- */
-	nav {
-		justify-content: flex-start;
-		text-transform: uppercase;
+		h1 {
+			font-size: 20pt;
+			margin-top: 1.8em;
+			margin-bottom: 1.8em;
+		}
 		a {
-			font-size: 12pt;
 			color: $white;
 			text-decoration: none;
-			margin-top: 1.2em;
-			margin-bottom: 1.2em;
 		}
-		a:hover {
+		.navlink {
+			font-size: 12pt;
+			margin-bottom: 2.4em;
+		}
+		.navlink:hover {
 			color: $black;
 		}
 	}

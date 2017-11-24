@@ -30,13 +30,11 @@
 			</nav>
 		</div>
 		<div class="left vbox">
-			<header class="vbox">
+			<nav class="vbox">
 				<img height="150px" width="150px" src="/assets/me.jpg" alt="Me" />
 				<h1><a href="/">{{site.author}}</a></h1>
-			</header>
-			<nav class="vbox">
 				{% for link in links.nav -%}
-				<a href="{{link.path}}">{{link.title}}</a>
+				<a class="navlink" href="{{link.path}}">{{link.title}}</a>
 				{% endfor -%}
 			</nav>
 			<footer class="social vbox">
