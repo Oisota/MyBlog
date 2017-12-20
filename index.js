@@ -65,7 +65,7 @@ Metalsmith(__dirname)
 .use(dateFormatter({
 	dates: [{
 		key: 'date',
-		format: 'dddd, MMMM Do YYYY'
+		format: 'YYYY-MM-DD'
 	}]
 }))
 .use(layouts({
