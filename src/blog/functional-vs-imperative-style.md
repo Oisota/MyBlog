@@ -66,7 +66,6 @@ This reduces the line count to only 7 lines.
 const gen_array = require('./array_gen');
 const x = gen_array();
 
-const newList = [];
 let sum = 0;
 for (let i=0; i<x.length; i++) {
 	if (x[i] < 100) {
