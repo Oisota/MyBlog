@@ -14,6 +14,8 @@ const nunjucks = require('nunjucks');
 
 nunjucks.configure('./templates', {watch: false});
 
+const buildDir = process.env.BUILD_DIR || 'build';
+
 Metalsmith(__dirname)
 .metadata({
 	site: {
@@ -36,7 +38,7 @@ Metalsmith(__dirname)
 	}
 })
 .source('src')
-.destination('build')
+.destination(buildDir)
 .clean(true)
 .use(sass({
 	outputDir: 'css'
