@@ -1,12 +1,13 @@
 ---
 title: Functional Programming Basics
 date: 2017-05-12
+draft: true
 ---
 
-Functional Programming is something I've been interested in ever since I first learned about it.
+Functional programming is something I've been interested in since I first learned about it.
 My first exposure to functional programming (FP) was in my comparative programming languages class at college where we used Standard ML for a few projects.
 What I enjoyed the most about FP and Standard ML was how elegant and concise the code was.
-Since then, I've been trying to get exposed to more FP concepts and learn more about programming in that style.
+Since then, I've been trying to learn more about FP concepts and how to write code in that style.
 I am by no means an expert or authority on the subject, but I think I can illustrate the basic concepts one would need in order to get started programming in a more functional style.
 
 Let me start by giving my definition of what FP actually is.
@@ -30,6 +31,14 @@ We don't have to worry about it's value changing elsewhere in the code.
 
 Pure Functions
 --------------
+A pure function is a function whose output depends only on its input and that does not affect any outside state.
+For example, the following `add` function is pure:
+```javascript
+function add(x, y) {
+	return x + y;
+}
+```
+The function simply adds two numbers
 
 
 First Class Functions
