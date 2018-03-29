@@ -4,7 +4,8 @@ date: 2017-08-12
 draft: true
 ---
 
-During my time in college and in the programming community at large, I've heard the general sentiment that long functions should be refactored into shorter functions that only do one thing.
+During my time in college and in the programming community at large, I've heard the general sentiment that long functions are bad and short functions are good.
+The argument is that short functions are easier to maintain and reason about and that long functions should be refactored into shorter functions that only do one thing.
 This rule is usually accepted as gospel without any opposition or discussion.
 It sounds logical at first but is this guideline actually a good rule of thumb?
 Are long functions inherently bad and short functions inherently better?
@@ -19,7 +20,7 @@ Doing this ensures that my functions actually encapsulate common functionality.
 I never try to predict the future and write functions ahead of time unless it is completely obvious that a function is needed.
 I also am not bothered at all by how many lines of code a function contains.
 
-### Long Function Advantages
+## Long Function Advantages
 The benefits of this approach is that you focus on solving the problem at hand rather than trying write generic, reusable functions.
 The primary goal of making software applications is to solve real world problems.
 When writing functions, it is too easy to get distracted by trying to write the perfectly reusable function.
@@ -36,7 +37,7 @@ This is especially true for junior devs and developers new to the codebase.
 They don't have to read over pages of documentation and scour the code base trying understand how every function is used and where its called from.
 Writing documentation is also easier simply because there is less to document.
 
-### Short Function Disadvantages
+## Short Function Disadvantages
 I've already alluded to some of the costs of having many short functions but I'll further elaborate my point.
 Every time a function is added to a code base, it allows other developers to start calling that function elsewhere in the code.
 This can lead to unintended consequences that the original person who wrote the function never considered.
@@ -48,7 +49,7 @@ These effects can be mitigated to some extent by languages that support private 
 Having short functions can also result in logic getting spread around the code base making it difficult to reason about the program overall.
 Understanding the program requires searching through files and directories rather than being able to see everything in one place.
 
-### Code Examples
+## Code Examples
 Often times people will refactor a long function into smaller ones whose names really only serve as comments about the code.
 For example:
 
@@ -112,7 +113,7 @@ function superLongFunction(a, b, c, d) {
 Inner functions are great because they keep everything encapsulated and you can pass in only the variables needed for the calculation.
 This makes it immediately clear which data the code is operating on and allows the code to be broken out later if ever need be.
 
-### Conclusion
+## Conclusion
 Functions are an integral unit of abstraction but they shouldn't be used when simple comments will do or when an existing function has gotten a little long.
 They should be used to encapsulate a reusable piece of logic that needs to be referenced in many places.
 I would also like to give credit to Brian Will in [this](https://youtu.be/QM1iUe6IofM?t=2235) video where he talks about long functions.
