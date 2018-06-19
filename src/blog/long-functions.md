@@ -47,11 +47,11 @@ Updating the function then becomes impossible due to other modules depending on 
 These effects can be mitigated to some extent by languages that support private variable scope inside modules and classes, but short functions should still be avoided due to the cognitive load mentioned earlier.
 
 Having short functions can also result in logic getting spread around the code base making it difficult to reason about the program overall.
-Understanding the program requires searching through files and directories rather than being able to see everything in one place.
+Understanding the code requires searching through files and directories rather than reading the code top to bottom.
 
 ## Code Examples
 Often times people will refactor a long function into smaller ones whose names really only serve as comments about the code.
-For example:
+Here is an exaggerated example:
 
 ```javascript
 function superLongFunction(a, b, c, d) {
@@ -62,20 +62,21 @@ function superLongFunction(a, b, c, d) {
 }
 
 function doFooThing(a, b) {
-	// 20-50 SLOC
+	// 10-50 SLOC
 }
 function doBarThing(x, c) {
-	// 20-50 SLOC
+	// 10-50 SLOC
 }
 function doBatThing(y, d) {
-	// 20-50 SLOC
+	// 10-50 SLOC
 }
 ```
 
 The developer has refactored `superLongFunction` into 3 function calls.
 These functions are all only once and are only called in `superLongFunction`.
 This makes the code somewhat clearer in its intent, but it comes with costs mentioned previously.
-Now, in order to understand `superLongFunction`, you have to find `doFooThing`, `doBarThing`, and `doBatThing` and look over their code.
+Now, in order to understand `superLongFunction`, you have to find `doFooThing`, `doBarThing`, and `doBatThing` and in the code base.
+Early on this is not a problem, but over time functions can get separated in other files the code flow is obstructed.
 There are now 3 more functions that may be consumed in the future by other developers not knowing that they were only meant to be called from `superLongFunction`.
 
 It would be much clearer and effective to simply add in some comments like so:
