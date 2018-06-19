@@ -7,7 +7,7 @@ deploy:
     skip_cleanup: true
     github-token: $GITHUB_TOKEN
     local_dir: build
-    repo: oisota.github.io
+    repo: Oisota/oisota.github.io
     target-branch: master
     on:
         branch: master
