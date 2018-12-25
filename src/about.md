@@ -1,5 +1,5 @@
 ---
-layout: about.html
+layout: about.njk
 title: About
 ---
 I am graduate of Cleveland State University with a bachelor's degree in computer science.

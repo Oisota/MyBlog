@@ -1,4 +1,4 @@
 ---
-layout: archive.html
+layout: archive.njk
 title: Archive
 ---

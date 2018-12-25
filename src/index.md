@@ -1,4 +1,4 @@
 ---
-layout: index.html
+layout: index.njk
 title: Derek Morey
 ---
