@@ -23,6 +23,6 @@
   },
   "scripts": {
     "build": "node index.js",
-    "start": "http-server build"
+    "start": "http-server dist"
   }
 }
