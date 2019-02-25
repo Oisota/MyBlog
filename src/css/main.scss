@@ -2,7 +2,7 @@ $blue: #225588;
 $lightgrey: #f2f2f2;
 $darkgrey: #2F2F2F;
 $black: #333333;
-$white: #FFFFFF;
+$white: #FAFAFA;
 $text-color: #555555;
 $link-color: #5588BB;
 $link-hover-color: #7b7b7b;
@@ -10,8 +10,6 @@ $bg-hover-color: #EEEEEE;
 $badge-color: #666666;
 
 $navbar-width: 25em;
-
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 /* ---- Main ---- */
 html, body {
@@ -21,7 +19,7 @@ html, body {
 
 body {
 	background-color: $white;
-	font-family: 'Montserrat', sans-serif;
+	font-family: Verdana, Helvetica, sans-serif;
 	font-weight: 400;
 	font-size: 14px;
 	color: $text-color;
@@ -30,7 +28,7 @@ body {
 
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Montserrat', sans-serif;
+	font-family: Verdana, Helvetica, sans-serif;
 	font-weight: 700;
 	color: $black;
 }
