@@ -8,8 +8,6 @@ const dateFormatter = require('metalsmith-date-formatter');
 const collections = require('metalsmith-collections');
 const drafts = require('metalsmith-drafts');
 const excerpts = require('metalsmith-excerpts');
-//const sass = require('metalsmith-sass');
-//const nunjucks = require('nunjucks');
 
 Metalsmith(__dirname)
 .metadata({
@@ -41,8 +39,8 @@ Metalsmith(__dirname)
 ]))
 .use(inPlace({
 	engineOptions: {
-		highlight: code => highlight.highlightAuto(code).value,
-		languages: [],
+		langPrefix: 'hljs ',
+		highlight: (code, lang) => highlight.highlight(lang, code).value,
 	},
 }))
 .use(collections({

@@ -104,13 +104,13 @@ The verbose output of the command is then redirected to the log file.
 
 This script can then be run like so:
 
-```no-highlight
+```plaintext
 $ ./backup.sh /path/to/storage/
 ```
 
 This will create the following directory structure:
 
-```no-highlight
+```plaintext
 /path/to/storage/2017-01-20_backup/
 ├── 2017-01-20_backup.log
 └── 2017-01-20_backup.tar.gz

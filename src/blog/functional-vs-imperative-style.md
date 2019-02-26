@@ -110,7 +110,7 @@ I used the `time` command to time the exeuction of each script.
 This gives a rough idea of the performance of each style.
 Each script uses the same array generated with the script from above.
 
-```no-highlight
+```plaintext
 $ time node imperative_naive.js
 328070766
 

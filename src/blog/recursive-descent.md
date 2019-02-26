@@ -12,7 +12,7 @@ This makes implementing the parser relatively straightforward as the parser code
 The language we will be implementing will be a simple language consisting of variable declarations, assignment statements, and print statements.
 All variables will be integers.
 Here is the grammar represented in Extended Backus-Naur Form (EBNF):
-```no-highlight
+```plaintext
 prog      = decl-list, stmt-list ;
 decl-list = decl | decl, decl-list ;
 decl      = 'var', id_list, ';' ;
@@ -30,7 +30,7 @@ A statement is either an assignment of an expression to a variable or a print st
 An expression in this language is a basic math expression of addition/subtraction and multiplication/division.
 
 An example program would then look like:
-```no-highlight
+```plaintext
 var a , b ;
 a = 5 ;
 b = 6 ;
@@ -266,7 +266,7 @@ prog();
 
 We can run the interpreter by issuing the command `node eval.js <file>` where `eval.js` contains all the previous code examples and `<file>` is the name of the program you want to run.
 Running the example program given earlier in the terminal would look like:
-```no-highlight
+```plaintext
 $ node eval.js example.txt
 15
 ```
