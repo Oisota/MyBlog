@@ -10,14 +10,14 @@
 <div class="content">
 	{{ post_content (site, title, date, path, contents) }}
 	<div class="pager hbox">
-		{% if previous -%}
-		<a class="previous" href="/{{previous.path}}">previous</a>
+		{% if next -%}
+		<a class="previous" href="/{{next.path}}">previous</a>
 		{% else -%}
 		<a class="previous disabled">previous</a>
 		{% endif -%}
 
-		{% if next -%}
-		<a class="next" href="/{{next.path}}">next</a>
+		{% if previous -%}
+		<a class="next" href="/{{previous.path}}">next</a>
 		{% else -%}
 		<a class="next disabled">next</a>
 		{% endif -%}
