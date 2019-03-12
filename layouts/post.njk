@@ -30,19 +30,19 @@
 {% endblock %}
 
 {% block scripts %}
+{% if commentsEnabled %}
 <script>
-if (window.location.host.split(':')[0] !== 'localhost') { 
-	var disqus_config = function () {
-		this.page.url = '{{site.url | safe}}{{path | safe}}';
-		this.page.identifier = '{{site.url | safe}}{{path | safe}}';
-	};
-	(function() { // DON'T EDIT BELOW THIS LINE
-		var d = document, s = d.createElement('script');
-		s.src = '//derekmorey-1.disqus.com/embed.js';
-		s.setAttribute('data-timestamp', (new Date()).getTime());
-		(d.head || d.body).appendChild(s);
-	})();
-}
+var disqus_config = function () {
+	this.page.url = '{{site.url | safe}}{{path | safe}}';
+	this.page.identifier = '{{site.url | safe}}{{path | safe}}';
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+	var d = document, s = d.createElement('script');
+	s.src = '//derekmorey-1.disqus.com/embed.js';
+	s.setAttribute('data-timestamp', (new Date()).getTime());
+	(d.head || d.body).appendChild(s);
+})();
 </script>
 {{ comment_count() }}
+{% endif %}
 {% endblock %}

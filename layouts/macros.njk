@@ -13,6 +13,8 @@
 {% endmacro %}
 
 {% macro comment_count() %}
+{% if commentsEnabled %}
 <script id="dsq-count-scr" src="//derekmorey-1.disqus.com/count.js" async=""></script>
+{% endif %}
 {% endmacro %}
 

@@ -23,6 +23,7 @@ function skip(opts) {
 Metalsmith(__dirname)
 .metadata({
 	liveReloadEnabled: process.env.NODE_ENV === 'development',
+	commentsEnabled: process.env.NODE_ENV === 'production',
 	site: {
 		author: 'Derek Morey',
 		author_email: 'derek.o.morey@gmail.com',
