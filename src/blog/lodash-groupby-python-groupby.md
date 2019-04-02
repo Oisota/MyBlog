@@ -70,9 +70,10 @@ const result = Object.keys(groups).map(k => groups[k]);
 console.log(result);
 ```
 
-The `keyFunc` is a function that takes the first element of the array as a parameter and returns a function which acts as the actual key function for `groupBy`.
-The key function increments the `latch` variable whenever a new value is encountered.
-The current value and latch are returned as a 2 element array tuple.
-This ensures that even if the same values occur in the array in different locations, the latch value will be different and the values will be in separate groups.
+`keyFunc` is a function that takes the first element of the array as a parameter and returns a function which acts as the actual key function.
+Doing it this way creates a closure where the state of the latch and previous element could be saved.
+The returned key function increments the `latch` variable whenever a new value is encountered.
+The current value and latch are returned as a 2 element array which serves as the actual key value.
+This ensures that even if the same values occur in the array in different locations, the latch value, and thus the key value, will be different and the values will be in separate groups.
 
-The updated code gives the expected result: `[ [ 1, 1, 1 ], [ 2, 2, 2 ], [ 3, 3, 3 ], [ 2, 2 ], [ 1, 1 ] ]`, which matches up with the Python version.
+The updated code gives the expected result: `[ [ 1, 1, 1 ], [ 2, 2, 2 ], [ 3, 3, 3 ], [ 2, 2 ], [ 1, 1 ] ]`, which matches the behavior Python version.
