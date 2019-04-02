@@ -1,6 +1,6 @@
 ---
 title: Cardboard Laptop Stand
-date: 2017-03-06
+date: "2017-03-06"
 ---
 
 This is a laptop stand I made completeley out of carboard.

@@ -1,6 +1,6 @@
 ---
 title: Assigning Boolean Expressions to Variables
-date: 2017-12-19
+date: "2017-12-19"
 ---
 
 This is just a design pattern I wanted to share.

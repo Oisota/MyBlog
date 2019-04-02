@@ -1,6 +1,6 @@
 ---
 title: Linux Backup Script
-date: 2017-01-27
+date: "2017-01-27"
 ---
 
 Here is the script I use to backup my home directory.

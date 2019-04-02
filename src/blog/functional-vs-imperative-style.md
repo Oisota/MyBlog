@@ -1,6 +1,6 @@
 ---
 title: Functional vs Imperative Programming
-date: 2017-04-06
+date: "2017-04-06"
 ---
 
 A while back I wrote a small JavaScript program that compared the difference between functional and imperative programming styles.
