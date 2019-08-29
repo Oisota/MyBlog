@@ -5,5 +5,16 @@
 	<h1 class="centered">{{title}}</h1>
 	<hr />
 	{{contents | safe}}
+	<h2>Skills</h2>
+	<hr />
+	{% for section in skills %}
+	<h3>{{section.title}}</h3>
+	<div>
+		{% set comma = joiner(',') %}
+		{% for item in section.items -%}
+		<span class="badge">{{item}}</span>
+		{%- endfor %}
+	</div>
+	{% endfor %}
 </div>
 {% endblock %}
