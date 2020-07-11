@@ -69,6 +69,9 @@ Metalsmith(__dirname)
 		highlight: (code, lang) => highlight.highlight(lang, code).value,
 	},
 }))
+.use(fingerprint({
+	pattern: 'css/*.css',
+}))
 .use(excerpts())
 .use(collections({
 	blog: {
@@ -92,9 +95,6 @@ Metalsmith(__dirname)
 		key: 'date',
 		format: 'YYYY-MM-DD'
 	}]
-}))
-.use(fingerprint({
-	pattern: 'css/*.css',
 }))
 .use(layouts())
 .build((err, files) => {
