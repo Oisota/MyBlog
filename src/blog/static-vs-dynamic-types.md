@@ -1,7 +1,7 @@
 ---
 title: "On static vs dynamic type systems"
 date: 2019-12-12
-drafts: true
+draft: true
 ---
 
 In statically typed languages, new types get created for no reason other than for type checking rather than using a built in container type like list/tuple/dictionary.
@@ -44,7 +44,7 @@ const request = {
 
 Something roughly equivalent in Java or any other STL might be:
 ```java
-RequestConfig request = RequestConfigBuilder()
+RequestConfig request = new RequestConfigBuilder()
 	.url(new URL('https://foo-bar.com/api/widgets'))
 	.method(HTTPMethod.GET)
 	.auth(new Auth('User1', 'secret'))
