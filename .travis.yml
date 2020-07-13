@@ -1,13 +1,10 @@
 language: node_js
 node_js:
-    - "8"
-script: npm run build
+    - "14"
+script: npm run build-prod
 deploy:
-    provider: pages
+    provider: script
+    script: bash scripts/deploy.sh
     skip_cleanup: true
-    github-token: $GITHUB_TOKEN
-    local_dir: build
-    repo: Oisota/oisota.github.io
-    target-branch: master
     on:
-        branch: master
+        tags: true
