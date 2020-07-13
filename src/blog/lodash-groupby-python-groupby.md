@@ -76,4 +76,4 @@ The returned key function increments the `latch` variable whenever a new value i
 The current value and latch are returned as a 2 element array which serves as the actual key value.
 This ensures that even if the same values occur in the array in different locations, the latch value, and thus the key value, will be different and the values will be in separate groups.
 
-The updated code gives the expected result: `[ [ 1, 1, 1 ], [ 2, 2, 2 ], [ 3, 3, 3 ], [ 2, 2 ], [ 1, 1 ] ]`, which matches the behavior Python version.
+The updated code gives the expected result: `[ [ 1, 1, 1 ], [ 2, 2, 2 ], [ 3, 3, 3 ], [ 2, 2 ], [ 1, 1 ] ]`, which matches the behavior of the Python version.

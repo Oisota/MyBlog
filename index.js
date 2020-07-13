@@ -10,6 +10,7 @@ const drafts = require('metalsmith-drafts');
 const excerpts = require('metalsmith-excerpts');
 const fingerprint = require('metalsmith-fingerprint-ignore');
 const watch = require('metalsmith-watch');
+const feed = require('metalsmith-feed');
 
 function skip(opts) {
 	if (!opts.test()) {
@@ -27,7 +28,8 @@ Metalsmith(__dirname)
 	site: {
 		author: 'Derek Morey',
 		author_email: 'derek.o.morey@gmail.com',
-		url: 'https://oisota.github.io/'
+		url: 'https://derekmorey.me/',
+		rssUrl: '/rss.xml',
 	},
 	links: {
 		nav: [
@@ -39,6 +41,7 @@ Metalsmith(__dirname)
 		social: [
 			{title: 'Github', url: 'https://github.com/Oisota'},
 			{title: 'LinkedIn', url: 'https://linkedin.com/in/derek-o-morey'},
+			{title: 'RSS', url: '/rss.xml'},
 		]
 	}
 })
@@ -66,6 +69,9 @@ Metalsmith(__dirname)
 		highlight: (code, lang) => highlight.highlight(lang, code).value,
 	},
 }))
+.use(fingerprint({
+	pattern: 'css/*.css',
+}))
 .use(excerpts())
 .use(collections({
 	blog: {
@@ -73,6 +79,9 @@ Metalsmith(__dirname)
 		sortBy: 'date',
 		reverse: true
 	}
+}))
+.use(feed({
+	collection: 'blog'
 }))
 .use(permalinks({
 	relative: false,
@@ -86,9 +95,6 @@ Metalsmith(__dirname)
 		key: 'date',
 		format: 'YYYY-MM-DD'
 	}]
-}))
-.use(fingerprint({
-	pattern: 'css/*.css',
 }))
 .use(layouts())
 .build((err, files) => {
