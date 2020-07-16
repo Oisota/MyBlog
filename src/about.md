@@ -2,11 +2,10 @@
 layout: about.njk
 title: About
 ---
-I am a graduate of Cleveland State University with a bachelor's degree in computer science.
-I love developing software and learning about new tools and technologies.
-I'm interested in all things related to programming, especially free and open source software.
-Some of my other interests include music, sailing, gaming, and electronics.
-Currently, I'm working at Grathwol Automation developing telematics software and web applications.
+I am a software developer from Ohio currently working at [Grathwol Automation](https://grathwolautomation.com/) developing telematics software and web applications.
+My main specialty is building web applications using Python/Flask on the backend with JavaScript/Vue.js on the frontend.
+I received my bachelor's degree in computer science from Cleveland State University in 2016.
+Some of my other interests include music, guitar, sailing, gaming, and electronics.
 
 My technical skills are listed below.
-If you would like to send me a message, please do so using the [contact page](/contact) and I will get back to you as soon as I can.
+If you would like to send me a message, feel free to do so using the [contact page](/contact) and I will get back to you as soon as I can.
