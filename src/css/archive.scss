@@ -1,0 +1,47 @@
+/* ---- Blog Archive ---- */
+$darkgrey: #2F2F2F;
+$bg-hover-color: #EEEEEE;
+$text-color: #555555;
+$badge-color: #444444;
+$badge-text: #DDDDDD;
+ 
+.archive-list {
+	a {
+		display: list-item;
+		padding: 1em;
+		list-style: none;
+		border-top: 1px solid #DDDDDD;
+		border-left: 1px solid #DDDDDD;
+		border-right: 1px solid #DDDDDD;
+		color: $text-color;
+	}
+	a:first-child {
+		border-top-left-radius: 0.5em;
+		border-top-right-radius: 0.5em;
+		border-top: 1px solid #DDDDDD;
+	}
+	a:last-child {
+		border-bottom-left-radius: 0.5em;
+		border-bottom-right-radius: 0.5em;
+		border-bottom: 1px solid #DDDDDD;
+	}
+	a:hover {
+		background: $bg-hover-color;
+	}
+}
+
+.badge {
+	float: right;
+	margin-left: 0.2rem;
+	margin-right: 0.2rem;
+	margin-top: 0.1rem;
+	margin-bottom: 0.1rem;
+	padding-left: 0.6rem;
+	padding-right: 0.6rem;
+	padding-top: 0.1rem;
+	padding-bottom: 0.1rem;
+	border-radius: 1rem;
+	color: $badge-text;
+	background: $badge-color;
+}
+
