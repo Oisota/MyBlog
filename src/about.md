@@ -7,3 +7,6 @@ I love developing software and learning about new tools and technologies.
 I'm interested in all things related to programming, especially free and open source software.
 Some of my other interests include music, sailing, gaming, and electronics.
 Currently, I'm working at Grathwol Automation developing telematics software and web applications.
+
+My technical skills are listed below.
+If you would like to send me a message, please do so using the [contact page](/contact) and I will get back to you as soon as I can.

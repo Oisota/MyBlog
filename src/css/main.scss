@@ -7,7 +7,7 @@ $text-color: #555555;
 $link-color: #5588BB;
 $link-hover-color: #7b7b7b;
 $bg-hover-color: #EEEEEE;
-$badge-color: #666666;
+$badge-color: #DDDDDD;
 
 $navbar-width: 25em;
 
@@ -100,18 +100,31 @@ p code {
 	max-width: 55em;
 }
 
+.badge-container {
+	margin-bottom: 2rem;
+}
+
 .badge {
-	float: right;
-	padding-left: 1em;
-	padding-right: 1em;
-	border-radius: 1em;
-	color: $white;
+	margin-left: 0.2rem;
+	margin-right: 0.2rem;
+	margin-top: 0.1rem;
+	margin-bottom: 0.1rem;
+	padding-left: 0.6rem;
+	padding-right: 0.6rem;
+	padding-top: 0.1rem;
+	padding-bottom: 0.1rem;
+	border-radius: 1rem;
+	color: $darkgrey;
 	background: $badge-color;
 }
 
 .vbox, .hbox { display: flex; }
 .vbox { flex-direction: column; }
 .hbox { flex-direction: row; }
+
+.flexwrap {
+	flex-wrap: wrap;
+}
 
 /* Color Wraps */
 .alt-white-grey {
@@ -246,6 +259,17 @@ main {
 	margin-bottom: 0.2em; 
 	a { color: $black; }
 	a:hover { color: #808080; }
+}
+
+/* ---- About Page ---- */
+.about-section-title {
+	margin-top: 0rem;
+	margin-bottom: 0.4rem;
+}
+
+.skills-title {
+	margin-top: 3rem;
+	margin-bottom: .2rem;
 }
 
 /* ---- Pager ---- */

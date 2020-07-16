@@ -43,7 +43,57 @@ Metalsmith(__dirname)
 			{title: 'LinkedIn', url: 'https://linkedin.com/in/derek-o-morey'},
 			{title: 'RSS', url: '/rss.xml'},
 		]
-	}
+	},
+	"skills": [
+		{
+			"title": "Languages",
+			"items": [
+				"Python",
+				"JavaScript/Node.js",
+				"TypeScript",
+				"SQL",
+				"Shell Scripting/Bash",
+				"HTML",
+				"CSS",
+				"SASS/SCSS",
+				"C",
+				"LaTex"
+			]
+		},
+		{
+			"title": "Libraries/Frameworks",
+			"items": [
+				"Flask",
+				"SQLAlchemy",
+				"Tornado",
+				"Vue.js",
+				"Axios.js",
+				"Chart.js",
+				"Lodash",
+				"Bootstrap",
+				"Bulma",
+				"jQuery",
+				"Metalsmith",
+				"webpack"
+			]
+		},
+		{
+			"title": "Tools",
+			"items": [
+				"MySQL",
+				"SQLite",
+				"Redis",
+				"Nginx",
+				"webpack",
+				"uWSGI",
+				"Linux",
+				"git",
+				"vim",
+				"tmux",
+				"ssh"
+			]
+		}
+	]
 })
 .source('src')
 .destination('dist')
