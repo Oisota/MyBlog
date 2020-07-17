@@ -167,7 +167,6 @@ p code {
 	
 	/* ---- Left Nav Footer ---- */
 	footer {
-		background-color: $darkgrey;
 		color: $white;
 		justify-content: center;
 		a {
@@ -180,6 +179,7 @@ p code {
 
 /* Social Media Links */
 .social {
+	background-color: $darkgrey;
 	a:before {
 		margin-right: 6px; 
 		vertical-align: -3px;
@@ -294,6 +294,9 @@ main {
 			text-align: center;
 			color: $white;
 			margin: 1em;
+		}
+		.social a {
+			color: $link-color;
 		}
 	}
 	.menu-btn {
