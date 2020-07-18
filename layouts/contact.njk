@@ -4,6 +4,9 @@
 <div class="content">
 	<h1 class="centered">{{title}}</h1>
 	<hr />
+	<div class="centered">
+		{{contents | safe}}
+	</div>
 	<form action="https://formspree.io/{{site.author_email}}" method="POST" role="form">
 		<div class="form-group">
 			<label for="name">Name: </label>
