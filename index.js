@@ -39,7 +39,7 @@ Metalsmith(__dirname)
 			{title: 'Contact', path: '/contact/'}
 		],
 		social: [
-			{title: 'Github', url: 'https://github.com/Oisota'},
+			{title: 'GitHub', url: 'https://github.com/Oisota'},
 			{title: 'LinkedIn', url: 'https://linkedin.com/in/derek-o-morey'},
 			{title: 'RSS', url: '/rss.xml'},
 		]
