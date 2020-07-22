@@ -35,6 +35,7 @@ Metalsmith(__dirname)
 		nav: [
 			{title: 'Home', path: '/'},
 			{title: 'About', path: '/about/'},
+			{title: 'Projects', path: '/projects/'},
 			{title: 'Archive', path: '/archive/'},
 			{title: 'Contact', path: '/contact/'}
 		],
@@ -128,7 +129,11 @@ Metalsmith(__dirname)
 		pattern: 'blog/*',
 		sortBy: 'date',
 		reverse: true
-	}
+	},
+	projects: {
+		pattern: 'projects/*',
+		sortBy: 'index',
+	},
 }))
 .use(feed({
 	collection: 'blog'
