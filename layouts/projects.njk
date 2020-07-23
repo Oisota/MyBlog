@@ -1,6 +1,7 @@
 {% extends "base.njk" %}
 
 {% block styles %}
+<link href="/{{fingerprint['css/projects.css']}}" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
@@ -12,12 +13,12 @@
 		{{ contents | safe }}
 	</div>
 
-	<div>
-		{% for project in collections.projects -%}
-		<h3>{{project.title}}</h3>
-		{{ project.contents | safe }}
-		{% endfor -%}
+	{% for project in collections.projects -%}
+	<h3 class="project-title">{{project.title}}</h3>
+	<div class="project-description">
+	{{ project.contents | safe }}
 	</div>
+	{% endfor -%}
 
 </div>
 {% endblock %}
