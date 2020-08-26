@@ -1,6 +1,7 @@
 ---
 title: Song Manager
 index: 3
+sourceCodeUrl: "https://github.com/Oisota/song-manager-api"
 ---
 
 This is an app I'm currently working on.

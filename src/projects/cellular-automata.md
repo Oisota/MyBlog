@@ -1,6 +1,7 @@
 ---
 title: Cellular Automata
 index: 1
+sourceCodeUrl: "https://github.com/Oisota/CellularAutomata"
 ---
 
 A simple website I made that generates [cellular automata](https://en.wikipedia.org/wiki/Elementary_cellular_automaton).

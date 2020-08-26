@@ -14,7 +14,10 @@
 	</div>
 
 	{% for project in collections.projects -%}
-	<h3 class="project-title">{{project.title}}</h3>
+	<div class="hbox project-header">
+		<h3 class="project-title">{{project.title}}</h3>
+		<a href="{{project.sourceCodeUrl}}">Source</a>
+	</div>
 	<div class="project-description">
 	{{ project.contents | safe }}
 	</div>
