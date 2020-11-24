@@ -5,7 +5,7 @@
   "repository": "https://github.com/Oisota/MyBlog",
   "description": "This is a script I use to generate my website",
   "dependencies": {
-    "highlight.js": "^9.13.1",
+    "highlight.js": "^10.1.2",
     "jstransformer-marked": "^1.0.3",
     "jstransformer-nunjucks": "^0.5.0",
     "jstransformer-scss": "^1.0.0",
