@@ -20,6 +20,7 @@
     "metalsmith-ignore": "^1.0.0",
     "metalsmith-in-place": "^4.4.1",
     "metalsmith-layouts": "^2.3.0",
+    "metalsmith-metafiles": "^2.0.0",
     "metalsmith-pagination": "^1.4.1",
     "metalsmith-permalinks": "^2.0.0",
     "metalsmith-watch": "^1.0.3"

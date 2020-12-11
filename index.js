@@ -11,6 +11,7 @@ const excerpts = require('metalsmith-excerpts');
 const fingerprint = require('metalsmith-fingerprint-ignore');
 const watch = require('metalsmith-watch');
 const feed = require('metalsmith-feed');
+const metafiles = require('metalsmith-metafiles');
 
 function skip(opts) {
 	if (!opts.test()) {
@@ -46,56 +47,6 @@ Metalsmith(__dirname)
 			{title: 'RSS', url: '/rss.xml'},
 		]
 	},
-	"skills": [
-		{
-			"title": "Languages",
-			"items": [
-				"Python",
-				"JavaScript/Node.js",
-				"TypeScript",
-				"SQL",
-				"Shell Scripting/Bash",
-				"HTML",
-				"CSS",
-				"SASS/SCSS",
-				"C",
-				"LaTex"
-			]
-		},
-		{
-			"title": "Libraries/Frameworks",
-			"items": [
-				"Flask",
-				"SQLAlchemy",
-				"Tornado",
-				"Vue.js",
-				"Axios.js",
-				"Chart.js",
-				"Lodash",
-				"Bootstrap",
-				"Bulma",
-				"jQuery",
-				"Metalsmith",
-				"webpack"
-			]
-		},
-		{
-			"title": "Tools",
-			"items": [
-				"MySQL",
-				"SQLite",
-				"Redis",
-				"Nginx",
-				"webpack",
-				"uWSGI",
-				"Linux",
-				"git",
-				"vim",
-				"tmux",
-				"ssh"
-			]
-		}
-	]
 })
 .source('src')
 .destination('dist')
@@ -115,6 +66,7 @@ Metalsmith(__dirname)
 .use(fileMetadata([
 	{pattern: 'blog/*', metadata: {layout: 'post.njk'}}
 ]))
+.use(metafiles())
 .use(inPlace({
 	engineOptions: {
 		langPrefix: 'hljs ',
