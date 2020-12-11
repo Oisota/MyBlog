@@ -27,6 +27,7 @@
 				"Lodash",
 				"Bootstrap",
 				"Bulma",
+				"Tailwind",
 				"jQuery",
 				"Metalsmith",
 				"webpack"
