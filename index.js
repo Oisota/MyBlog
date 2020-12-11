@@ -136,9 +136,6 @@ Metalsmith(__dirname)
 		sortBy: 'index',
 	},
 }))
-.use(feed({
-	collection: 'blog'
-}))
 .use(permalinks({
 	relative: false,
 	linksets: [{
@@ -151,6 +148,9 @@ Metalsmith(__dirname)
 		key: 'date',
 		format: 'YYYY-MM-DD'
 	}]
+}))
+.use(feed({
+	collection: 'blog'
 }))
 .use(layouts())
 .build((err, files) => {
