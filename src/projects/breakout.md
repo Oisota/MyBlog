@@ -1,6 +1,6 @@
 ---
 title: Breakout Game
-index: 0
+index: 1
 sourceCodeUrl: "https://github.com/Oisota/Breakout"
 ---
 

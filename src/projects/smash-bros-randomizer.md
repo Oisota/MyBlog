@@ -1,6 +1,6 @@
 ---
 title: Smash Bros Randomizer
-index: 2
+index: 3
 sourceCodeUrl: "https://github.com/Oisota/smash-bros-randomizer"
 ---
 
