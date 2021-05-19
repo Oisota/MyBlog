@@ -4,6 +4,12 @@
   "license": "GPL-3.0",
   "repository": "https://github.com/Oisota/MyBlog",
   "description": "This is a script I use to generate my website",
+  "scripts": {
+    "build-dev": "export NODE_ENV=development && node index.js",
+    "build-prod": "export NODE_ENV=production && node index.js",
+    "start": "http-server dist",
+		"package": "tar -czf dist.tar.gz dist"
+  },
   "dependencies": {
     "highlight.js": "^10.4.1",
     "jstransformer-marked": "^1.0.3",
@@ -24,10 +30,5 @@
     "metalsmith-pagination": "^1.4.1",
     "metalsmith-permalinks": "^2.0.0",
     "metalsmith-watch": "^1.0.3"
-  },
-  "scripts": {
-    "build-dev": "export NODE_ENV=development && node index.js",
-    "build-prod": "export NODE_ENV=production && node index.js",
-    "start": "http-server dist"
   }
 }
