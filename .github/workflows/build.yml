@@ -3,8 +3,8 @@ name: Build Site
 
 on:
   push:
-    tags:
-      - 'v*.*.*'
+    branches:
+      - master
 
 jobs:
   build:
@@ -20,9 +20,12 @@ jobs:
       - run: npm ci
       - run: npm run build-prod
       - run: npm run package
-      - name: Release
-        uses: softprops/action-gh-release@v1
+      - name: Deploy to Server using Rsync
+        uses: burnett01/rsync-deployments@4.1
         with:
-          files: ./dist.tar.gz
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          switches: -avzr --delete
+          path: dist/
+          remote_path: /var/www/derek/blog/
+          remote_host: ${{ secrets.REMOTE_HOST }}
+          remote_user: ${{ secrets.REMOTE_USER }}
+          remote_key: ${{ secrets.DEPLOY_KEY }}
