@@ -26,16 +26,16 @@
 				"Chart.js",
 				"Lodash",
 				"Bootstrap",
-				"Bulma",
-				"Tailwind",
-				"jQuery",
+				"webpack",
 				"Metalsmith",
-				"webpack"
+				"Bulma",
+				"Tailwind"
 			]
 		},
 		{
 			"title": "Tools",
 			"items": [
+				"Ansible",
 				"MySQL",
 				"SQLite",
 				"Redis",
@@ -43,6 +43,7 @@
 				"webpack",
 				"uWSGI",
 				"Linux",
+				"GitHub",
 				"git",
 				"vim",
 				"tmux",

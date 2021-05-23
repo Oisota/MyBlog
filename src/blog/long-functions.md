@@ -29,11 +29,11 @@ Taking the time to think about these things is good when you're writing a librar
 Libraries are supposed to be generic and reusable, applications are not.
 They are meant to solve a specific problem and have much more specific use cases.
 
-Another benefit is that the codebase becomes easier to understand and document.
+Another benefit is that the code base becomes easier to understand and document.
 With less functions, there is less cognitive load in understanding how all the functions interact with each other.
 The call graph is greatly simplified.
 It is much easier to understand 10 functions that are 200-500 SLOC than it is to understand 200 functions that are all 10-50 SLOC.
-This is especially true for junior devs and developers new to the codebase.
+This is especially true for junior devs and developers new to the code base.
 They don't have to read over pages of documentation and scour the code base trying understand how every function is used and where its called from.
 Writing documentation is also easier simply because there is less to document.
 
@@ -46,7 +46,7 @@ When other people start calling the function, it creates tight coupling between 
 Updating the function then becomes impossible due to other modules depending on it.
 These effects can be mitigated to some extent by languages that support private variable scope inside modules and classes, but short functions should still be avoided due to the cognitive load mentioned earlier.
 
-Having short functions can also result in logic getting spread around the code base making it difficult to reason about the program overall.
+Having short functions can also result in logic getting spread around the code making it difficult to reason about the program overall.
 Understanding the code requires searching through files and directories rather than reading the code top to bottom.
 
 ## Code Examples
@@ -118,3 +118,24 @@ This makes it immediately clear which data the code is operating on and allows t
 Functions are an integral unit of abstraction but they shouldn't be used when simple comments will do or when an existing function has gotten a little long.
 They should be used to encapsulate a reusable piece of logic that needs to be referenced in many places.
 I would also like to give credit to Brian Will in [this](https://youtu.be/QM1iUe6IofM?t=2235) video where he talks about long functions.
+
+# Addendum
+Ideally I would like it if languages had some concept of creating a private scope within a function.
+It could look something like:
+
+```javascript
+function myFunction() {
+	const a = 'a';
+	const b = 'c';
+	const c = 'c';
+
+	const x = use a, b {
+		return a + b;
+	}
+
+	return c + x;
+}
+```
+
+Where the `use` block would create a private scope that captures `a` and `b`.
+This would allow grouping logic together in private scopes and prevent the need for having lots of variables local to the function.
