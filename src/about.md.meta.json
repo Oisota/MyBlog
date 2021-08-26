@@ -18,6 +18,7 @@
 		{
 			"title": "Libraries/Frameworks",
 			"items": [
+				"Django",
 				"Flask",
 				"SQLAlchemy",
 				"Tornado",
@@ -47,7 +48,8 @@
 				"git",
 				"vim",
 				"tmux",
-				"ssh"
+				"ssh",
+				"VSCode"
 			]
 		}
 	]

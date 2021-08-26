@@ -2,9 +2,9 @@
 layout: about.njk
 title: About
 ---
-I am a software developer from Ohio currently working for [Astec Industries](https://www.astecindustries.com/) (formerly Grathwol Automation) developing telematics software and web applications.
-My primary skill set is building web applications using Python/Flask on the backend with JavaScript/Vue.js on the frontend.
+I am a software developer from Ohio currently working at [Avantia Inc.](https://www.avantia-inc.com/) developing web applications.
 I received my bachelor's degree in computer science from Cleveland State University in 2016.
+My main skill set is building web applications using Python and JavaScript.
 Some of my other interests include music, guitar, sailing, gaming, electronics, and woodworking.
 
 I built this website to showcase my skills and projects as well as a place to write about things I find interesting.
