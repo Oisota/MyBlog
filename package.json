@@ -8,7 +8,7 @@
     "build-dev": "export NODE_ENV=development && node index.js",
     "build-prod": "export NODE_ENV=production && node index.js",
     "start": "http-server dist",
-		"package": "tar -czf dist.tar.gz dist"
+    "package": "tar -czf dist.tar.gz dist"
   },
   "dependencies": {
     "highlight.js": "^10.4.1",
@@ -24,7 +24,7 @@
     "metalsmith-filemetadata": "^1.0.0",
     "metalsmith-fingerprint-ignore": "^2.0.0",
     "metalsmith-ignore": "^1.0.0",
-    "metalsmith-in-place": "^4.4.1",
+    "metalsmith-in-place": "^4.4.2",
     "metalsmith-layouts": "^2.3.0",
     "metalsmith-metafiles": "^2.0.0",
     "metalsmith-pagination": "^1.4.1",
