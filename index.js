@@ -42,9 +42,9 @@ Metalsmith(__dirname)
 			{title: 'Contact', path: '/contact/'}
 		],
 		social: [
-			{title: 'GitHub', url: 'https://github.com/Oisota'},
-			{title: 'LinkedIn', url: 'https://linkedin.com/in/derek-o-morey'},
-			{title: 'RSS', url: '/rss.xml'},
+			{title: 'GitHub', url: 'https://github.com/Oisota', icon: 'lab la-github'},
+			{title: 'LinkedIn', url: 'https://linkedin.com/in/derek-o-morey', icon: 'la la-linkedin'},
+			{title: 'RSS', url: '/rss.xml', icon: 'las la-rss'},
 		]
 	},
 })

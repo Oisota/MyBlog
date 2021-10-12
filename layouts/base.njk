@@ -8,12 +8,7 @@
 		{% block styles %}
 		{% endblock %}
 		<link href="/{{fingerprint['css/main.css']}}" rel="stylesheet">
-		<!--
-			TODO figure out if fontawesome script can be either:
-				placed at bottom of body or bundle the icons with site
-				and import them in the css
-		-->
-		<script src="https://use.fontawesome.com/b1cdb9069f.js"></script>
+		<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 	</head>
 	<body>
 		<div class="topbar">
@@ -46,7 +41,10 @@
 			</nav>
 			<footer class="social vbox">
 				{% for link in links.social -%}
-				<a href="{{link.url}}">{{link.title}}</a>
+				<span>
+					<i class="{{link.icon}} la-lg"></i>
+					<a href="{{link.url}}">{{link.title}}</a>
+				</span>
 				{% endfor %}
 			</footer>
 		</div>
