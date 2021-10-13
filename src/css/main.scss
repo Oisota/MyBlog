@@ -233,9 +233,9 @@ main {
 
 /* ---- Pager ---- */
 .pager {
-	justify-content: space-between;
-	padding-top: 1em;
-	padding-bottom: 4em;
+	justify-content: end;
+	padding-top: 0.5em;
+	padding-bottom: 2em;
 	a {
 		border: 1px solid #DDDDDD;
 		border-radius: 1.3em;
@@ -250,6 +250,9 @@ main {
 	.disabled:hover{
 		background: #FFFFFF;
 		cursor: not-allowed;
+	}
+	.previous {
+		margin-right: 0.5rem;
 	}
 }
 

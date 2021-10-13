@@ -11,15 +11,23 @@
 	{{ post_content (site, title, date, path, contents) }}
 	<div class="pager hbox">
 		{% if next -%}
-		<a class="previous" href="/{{next.path}}">previous</a>
+		<a class="previous" href="/{{next.path}}" title="previous">
+			<i class="las la-angle-left"></i>
+		</a>
 		{% else -%}
-		<a class="previous disabled">previous</a>
+		<a class="previous disabled" title="previous">
+			<i class="las la-angle-left"></i>
+		</a>
 		{% endif -%}
 
 		{% if previous -%}
-		<a class="next" href="/{{previous.path}}">next</a>
+		<a class="next" href="/{{previous.path}}" title="next">
+			<i class="las la-angle-right"></i>
+		</a>
 		{% else -%}
-		<a class="next disabled">next</a>
+		<a class="next disabled" title="next">
+			<i class="las la-angle-right"></i>
+		</a>
 		{% endif -%}
 	</div>
 	<div id="disqus_thread"></div>
