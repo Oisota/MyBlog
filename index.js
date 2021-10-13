@@ -44,6 +44,7 @@ Metalsmith(__dirname)
 		social: [
 			{title: 'GitHub', url: 'https://github.com/Oisota', icon: 'lab la-github'},
 			{title: 'LinkedIn', url: 'https://linkedin.com/in/derek-o-morey', icon: 'la la-linkedin'},
+			{title: 'Instagram', url: 'https://www.instagram.com/oisota/', icon: 'lab la-instagram'},
 			{title: 'RSS', url: '/rss.xml', icon: 'las la-rss'},
 		]
 	},
