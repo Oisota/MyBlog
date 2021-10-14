@@ -5,13 +5,13 @@ draft: true
 ---
 
 During my time in college and in the programming community at large, I've heard the general sentiment that long functions are bad and short functions are good.
-The argument is that short functions are easier to maintain and reason about and that long functions should be refactored into shorter functions that only do one thing.
+The argument is that short functions are easier to maintain and reason about and that long functions should be rewritten into shorter functions that only do one thing.
 This rule is usually accepted as gospel without any opposition or discussion.
 It sounds logical at first but is this guideline actually a good rule of thumb?
 Are long functions inherently bad and short functions inherently better?
 I don't believe this is the case.
 The length of a function should not even be considered in most cases.
-In fact, there are disadvantages to refactoring code into small functions.
+In fact, there are significant disadvantages to refactoring code into small functions.
 
 When I program, I don't write any functions until I absolutely need to.
 I look for at least three examples of code duplication in the code base before I even consider writing a function.
@@ -26,16 +26,14 @@ The primary goal of making software applications is to solve real world problems
 When writing functions, it is too easy to get distracted by trying to write the perfectly reusable function.
 You waste time thinking about what arguments the function should take, how generic it should it be, what the use cases are, who's going to consume it, etc.
 Taking the time to think about these things is good when you're writing a library, but not so much when making an application.
-Libraries are supposed to be generic and reusable, applications are not.
-They are meant to solve a specific problem and have much more specific use cases.
 
 Another benefit is that the code base becomes easier to understand and document.
 With less functions, there is less cognitive load in understanding how all the functions interact with each other.
 The call graph is greatly simplified.
 It is much easier to understand 10 functions that are 200-500 SLOC than it is to understand 200 functions that are all 10-50 SLOC.
-This is especially true for junior devs and developers new to the code base.
-They don't have to read over pages of documentation and scour the code base trying understand how every function is used and where its called from.
-Writing documentation is also easier simply because there is less to document.
+This is especially true for less experienced developers and developers new to the code base.
+They don't have to scour the code base trying understand how every function is used and where its called from.
+Documenting the code is easier simply because there is less to document.
 
 ## Short Function Disadvantages
 I've already alluded to some of the costs of having many short functions but I'll further elaborate my point.
@@ -50,7 +48,7 @@ Having short functions can also result in logic getting spread around the code m
 Understanding the code requires searching through files and directories rather than reading the code top to bottom.
 
 ## Code Examples
-Often times people will refactor a long function into smaller ones whose names really only serve as comments about the code.
+Often times people will rewrite a long function into smaller ones whose names really only serve as comments about the code.
 Here is an exaggerated example:
 
 ```javascript
@@ -58,7 +56,7 @@ function superLongFunction(a, b, c, d) {
 	const x = doFooThing(a, b);	
 	const y = doBarThing(x, c);
 	const z = doBatThing(y, d);
-	return z;
+	return x + y + z;
 }
 
 function doFooThing(a, b) {
@@ -72,7 +70,7 @@ function doBatThing(y, d) {
 }
 ```
 
-The developer has refactored `superLongFunction` into 3 function calls.
+The developer has rewritten `superLongFunction` into 3 function calls.
 These functions are all only once and are only called in `superLongFunction`.
 This makes the code somewhat clearer in its intent, but it comes with costs mentioned previously.
 Now, in order to understand `superLongFunction`, you have to find `doFooThing`, `doBarThing`, and `doBatThing` and in the code base.
@@ -120,7 +118,7 @@ They should be used to encapsulate a reusable piece of logic that needs to be re
 I would also like to give credit to Brian Will in [this](https://youtu.be/QM1iUe6IofM?t=2235) video where he talks about long functions.
 
 # Addendum
-Ideally I would like it if languages had some concept of creating a private scope within a function.
+Ideally, I would like if languages had some concept of creating a private scope within a function.
 It could look something like:
 
 ```javascript
@@ -129,7 +127,7 @@ function myFunction() {
 	const b = 'c';
 	const c = 'c';
 
-	const x = use a, b {
+	const x = scope a, b {
 		return a + b;
 	}
 
@@ -137,5 +135,5 @@ function myFunction() {
 }
 ```
 
-Where the `use` block would create a private scope that captures `a` and `b`.
+Where the `scope` block would create a private scope that captures `a` and `b`.
 This would allow grouping logic together in private scopes and prevent the need for having lots of variables local to the function.

@@ -24,9 +24,12 @@
 				{% for link in links.nav -%}
 				<a href="{{link.path}}">{{link.title}}</a>
 				{% endfor -%}
-				<div class="social vbox">
+				<div class="social">
 				{% for link in links.social -%}
-				<a href="{{link.url}}">{{link.title}}</a>
+				<span>
+					<i class="{{link.icon}} la-lg"></i>
+					<a href="{{link.url}}">{{link.title}}</a>
+				</span>
 				{% endfor %}
 				</div>
 			</nav>
@@ -39,7 +42,7 @@
 				<a class="navlink" href="{{link.path}}">{{link.title}}</a>
 				{% endfor -%}
 			</nav>
-			<footer class="social vbox">
+			<footer class="social">
 				{% for link in links.social -%}
 				<span>
 					<i class="{{link.icon}} la-lg"></i>

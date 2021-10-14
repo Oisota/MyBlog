@@ -180,11 +180,14 @@ p code {
 /* Social Media Links */
 .social {
 	background-color: $darkgrey;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
 	span {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		justify-content: start;
+		justify-content: center;
 		
 		i {
 			padding-right: 0.2rem;
@@ -306,7 +309,6 @@ main {
 		display: none;
 		background: $blue;
 		a {
-			width: 100%;
 			text-align: center;
 			color: $white;
 			margin: 1em;
