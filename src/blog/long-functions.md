@@ -1,6 +1,6 @@
 ---
 title: In Defense of Long Functions
-date: 2017-08-12
+date: 2021-10-14
 draft: true
 ---
 
@@ -74,7 +74,7 @@ The developer has rewritten `superLongFunction` into 3 function calls.
 These functions are all only once and are only called in `superLongFunction`.
 This makes the code somewhat clearer in its intent, but it comes with costs mentioned previously.
 Now, in order to understand `superLongFunction`, you have to find `doFooThing`, `doBarThing`, and `doBatThing` and in the code base.
-Early on this is not a problem, but over time functions can get separated in other files the code flow is obstructed.
+Early on this is not a problem, but over time functions can get moved around obstructing the flow of logic further.
 There are now 3 more functions that may be consumed in the future by other developers not knowing that they were only meant to be called from `superLongFunction`.
 
 It would be much clearer and effective to simply add in some comments like so:
@@ -111,11 +111,13 @@ function superLongFunction(a, b, c, d) {
 
 Inner functions are great because they keep everything encapsulated and you can pass in only the variables needed for the calculation.
 This makes it immediately clear which data the code is operating on and allows the code to be broken out later if ever need be.
+The only downside (depending on if the language has closures) would be that the inner functions can still access the outer functions variables.
 
 ## Conclusion
 Functions are an integral unit of abstraction but they shouldn't be used when simple comments will do or when an existing function has gotten a little long.
 They should be used to encapsulate a reusable piece of logic that needs to be referenced in many places.
-I would also like to give credit to Brian Will in [this](https://youtu.be/QM1iUe6IofM?t=2235) video where he talks about long functions.
+
+Brian Will talks about similar ideas in [this](https://youtu.be/QM1iUe6IofM?t=2235) video.
 
 # Addendum
 Ideally, I would like if languages had some concept of creating a private scope within a function.
