@@ -1,12 +1,15 @@
-$blue: #225588;
-$lightgrey: #f2f2f2;
-$darkgrey: #2F2F2F;
-$black: #333333;
-$white: #FAFAFA;
-$text-color: #555555;
-$link-color: #5588BB;
-$link-hover-color: #7b7b7b;
+//$blue: #2b87bd;
+$blue: #226388;
+$lightgrey: #3d3d3d;
+$darkgrey: #222222;
+$black: #cecece;
+$white: #333333;
+$text-color: #ececec;
+$link-color: #4aeeee;
+$link-hover-color: #acacac;
 $bg-hover-color: #EEEEEE;
+$social-icon-color: #737b7c;
+$nav-link-color: #b2c7ca;
 
 $navbar-width: 25em;
 
@@ -93,9 +96,8 @@ p code {
 }
 
 .content {
-	margin: auto;
-	padding-left: 2em;
-	padding-right: 2em;
+	padding-left: 4em;
+	padding-right: 4em;
 	max-width: 55em;
 }
 
@@ -130,13 +132,19 @@ p code {
 	top: 0;
 	bottom: 0;
 	width: $navbar-width;
-	background: $blue;
+	background: $darkgrey;
 	overflow-y: auto;
 
 	nav, footer {
-		flex-grow: 1;
-		flex-shrink: 0;
+		//flex-grow: 1;
+		//flex-shrink: 0;
 		align-items: center;
+	}
+
+	.nav-separator {
+		width: 40%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	/* ---- Left Nav Navigation ---- */
@@ -148,17 +156,16 @@ p code {
 			border-radius: 50%;
 		}
 		h1 {
-			font-size: 20pt;
+			font-size: 18pt;
 			margin-top: 1.8em;
 			margin-bottom: 1.8em;
 		}
 		a {
-			color: $white;
 			text-decoration: none;
 		}
 		.navlink {
 			font-size: 12pt;
-			margin-bottom: 2.4em;
+			margin-bottom: 1.2em;
 		}
 		.navlink:hover {
 			color: $black;
@@ -171,18 +178,16 @@ p code {
 		justify-content: center;
 		a {
 			text-decoration: none;
-			margin-top: 1.2em;
-			margin-bottom: 1.2em;
+			margin-top: 0.8em;
+			margin-bottom: 0.8em;
 		}
 	}
 }
 
 /* Social Media Links */
 .social {
-	background-color: $darkgrey;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
+	display: flex;
+	flex-direction: column;
 	span {
 		display: flex;
 		flex-direction: row;
@@ -191,7 +196,7 @@ p code {
 		
 		i {
 			padding-right: 0.2rem;
-			color: $lightgrey;
+			color: $social-icon-color;
 		}
 	}
 }
@@ -294,12 +299,12 @@ main {
 @media (max-width: 900px) {
 	.topbar {
 		display: block;
-		background: $blue;
+		background: $darkgrey;
 		header { 
 			justify-content: space-between;
 		}
 		h1 {
-			color: $white;
+			color: $link-color;
 			padding: 0;
 			margin: 0;
 			margin-left: 0.1em;
@@ -307,10 +312,10 @@ main {
 	}
 	#topbar-nav {
 		display: none;
-		background: $blue;
+		background: $darkgrey;
 		a {
 			text-align: center;
-			color: $white;
+			color: $link-color;
 			margin: 1em;
 		}
 		.social a {
