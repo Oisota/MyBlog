@@ -269,14 +269,16 @@ main {
 	display: block;
 	box-sizing: border-box;
 	width: 100%;
-	font-size: 14pt;
+	font-size: 12pt;
 	border-radius: 0.2em;
 	border: 1px solid #CCCCCC;
 	padding: 0.3em;
+	background-color: #EEEEEE;
 }
 .form-group label {
-	font-size: 1.2em;
-	font-weight: 700;
+	display: block;
+	font-weight: 600;
+	padding-bottom: 0.4rem;
 }
 .form-group {
 	padding-top: 0.7em;
@@ -289,7 +291,7 @@ main {
 	padding-right: 0.7em;
 	border: 1px solid #CCCCCC;
 	border-radius: 0.3em;
-	font-size: 12pt;
+	font-size: 11pt;
 }
 .btn:hover {
 	background: $bg-hover-color;

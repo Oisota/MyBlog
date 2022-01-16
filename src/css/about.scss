@@ -1,5 +1,6 @@
 $darkgrey: #2F2F2F;
-$badge-color: #DDDDDD;
+$badge-color: #575f5f;
+$badge-text: #DDDDDD;
 
 .about-section-title {
 	margin-top: 0rem;
@@ -25,6 +26,6 @@ $badge-color: #DDDDDD;
 	padding-top: 0.1rem;
 	padding-bottom: 0.1rem;
 	border-radius: 1rem;
-	color: $darkgrey;
+	color: $badge-text;
 	background: $badge-color;
 }

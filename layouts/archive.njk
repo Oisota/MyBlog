@@ -10,7 +10,10 @@
 	<hr />
 	<div class="archive-list">
 		{% for post in collections.blog -%}
-		<a href="/{{post.path}}">{{post.title}}<span class="badge">{{post.date}}</span></a>
+		<div class="hbox">
+			<a href="/{{post.path}}">{{post.title}}</a>
+			<span class="badge">{{post.date}}</span>
+		</div>
 		{% endfor -%}
 	</div>
 </div>
