@@ -1,14 +1,13 @@
 $primary: #4aeeee;
 $nav-background: #1f2020;
 $body-background: #2c2e2e;
+$heading-color: #cecece;
 $text-color: #ececec;
 $link-color: $primary;
 $link-hover-color: #acacac;
 $bg-hover-color: #EEEEEE;
 $social-icon-color: #737b7c;
 $navbar-width: 25em;
-
-$black: #cecece;
 
 
 /* ---- Main ---- */
@@ -29,7 +28,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-family: Verdana, Helvetica, sans-serif;
 	font-weight: 700;
-	color: $black;
+	color: $heading-color;
 }
 
 h1 { font-size: 2.2em; }
@@ -44,6 +43,14 @@ p {
 	line-height: 1.6rem;
 	font-size: 15px;
 	margin-bottom: 1.5rem;
+
+	code {
+		background-color: $nav-background;
+		padding-left: 0.2rem;
+		padding-right: 0.2rem;
+		padding-top: 0.1rem;
+		padding-bottom: 0.1rem;
+	}
 }
 
 /* Links */
@@ -215,7 +222,7 @@ main {
 }
 .blog-title { 
 	margin-bottom: 0.2em; 
-	a { color: $black; }
+	a { color: $heading-color; }
 	a:hover { color: #808080; }
 }
 
