@@ -32,12 +32,8 @@ h1, h2, h3, h4, h5, h6 {
 	color: $black;
 }
 
-h1 {
-	margin-top: 30px;
-	margin-bottom: 30px;
-}
-h1 { font-size: 2.4em; }
-h2 { font-size: 2em; }
+h1 { font-size: 2.2em; }
+h2 { font-size: 1.9em; }
 h3 { font-size: 1.5em; }
 h4 { font-size: 1.17em; }
 h5 { font-size: 1.12em; }
@@ -45,8 +41,8 @@ h6 { font-size: .85em; }
 
 /* Paragraph & Typographic */
 p {
-	line-height: 28px;
-	font-size: 16px;
+	line-height: 1.6rem;
+	font-size: 15px;
 	margin-bottom: 1.5rem;
 }
 
@@ -56,16 +52,15 @@ a {
 	word-wrap: break-word;
 	transition: color 0.1s ease-in, background 0.1s ease-in;
 	text-decoration: none;
-}
 
-a:hover, a:focus {
-	color: $link-hover-color;
-	text-decoration: none;
-	outline: 0;
-}
-
-a:before, a:after {
-	transition: color 0.1s ease-in, background 0.1s ease-in;
+	&:hover, &:focus {
+		color: $link-hover-color;
+		text-decoration: none;
+		outline: 0;
+	}
+	&:before, &:after {
+		transition: color 0.1s ease-in, background 0.1s ease-in;
+	}
 }
 
 hr {
