@@ -7,11 +7,9 @@
 {% block content %}
 <div class="content">
 
-	<h1 class="centered">{{title}}</h1>
+	<h1>{{title}}</h1>
 	<hr />
-	<div class="centered">
-		{{ contents | safe }}
-	</div>
+	<div>{{ contents | safe }}</div>
 
 	{% for project in collections.projects -%}
 	<div class="hbox project-header">
