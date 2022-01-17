@@ -1,11 +1,11 @@
 {% macro post_content(site, title, date, path, contents) %}
 <div class="blog-content">
-	<p class="blog-meta">
+	<span class="blog-meta">
 		<i class="la la-lg la-calendar" aria-hidden="true"></i>
 		<span class="blog-date">{{date}}</span>
 		<i class="la la-lg la-comment" aria-hidden="true"></i>
 		<a class="comment-count" href="{{site.url | safe}}{{path | safe}}#disqus_thread">comments</a>
-	</p>
+	</span>
 	<h1 class="blog-title"><a href="/{{path | safe}}">{{title}}</a></h1>
 	<hr>
 	{{ contents | safe }}

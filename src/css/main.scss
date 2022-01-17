@@ -1,15 +1,16 @@
-$lightgrey: #3d3d3d;
-$darkgrey: #222222;
-$black: #cecece;
-$white: #333333;
+$primary: #4aeeee;
+$nav-background: #222222;
+$body-background: #333333;
 $text-color: #ececec;
-$link-color: #4aeeee;
+$link-color: $primary;
 $link-hover-color: #acacac;
 $bg-hover-color: #EEEEEE;
 $social-icon-color: #737b7c;
-$nav-link-color: #b2c7ca;
-
 $navbar-width: 25em;
+
+$lightgrey: #3d3d3d;
+$black: #cecece;
+
 
 /* ---- Main ---- */
 html, body {
@@ -18,13 +19,12 @@ html, body {
 }
 
 body {
-	background-color: $white;
+	background-color: $body-background;
 	font-family: Verdana, Helvetica, sans-serif;
 	font-weight: 400;
 	font-size: 14px;
 	color: $text-color;
 }
-
 
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
@@ -47,8 +47,8 @@ h6 { font-size: .85em; }
 /* Paragraph & Typographic */
 p {
 	line-height: 28px;
-	margin-bottom: 25px;
 	font-size: 16px;
+	margin-bottom: 1.5rem;
 }
 
 /* Links */
@@ -78,12 +78,6 @@ hr {
 	padding: 0;
 }
 
-p code {
-	color: $black;
-	background: $lightgrey;
-	padding: 0.2em;
-}
-
 /* Helpers */
 .centered {
 	text-align: center;
@@ -109,9 +103,9 @@ p code {
 
 /* Color Wraps */
 .alt-white-grey {
-	padding-top: 4em;
+	padding-top: 2em;
 	padding-bottom: 4em;
-	background-color: $white;
+	background-color: $body-background;
 }
 
 .alt-white-grey:nth-child(odd) {
@@ -130,7 +124,7 @@ p code {
 	top: 0;
 	bottom: 0;
 	width: $navbar-width;
-	background: $darkgrey;
+	background: $nav-background;
 	overflow-y: auto;
 	align-items: center;
 
@@ -162,14 +156,10 @@ p code {
 			font-size: 12pt;
 			margin-bottom: 1.2em;
 		}
-		.navlink:hover {
-			color: $black;
-		}
 	}
 	
 	/* ---- Left Nav Footer ---- */
 	footer {
-		color: $white;
 		justify-content: center;
 		align-items: center;
 		a {
@@ -208,6 +198,7 @@ main {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	margin-top: 1.5rem;
 
 	i {
 		padding-right: 0.2rem;
@@ -297,7 +288,7 @@ main {
 @media (max-width: 900px) {
 	.topbar {
 		display: block;
-		background: $darkgrey;
+		background: $nav-background;
 		header { 
 			justify-content: space-between;
 		}
@@ -310,7 +301,7 @@ main {
 	}
 	#topbar-nav {
 		display: none;
-		background: $darkgrey;
+		background: $nav-background;
 		a {
 			text-align: center;
 			color: $link-color;
@@ -327,7 +318,7 @@ main {
 			width: 30px;
 			height: 4px;
 			margin-top: 0.4em;
-			background: $white;
+			background: $body-background;
 			border-radius: 2px;
 		}
 	}
