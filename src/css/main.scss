@@ -231,18 +231,23 @@ main {
 	padding-top: 0.5em;
 	padding-bottom: 2em;
 	a {
-		border: 1px solid #DDDDDD;
+		border: 1px solid $primary;
 		border-radius: 0.3em;
 		padding: 0.5em;
 		padding-left: 0.7em;
 		padding-right: 0.7em;
 	}
 	a:hover {
-		background: $bg-hover-color;
+		background: $primary;
+		color: $body-background;
 	}
-	.disabled { color: #777777; }
+	.disabled {
+		color: #777777;
+		border: 1px solid #777777;
+	}
 	.disabled:hover{
-		background: #FFFFFF;
+		background: $body-background;
+		color: #777777;
 		cursor: not-allowed;
 	}
 	.previous {
@@ -259,7 +264,7 @@ main {
 	border-radius: 0.2em;
 	border: 1px solid #CCCCCC;
 	padding: 0.3em;
-	background-color: #EEEEEE;
+	background-color: #bfd1d1;
 }
 .form-group label {
 	display: block;
@@ -271,16 +276,18 @@ main {
 	padding-bottom: 0.7em;
 }
 .btn {
-	background: #FFFFFF;
+	background: $body-background;
+	color: $primary;
 	padding: 0.6em;
 	padding-left: 0.7em;
 	padding-right: 0.7em;
-	border: 1px solid #CCCCCC;
+	border: 1px solid $primary;
 	border-radius: 0.3em;
 	font-size: 11pt;
 }
 .btn:hover {
-	background: $bg-hover-color;
+	background: $primary;
+	color: $body-background;
 }
 
 /* ---- Mobile Layout ---- */
