@@ -35,9 +35,9 @@
 			</nav>
 		</div>
 		<div class="left vbox">
+			<img height="130px" width="130px" src="/assets/me.jpg" alt="Me" />
+			<h1>{{site.author}}</h1>
 			<nav class="vbox">
-				<img height="150px" width="150px" src="/assets/me.jpg" alt="Me" />
-				<h1><a href="/">{{site.author}}</a></h1>
 				{% for link in links.nav -%}
 				<a class="navlink" href="{{link.path}}">{{link.title}}</a>
 				{% endfor -%}

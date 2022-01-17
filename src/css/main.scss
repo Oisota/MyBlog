@@ -1,5 +1,3 @@
-//$blue: #2b87bd;
-$blue: #226388;
 $lightgrey: #3d3d3d;
 $darkgrey: #222222;
 $black: #cecece;
@@ -134,32 +132,29 @@ p code {
 	width: $navbar-width;
 	background: $darkgrey;
 	overflow-y: auto;
+	align-items: center;
 
-	nav, footer {
-		//flex-grow: 1;
-		//flex-shrink: 0;
-		align-items: center;
+	img {
+		margin-top: 2rem;
+		border-radius: 50%;
+	}
+	h1 {
+		font-size: 18pt;
+		margin-top: 1.8em;
+		margin-bottom: 1.8em;
 	}
 
 	.nav-separator {
-		width: 40%;
+		width: 35%;
 		margin-left: auto;
 		margin-right: auto;
 	}
 
 	/* ---- Left Nav Navigation ---- */
 	nav {
-		padding-top: 1.5em;
 		justify-content: flex-start;
+		align-items: center;
 		text-transform: uppercase;
-		img {
-			border-radius: 50%;
-		}
-		h1 {
-			font-size: 18pt;
-			margin-top: 1.8em;
-			margin-bottom: 1.8em;
-		}
 		a {
 			text-decoration: none;
 		}
@@ -176,6 +171,7 @@ p code {
 	footer {
 		color: $white;
 		justify-content: center;
+		align-items: center;
 		a {
 			text-decoration: none;
 			margin-top: 0.8em;
