@@ -71,7 +71,7 @@ Metalsmith(__dirname)
 .use(inPlace({
 	engineOptions: {
 		langPrefix: 'hljs ',
-		highlight: (code, lang) => highlight.highlight(lang, code).value,
+		highlight: (code, lang) => highlight.highlight(code, {language: lang}).value,
 	},
 }))
 .use(fingerprint({
