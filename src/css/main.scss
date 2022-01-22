@@ -2,7 +2,7 @@ $primary: #4aeeee;
 $nav-background: #1f2020;
 $body-background: #2c2e2e;
 $heading-color: #cecece;
-$text-color: #ececec;
+$text-color: #d4d4d4;
 $link-color: $primary;
 $link-hover-color: #acacac;
 $bg-hover-color: #EEEEEE;
@@ -114,7 +114,7 @@ hr {
 	background-color: $body-background;
 }
 
-.alt-white-grey:nth-child(odd) {
+.alt-white-grey:nth-child(even) {
 	background-color: lighten($body-background, 4%);
 }
 

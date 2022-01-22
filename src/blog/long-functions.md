@@ -120,8 +120,8 @@ They should be used to encapsulate a reusable piece of logic that needs to be re
 Brian Will talks about similar ideas in [this](https://youtu.be/QM1iUe6IofM?t=2235) video.
 
 # Addendum
-Ideally, I would like if languages had some concept of creating a private scope within a function.
-It could look something like:
+Ideally, languages should provide a construct for creating private scopes within functions.
+In JavaScript, it could look something like this:
 
 ```javascript
 function myFunction() {
@@ -129,7 +129,7 @@ function myFunction() {
 	const b = 'c';
 	const c = 'c';
 
-	const x = scope a, b {
+	const x = scope (a, b) {
 		return a + b;
 	}
 
