@@ -102,6 +102,11 @@ hr {
 	flex-wrap: wrap;
 }
 
+.link-disable {
+	pointer-events: none;
+	color: $link-hover-color;
+}
+
 /* Color Wraps */
 .alt-white-grey {
 	padding-top: 2em;

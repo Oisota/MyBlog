@@ -35,11 +35,11 @@ Metalsmith(__dirname)
 	},
 	links: {
 		nav: [
-			{title: 'Home', path: '/'},
-			{title: 'About', path: '/about/'},
-			{title: 'Projects', path: '/projects/'},
-			{title: 'Archive', path: '/archive/'},
-			{title: 'Contact', path: '/contact/'}
+			{name: 'home', title: 'Home', path: '/'},
+			{name: 'about', title: 'About', path: '/about/'},
+			{name: 'projects', title: 'Projects', path: '/projects/'},
+			{name: 'archive', title: 'Archive', path: '/archive/'},
+			{name: 'contact', title: 'Contact', path: '/contact/'}
 		],
 		social: [
 			{title: 'GitHub', url: 'https://github.com/Oisota', icon: 'lab la-github'},

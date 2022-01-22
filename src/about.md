@@ -1,6 +1,7 @@
 ---
 layout: about.njk
 title: About
+nav_name: about
 ---
 I am a software developer from Ohio currently working at [Avantia Inc.](https://www.avantia-inc.com/) developing web applications.
 I received my bachelor's degree in computer science from Cleveland State University in 2016.

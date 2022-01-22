@@ -22,7 +22,11 @@
 			</header>
 			<nav id="topbar-nav" class="vbox">
 				{% for link in links.nav -%}
+				{% if link.name == nav_name %}
+				<a class="link-disable" href="{{link.path}}">{{link.title}}</a>
+				{% else %}
 				<a href="{{link.path}}">{{link.title}}</a>
+				{% endif %}
 				{% endfor -%}
 				<div class="social">
 				{% for link in links.social -%}
@@ -39,7 +43,11 @@
 			<h1>{{site.author}}</h1>
 			<nav class="vbox">
 				{% for link in links.nav -%}
+				{% if link.name == nav_name %}
+				<a class="navlink link-disable" href="{{link.path}}">{{link.title}}</a>
+				{% else %}
 				<a class="navlink" href="{{link.path}}">{{link.title}}</a>
+				{% endif %}
 				{% endfor -%}
 			</nav>
 			<hr class="nav-separator">
