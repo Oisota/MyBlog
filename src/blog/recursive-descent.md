@@ -1,6 +1,7 @@
 ---
 title: Recursive Descent Parsers
 date: "2016-12-20"
+tags: tutorial, javascript
 ---
 
 In this tutorial we are going to implement a small programming language using the top-down recursive descent method of parsing.

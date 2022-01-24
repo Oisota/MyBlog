@@ -1,6 +1,7 @@
 ---
 title: Return Early From Functions
 date: "2021-05-22"
+tags: code-style
 ---
 
 In general, I find it preferable to return early from functions whenever possible.

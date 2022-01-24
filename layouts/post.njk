@@ -8,7 +8,7 @@
 
 {% block content %}
 <div class="content">
-	{{ post_content (site, title, date, path, contents) }}
+	{{ post_content (site, title, date, tags, path, contents) }}
 	<div class="pager hbox">
 		{% if next -%}
 		<a class="previous" href="/{{next.path}}" title="previous">

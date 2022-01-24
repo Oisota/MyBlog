@@ -12,6 +12,7 @@ const fingerprint = require('metalsmith-fingerprint-ignore');
 const watch = require('metalsmith-watch');
 const feed = require('metalsmith-feed');
 const metafiles = require('metalsmith-metafiles');
+const tags = require('metalsmith-tags');
 
 function skip(opts) {
 	if (!opts.test()) {
@@ -38,6 +39,7 @@ Metalsmith(__dirname)
 			{name: 'home', title: 'Home', path: '/'},
 			{name: 'about', title: 'About', path: '/about/'},
 			{name: 'projects', title: 'Projects', path: '/projects/'},
+			{name: 'topics', title: 'Topics', path: '/topics/'},
 			{name: 'archive', title: 'Archive', path: '/archive/'},
 			{name: 'contact', title: 'Contact', path: '/contact/'}
 		],
@@ -68,6 +70,17 @@ Metalsmith(__dirname)
 	{pattern: 'blog/*', metadata: {layout: 'post.njk'}}
 ]))
 .use(metafiles())
+.use(tags({
+	handle: 'tags',
+	path: 'topics/:tag.html',
+	layout: 'tag.njk',
+	normalize: true,
+	sortBy: 'date',
+	reverse: true,
+	skipMetaData: false,
+	metadataKey: 'category',
+	slug: {mode: 'rfc3986'},
+}))
 .use(inPlace({
 	engineOptions: {
 		langPrefix: 'hljs ',

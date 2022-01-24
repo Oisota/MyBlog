@@ -6,7 +6,7 @@
 {% for post in collections.blog -%}
 <div class="alt-white-grey">
 	<div class="content">
-		{{ post_content(site, post.title, post.date, post.path, post.excerpt) }}
+		{{ post_content(site, post.title, post.date, post.tags, post.path, post.excerpt) }}
 		<a href="{{post.path}}">Continue Reading...</a>
 	</div>
 </div>

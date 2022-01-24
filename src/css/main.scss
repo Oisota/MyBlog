@@ -204,10 +204,19 @@ main {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	margin-top: 1.5rem;
+	margin-top: 1rem;
 
 	i {
 		padding-right: 0.2rem;
+	}
+}
+.blog-tags {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 1rem;
+	.tag {
+		padding-right: 0.4rem;
 	}
 }
 .blog-date, .comment-count {

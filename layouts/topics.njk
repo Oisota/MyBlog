@@ -1,0 +1,20 @@
+{% extends "base.njk" %}
+
+{% block styles %}
+<link href="/{{fingerprint['css/archive.css']}}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="content">
+	<h1>{{title}}</h1>
+	<hr />
+	<div class="archive-list">
+		{% for tag_name, tag_value in category | dictsort -%}
+		<div class="hbox">
+			<a href="/topics/{{tag_value.urlSafe}}">#{{tag_name}}</a>
+			<span class="badge" title="article count">{{tag_value.length}}</span>
+		</div>
+		{% endfor -%}
+	</div>
+</div>
+{% endblock %}

@@ -1,6 +1,7 @@
 ---
 title: Assigning Boolean Expressions to Variables
 date: "2017-12-19"
+tags: code-style
 ---
 
 This is just a design pattern I wanted to share.

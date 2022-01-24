@@ -1,0 +1,20 @@
+{% extends "base.njk" %}
+
+{% block styles %}
+<link href="/{{fingerprint['css/archive.css']}}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="content">
+	<h1>#{{tag}}</h1>
+	<hr />
+	<div class="archive-list">
+		{% for post in pagination.files -%}
+		<div class="hbox">
+			<a href="/{{post.path}}">{{post.title}}</a>
+			<span class="badge">{{post.date}}</span>
+		</div>
+		{% endfor -%}
+	</div>
+</div>
+{% endblock %}
