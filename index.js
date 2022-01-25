@@ -13,7 +13,15 @@ const watch = require('metalsmith-watch');
 const feed = require('metalsmith-feed');
 const metafiles = require('metalsmith-metafiles');
 const tags = require('metalsmith-tags');
-const msif = require('metalsmith-if');
+
+function skip(opts) {
+	if (!opts.test()) {
+		return opts.plugin(opts.opts);
+	}
+	return (files, metalsmith, done) => {
+		setImmediate(done);
+	};
+}
 
 Metalsmith(__dirname)
 .metadata({
@@ -46,16 +54,17 @@ Metalsmith(__dirname)
 .source('src')
 .destination('dist')
 .clean(true)
-.use(msif(
-	process.env.NODE_ENV !== 'production',
-	watch({
+.use(skip({
+	test: () => process.env.NODE_ENV === 'production',
+	plugin: watch,
+	opts: {
 		paths: {
 			'${source}/**/*': '**/*',
 			'layouts/**/*': '**/*',
 		},
 		livereload: 8081,
-	})
-))
+	}
+}))
 .use(drafts())
 .use(fileMetadata([
 	{pattern: 'blog/*', metadata: {layout: 'post.njk'}}

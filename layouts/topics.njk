@@ -11,7 +11,7 @@
 	<div class="archive-list">
 		{% for tag_name, tag_value in category | dictsort -%}
 		<div class="hbox">
-			<a href="/topics/{{tag_value.slug}}">#{{tag_name}}</a>
+			<a href="/topics/{{tag_value.urlSafe}}">#{{tag_name}}</a>
 			<span class="badge" title="article count">{{tag_value.length}}</span>
 		</div>
 		{% endfor -%}
