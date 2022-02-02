@@ -1,18 +1,18 @@
 {% extends "base.njk" %}
 
 {% block styles %}
-<link href="/{{fingerprint['css/archive.css']}}" rel="stylesheet">
+<link href="/{{fingerprint['css/topics.css']}}" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
 <div class="content">
 	<h1>{{title}}</h1>
 	<hr />
-	<div class="archive-list">
-		{% for tag_name, tag_value in category | dictsort -%}
+	<div class="topic-list">
+		{% for tag in topics | sort(true, false, 'count') -%}
 		<div class="hbox">
-			<a href="/topics/{{tag_value.slug}}">#{{tag_name}}</a>
-			<span class="badge" title="article count">{{tag_value.length}}</span>
+			<a href="/topics/{{tag.slug}}">#{{tag.name}}</a>
+			<span class="badge" title="article count" style="width: {{tag.percent}}%;">{{tag.count}}</span>
 		</div>
 		{% endfor -%}
 	</div>

@@ -1,0 +1,28 @@
+/* ---- Blog Topcis ---- */
+$badge-color: #575f5f;
+$badge-text: #DDDDDD;
+ 
+.topic-list {
+	div {
+		padding-top: 0.4rem;
+		padding-bottom: 0.4rem;
+		justify-content: space-between;
+	}
+}
+
+.badge {
+	float: right;
+	margin-left: 0.2rem;
+	margin-right: 0.2rem;
+	margin-top: 0.1rem;
+	margin-bottom: 0.1rem;
+	padding-left: 0.6rem;
+	padding-right: 0.6rem;
+	padding-top: 0.1rem;
+	padding-bottom: 0.1rem;
+	border-radius: 1rem;
+	color: $badge-text;
+	background: $badge-color;
+	text-align: right;
+}
+
