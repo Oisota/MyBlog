@@ -25,7 +25,7 @@ exports.tagPercents = function tagPercents(opts) {
 				const [tag, posts] = entry;
 				return {
 					name: tag,
-					slug: tag.slug,
+					slug: posts.urlSafe,
 					percent: Math.floor((posts.length / tagSum) * 100),
 					count: posts.length,
 				}
