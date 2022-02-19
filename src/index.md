@@ -1,5 +1,9 @@
 ---
 layout: index.njk
 title: Derek Morey
-nav_name: home
+nav_title: Home
+name: home
+index: 0
+collection:
+    - navlinks
 ---

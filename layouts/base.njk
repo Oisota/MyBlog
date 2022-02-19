@@ -24,11 +24,11 @@
 				</span>
 			</header>
 			<nav id="topbar-nav" class="vbox">
-				{% for link in links.nav -%}
-				{% if link.name == nav_name %}
-				<a class="link-disable" href="{{link.path}}">{{link.title}}</a>
+				{% for link in collections.navlinks -%}
+				{% if link.name == name %}
+				<a class="link-disable" href="/{{link.path | safe}}">{{link.nav_title}}</a>
 				{% else %}
-				<a href="{{link.path}}">{{link.title}}</a>
+				<a href="/{{link.path | safe}}">{{link.nav_title}}</a>
 				{% endif %}
 				{% endfor -%}
 				<div class="social">
@@ -45,11 +45,11 @@
 			<img height="130px" width="130px" src="/assets/me.jpg" alt="Me" />
 			<h1>{{site.author}}</h1>
 			<nav class="vbox">
-				{% for link in links.nav -%}
-				{% if link.name == nav_name %}
-				<a class="navlink link-disable" href="{{link.path}}">{{link.title}}</a>
+				{% for link in collections.navlinks -%}
+				{% if link.name == name %}
+				<a class="navlink link-disable" href="/{{link.path | safe}}">{{link.nav_title}}</a>
 				{% else %}
-				<a class="navlink" href="{{link.path}}">{{link.title}}</a>
+				<a class="navlink" href="/{{link.path | safe}}">{{link.nav_title}}</a>
 				{% endif %}
 				{% endfor -%}
 			</nav>

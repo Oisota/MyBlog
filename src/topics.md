@@ -1,5 +1,9 @@
 ---
 layout: topics.njk
 title: Topics
-nav_name: topics
+nav_title: Topics
+name: topics
+index: 3
+collection:
+  - navlinks
 ---

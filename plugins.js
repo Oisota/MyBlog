@@ -1,4 +1,6 @@
 // custom plugins
+
+// skip loading a given plugin based on a test function
 exports.skip = function skip(opts) {
 	if (!opts.test()) {
 		return opts.plugin(opts.opts);
@@ -6,8 +8,9 @@ exports.skip = function skip(opts) {
 	return (files, metalsmith, done) => {
 		setImmediate(done);
 	};
-}
+};
 
+// calculate tag counts as a percentage of total amount of tags
 exports.tagPercents = function tagPercents(opts) {
 	const tagsKey = opts.tagsKey || 'tags';
 	const metaKey = opts.metaKey || 'topics';
@@ -34,4 +37,4 @@ exports.tagPercents = function tagPercents(opts) {
 		metadata[metaKey] = topics;
 		setImmediate(done);
 	};
-}
+};

@@ -27,14 +27,6 @@ Metalsmith(__dirname)
 		rssUrl: '/rss.xml',
 	},
 	links: {
-		nav: [
-			{name: 'home', title: 'Home', path: '/'},
-			{name: 'about', title: 'About', path: '/about/'},
-			{name: 'projects', title: 'Projects', path: '/projects/'},
-			{name: 'topics', title: 'Topics', path: '/topics/'},
-			{name: 'archive', title: 'Archive', path: '/archive/'},
-			{name: 'contact', title: 'Contact', path: '/contact/'}
-		],
 		social: [
 			{title: 'GitHub', url: 'https://github.com/Oisota', icon: 'lab la-github'},
 			{title: 'LinkedIn', url: 'https://linkedin.com/in/derek-o-morey', icon: 'la la-linkedin'},
@@ -95,6 +87,9 @@ Metalsmith(__dirname)
 	},
 	projects: {
 		pattern: 'projects/*',
+		sortBy: 'index',
+	},
+	navlinks: {
 		sortBy: 'index',
 	},
 }))
