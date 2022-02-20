@@ -328,8 +328,12 @@ main {
 	.topbar {
 		display: block;
 		background: $nav-background;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		transition: top 0.3s;
 		header { 
-			justify-content: space-between;
+			justify-content: center;
 		}
 		h1 {
 			color: $link-color;
@@ -341,10 +345,16 @@ main {
 	#topbar-nav {
 		display: none;
 		background: $nav-background;
+		justify-content: center;
+		div {
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
 		a {
 			text-align: center;
 			color: $link-color;
-			margin: 1em;
+			margin-top: 0.6rem;
+			margin-bottom: 0.6rem;
 		}
 		.social a {
 			color: $link-color;
@@ -352,7 +362,7 @@ main {
 	}
 	.menu-btn {
 		margin-top: 0.2em;
-		margin-right: 0.8em;
+		margin-bottom: 0.2em;
 		div {
 			width: 30px;
 			height: 4px;
