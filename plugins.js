@@ -38,3 +38,11 @@ exports.tagPercents = function tagPercents(opts) {
 		setImmediate(done);
 	};
 };
+
+// helper for debugging other plugins
+exports.log = function() {
+	return (files, metalsmith, done) => {
+		console.log(metalsmith);
+		setImmediate(done);
+	};
+};
