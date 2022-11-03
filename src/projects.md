@@ -8,4 +8,4 @@ collection:
     - navlinks
 ---
 
-Here are various projects I've made, am currently working on, or works in progress.
+Here are some of my projects in various stages of development.

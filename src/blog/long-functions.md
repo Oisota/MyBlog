@@ -74,7 +74,7 @@ function doBatThing(y, d) {
 The developer has rewritten `superLongFunction` into 3 function calls.
 These functions are all only once and are only called in `superLongFunction`.
 This makes the code somewhat clearer in its intent, but it comes with costs mentioned previously.
-Now, in order to understand `superLongFunction`, you have to find `doFooThing`, `doBarThing`, and `doBatThing` and in the code base.
+Now, in order to understand `superLongFunction`, you have to find `doFooThing`, `doBarThing`, and `doBatThing` in the code base.
 Early on this is not a problem, but over time functions can get moved around obstructing the flow of logic further.
 There are now 3 more functions that may be consumed in the future by other developers not knowing that they were only meant to be called from `superLongFunction`.
 
@@ -94,6 +94,7 @@ function superLongFunction(a, b, c, d) {
 
 This way, the intent is just as clear, and no new functions are added that have to be maintained and documented.
 Everything stays inside `superLongFunction`.
+Although, this approach leads to the problem of having lots of local variables in the function making it hard to know which variables are used where and what their life times logically are.
 
 Another alternative would be to use inner functions if your language supports them.
 
@@ -112,31 +113,10 @@ function superLongFunction(a, b, c, d) {
 
 Inner functions are great because they keep everything encapsulated and you can pass in only the variables needed for the calculation.
 This makes it immediately clear which data the code is operating on and allows the code to be broken out later if ever need be.
-The only downside (depending on if the language has closures) would be that the inner functions can still access the outer functions variables.
+The only downside (depending on if the language has closures) would be that the inner functions can still access the outer functions variables which could potentially cause bugs.
 
 ## Conclusion
 Functions are an integral unit of abstraction but they shouldn't be used when simple comments will do or when an existing function has gotten a little long.
 They should be used to encapsulate a reusable piece of logic that needs to be referenced in many places.
 
 Brian Will talks about similar ideas in [this](https://youtu.be/QM1iUe6IofM?t=2235) video.
-
-# Addendum
-Ideally, languages should provide a construct for creating private scopes within functions.
-In JavaScript, it could look something like this:
-
-```javascript
-function myFunction() {
-	const a = 'a';
-	const b = 'c';
-	const c = 'c';
-
-	const x = scope (a, b) {
-		return a + b;
-	}
-
-	return c + x;
-}
-```
-
-Where the `scope` block would create a private scope that captures `a` and `b`.
-This would allow grouping logic together in private scopes and prevent the need for having lots of variables local to the function.
