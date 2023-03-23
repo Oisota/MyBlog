@@ -5,7 +5,7 @@
 {% block content %}
 {% for post in collections.blog -%}
 <div class="alt-white-grey">
-	<div class="content">
+	<section class="content">
 		{{ post_content(site, post.title, post.date, post.tags, post.path, post.excerpt) }}
 		<a href="{{post.path}}">Continue Reading...</a>
 	</div>

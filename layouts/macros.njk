@@ -1,5 +1,5 @@
 {% macro post_content(site, title, date, tags, path, contents) %}
-<div class="blog-content">
+<article class="blog-content">
 	<span class="blog-meta">
 		<i class="la la-lg la-calendar" aria-hidden="true"></i>
 		<span class="blog-date">{{date}}</span>
@@ -14,7 +14,7 @@
 	<h1 class="blog-title"><a href="/{{path | safe}}">{{title}}</a></h1>
 	<hr>
 	{{ contents | safe }}
-</div>
+</article>
 {% endmacro %}
 
 {% macro comment_count() %}
