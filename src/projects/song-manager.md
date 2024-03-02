@@ -1,7 +1,7 @@
 ---
 title: Song Manager
 index: 4
-sourceCodeUrl: "https://github.com/Oisota/song-manager-api"
+sourceCodeUrl: "https://github.com/Oisota/song-manager-django"
 ---
 
 The goal for the project is to make an app for musicians to manage songs, setlists, and lyrics.
