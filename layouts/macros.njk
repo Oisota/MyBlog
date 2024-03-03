@@ -4,7 +4,6 @@
 		<i class="la la-lg la-calendar" aria-hidden="true"></i>
 		<span class="blog-date">{{date}}</span>
 		<i class="la la-lg la-comment" aria-hidden="true"></i>
-		<a class="comment-count" href="{{site.url | safe}}{{path | safe}}#disqus_thread">comments</a>
 	</span>
 	<span class="blog-tags">
 	{% for tag in tags %}
@@ -16,10 +15,3 @@
 	{{ contents | safe }}
 </article>
 {% endmacro %}
-
-{% macro comment_count() %}
-{% if commentsEnabled %}
-<script id="dsq-count-scr" src="//derekmorey-1.disqus.com/count.js" async></script>
-{% endif %}
-{% endmacro %}
-
