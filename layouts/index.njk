@@ -1,6 +1,6 @@
 {% extends "base.njk" %}
 
-{% from "macros.njk" import post_content, comment_count %}
+{% from "macros.njk" import post_content %}
 
 {% block content %}
 {% for post in collections.blog -%}
@@ -11,8 +11,4 @@
 	</div>
 </div>
 {% endfor -%}
-{% endblock %}
-
-{% block scripts %}
-{{ comment_count() }}
 {% endblock %}
