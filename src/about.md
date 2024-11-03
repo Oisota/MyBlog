@@ -7,7 +7,7 @@ index: 1
 collection:
   - navlinks
 ---
-I am a software developer from Ohio currently working at [Avantia Inc.](https://www.avantia-inc.com/) developing web applications.
+I am a software developer from Ohio and mainly build web applications but I dabble in other areas like language design and embedded development.
 I received my bachelor's degree in computer science from Cleveland State University in 2016.
 My main skill set is building web applications using Python and JavaScript.
 Some of my other interests include music, guitar, sailing, gaming, electronics, and woodworking.
