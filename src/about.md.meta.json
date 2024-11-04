@@ -4,7 +4,7 @@
 			"title": "Languages",
 			"items": [
 				"Python",
-				"JavaScript/Node.js",
+				"JavaScript",
 				"TypeScript",
 				"SQL",
 				"Shell Scripting/Bash",
@@ -12,7 +12,8 @@
 				"CSS",
 				"SASS/SCSS",
 				"C",
-				"LaTex"
+				"LaTex",
+				"Nim"
 			]
 		},
 		{
@@ -27,29 +28,24 @@
 				"Chart.js",
 				"Lodash",
 				"Bootstrap",
-				"webpack",
 				"Metalsmith",
-				"Bulma",
-				"Tailwind"
+				"HTMX"
 			]
 		},
 		{
 			"title": "Tools",
 			"items": [
 				"Ansible",
+				"Docker",
 				"MySQL",
 				"SQLite",
 				"Redis",
 				"Nginx",
-				"webpack",
-				"uWSGI",
 				"Linux",
-				"GitHub",
 				"git",
-				"vim",
-				"tmux",
-				"ssh",
-				"VSCode"
+				"GitHub",
+				"GitLab",
+				"AWS"
 			]
 		}
 	]
