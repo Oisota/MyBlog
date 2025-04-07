@@ -62,7 +62,7 @@ let token = '';
 
 The first thing we do is create an empty object that will map variable names to values (e.g. `var_map['a'] = 5`).
 We then read the file given by the command line arg into an array of strings.
-For simplicity, its assumed that the every token in the language is separated by whitespace.
+For simplicity, its assumed that the every token in the grammar is separated by whitespace.
 This allows us to just split the input file on whitespace to get all the tokens.
 An iterator is used to keep track of the current token and the `token` variable is used to hold the current token value.
 
