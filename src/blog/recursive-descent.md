@@ -44,7 +44,7 @@ Which would output `15` as a result.
 We are going to implement the interpreter using Node.js and JavaScript but feel free to use the language your're most comfortable with.
 The basic principles will be the same.
 As stated earlier, non-terminal symbols on the left hand side of the grammar will become functions in the parser, so there will be functions `prog`, `decl_list`, `decl`, `id_list`, and so on.
-These functions will be relataively simple functions that take care of their corresponding rule in the grammar.
+These functions will be relatively simple functions that take care of their corresponding rule in the grammar.
 
 Below is the code we'll need to get started.
 If you're not familiar with Node then don't worry about the `use strict` and `require` function.
