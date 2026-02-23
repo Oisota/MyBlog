@@ -6,8 +6,8 @@
 {% for post in collections.blog -%}
 <div class="alt-white-grey">
 	<section class="content">
-		{{ post_content(site, post.title, post.date, post.tags, post.path, post.excerpt) }}
-		<a href="{{post.path}}">Continue Reading...</a>
+		{{ post_content(site, post.title, post.date, post.tags, post.permalink, post.excerpt) }}
+		<a href="{{post.permalink}}">Continue Reading...</a>
 	</div>
 </div>
 {% endfor -%}

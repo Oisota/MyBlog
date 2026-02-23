@@ -8,10 +8,10 @@
 
 {% block content %}
 <section class="content">
-	{{ post_content (site, title, date, tags, path, contents) }}
+	{{ post_content (site, title, date, tags, permalink, contents) }}
 	<div class="pager hbox">
-		{% if next -%}
-		<a class="previous" href="/{{next.path}}" title="previous">
+		{% if collection.blog.next[0] -%}
+		<a class="previous" href="/{{collection.blog.next[0].permalink}}" title="previous">
 			<i class="las la-angle-left"></i>
 		</a>
 		{% else -%}
@@ -20,8 +20,8 @@
 		</a>
 		{% endif -%}
 
-		{% if previous -%}
-		<a class="next" href="/{{previous.path}}" title="next">
+		{% if collection.blog.previous[0] -%}
+		<a class="next" href="/{{collection.blog.previous[0].permalink}}" title="next">
 			<i class="las la-angle-right"></i>
 		</a>
 		{% else -%}

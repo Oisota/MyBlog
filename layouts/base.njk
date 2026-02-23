@@ -20,9 +20,9 @@
 				<div class="vbox">
 					{% for link in collections.navlinks -%}
 					{% if link.name == name %}
-					<a class="link-disable" href="/{{link.path | safe}}">{{link.nav_title}}</a>
+					<a class="link-disable" href="/{{link.permalink | safe}}">{{link.nav_title}}</a>
 					{% else %}
-					<a href="/{{link.path | safe}}">{{link.nav_title}}</a>
+					<a href="/{{link.permalink | safe}}">{{link.nav_title}}</a>
 					{% endif %}
 					{% endfor -%}
 				</div>
@@ -50,9 +50,9 @@
 			<nav class="vbox">
 				{% for link in collections.navlinks -%}
 				{% if link.name == name %}
-				<a class="navlink link-disable" href="/{{link.path | safe}}">{{link.nav_title}}</a>
+				<a class="navlink link-disable" href="/{{link.permalink | safe}}">{{link.nav_title}}</a>
 				{% else %}
-				<a class="navlink" href="/{{link.path | safe}}">{{link.nav_title}}</a>
+				<a class="navlink" href="/{{link.permalink | safe}}">{{link.nav_title}}</a>
 				{% endif %}
 				{% endfor -%}
 			</nav>

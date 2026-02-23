@@ -1,19 +1,28 @@
-const Metalsmith = require('metalsmith');
-const layouts = require('@metalsmith/layouts');
-const collections = require('@metalsmith/collections');
-const drafts = require('@metalsmith/drafts');
-const excerpts = require('@metalsmith/excerpts');
-const inPlace = require('@metalsmith/in-place');
-const permalinks = require('@metalsmith/permalinks');
-const highlight = require('highlight.js');
-const fileMetadata = require('metalsmith-filemetadata');
-const dateFormatter = require('metalsmith-date-formatter');
-const fingerprint = require('metalsmith-fingerprint-ignore');
-const watch = require('metalsmith-watch');
-const feed = require('metalsmith-feed');
-const metafiles = require('metalsmith-metafiles');
-const tags = require('metalsmith-tags');
-const { skip, tagPercents } = require('./plugins');
+import { fileURLToPath } from 'node:url'
+import { dirname } from 'path'
+import Metalsmith from 'metalsmith'
+import layouts from '@metalsmith/layouts'
+import collections from '@metalsmith/collections'
+import drafts from '@metalsmith/drafts'
+import excerpts from '@metalsmith/excerpts'
+import inPlace from '@metalsmith/in-place'
+import permalinks from '@metalsmith/permalinks'
+import highlight from 'highlight.js'
+import fileMetadata from 'metalsmith-filemetadata'
+import dateFormatter from 'metalsmith-date-formatter'
+import fingerprint from 'metalsmith-fingerprint-ignore'
+import watch from 'metalsmith-watch'
+import feed from 'metalsmith-feed'
+import metafiles from 'metalsmith-metafiles'
+import tags from 'metalsmith-tags'
+import { skip, tagPercents } from './plugins.js'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
+
+const engineOptions = {
+	langPrefix: 'hljs ',
+	highlight: (code, lang) => highlight.highlight(code, {language: lang}).value,
+}
 
 Metalsmith(__dirname)
 .metadata({
@@ -70,10 +79,13 @@ Metalsmith(__dirname)
 	metaKey: 'topics'
 }))
 .use(inPlace({
-	engineOptions: {
-		langPrefix: 'hljs ',
-		highlight: (code, lang) => highlight.highlight(code, {language: lang}).value,
-	},
+	transform: 'marked',
+	extname: '.html',
+	engineOptions: engineOptions,
+}))
+.use(inPlace({
+	transform: 'scss',
+	extname: '.css',
 }))
 .use(fingerprint({
 	pattern: 'css/*.css',
@@ -82,20 +94,22 @@ Metalsmith(__dirname)
 .use(collections({
 	blog: {
 		pattern: 'blog/*',
-		sortBy: 'date',
-		reverse: true
+		sort: 'date:desc',
 	},
 	projects: {
 		pattern: 'projects/*',
-		sortBy: 'index',
+		sort: 'index:asc',
 	},
 	navlinks: {
-		sortBy: 'index',
+		sort: 'index:asc',
 	},
 }))
 .use(permalinks({
-	relative: false,
+	match: '**/*.html',
+	trailingSlash: true,
+	directoryIndex: 'index.html',
 	linksets: [{
+		trailingSlash: true,
 		match: { collection: 'blog' },
 		pattern: 'blog/:date/:title'
 	}]
@@ -109,7 +123,11 @@ Metalsmith(__dirname)
 .use(feed({
 	collection: 'blog'
 }))
-.use(layouts())
+.use(layouts({
+	transform: 'nunjucks',
+	pattern: '**/*.html',
+	engineOptions: engineOptions,
+}))
 .build((err, files) => {
 	if (err) { throw err; } 
 	else { console.log('W00T, it WORKED!'); }
