@@ -6,7 +6,7 @@
   "description": "This is a script I use to generate my website",
   "type": "module",
   "scripts": {
-    "build-dev": "export NODE_ENV=development && node index.js",
+    "build-dev": "export NODE_ENV=development && node --watch-path=./src --watch-path=./layouts index.js",
     "build-prod": "export NODE_ENV=production && node index.js",
     "start": "http-server dist",
     "package": "tar -czf dist.tar.gz dist"
@@ -31,7 +31,6 @@
     "metalsmith-metafiles": "^2.0.0",
     "metalsmith-pagination": "^1.5.0",
     "metalsmith-tags": "^2.1.0",
-    "metalsmith-watch": "^1.0.3",
     "sass": "^1.97.3"
   }
 }

@@ -11,11 +11,10 @@ import highlight from 'highlight.js'
 import fileMetadata from 'metalsmith-filemetadata'
 import dateFormatter from 'metalsmith-date-formatter'
 import fingerprint from 'metalsmith-fingerprint-ignore'
-import watch from 'metalsmith-watch'
 import feed from 'metalsmith-feed'
 import metafiles from 'metalsmith-metafiles'
 import tags from 'metalsmith-tags'
-import { skip, tagPercents } from './plugins.js'
+import { tagPercents } from './plugins.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -47,17 +46,6 @@ Metalsmith(__dirname)
 .source('src')
 .destination('dist')
 .clean(true)
-.use(skip({
-	test: () => process.env.NODE_ENV === 'production',
-	plugin: watch,
-	opts: {
-		paths: {
-			'${source}/**/*': '**/*',
-			'layouts/**/*': '**/*',
-		},
-		livereload: 8081,
-	}
-}))
 .use(drafts())
 .use(fileMetadata([
 	{pattern: 'blog/*', metadata: {layout: 'post.njk'}}
