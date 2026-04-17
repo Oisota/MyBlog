@@ -1,6 +1,6 @@
 ---
 title: RSS Feed Reader
-index: 0
+index: 1
 sourceCodeUrl: "https://github.com/Oisota/rss-feed-reader"
 ---
 
