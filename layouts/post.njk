@@ -1,6 +1,6 @@
 {% extends "base.njk" %}
 
-{% from "macros.njk" import post_content %}
+{% from "macros.njk" import post_content, pager %}
 
 {% block styles %}
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/tomorrow-night.min.css">
@@ -9,27 +9,7 @@
 {% block content %}
 <section class="content">
 	{{ post_content (site, title, date, tags, permalink, contents) }}
-	<div class="pager hbox">
-		{% if collection.blog.next[0] -%}
-		<a class="previous" href="/{{collection.blog.next[0].permalink}}" title="previous">
-			<i class="las la-angle-left"></i>
-		</a>
-		{% else -%}
-		<a class="previous disabled" title="previous">
-			<i class="las la-angle-left"></i>
-		</a>
-		{% endif -%}
-
-		{% if collection.blog.previous[0] -%}
-		<a class="next" href="/{{collection.blog.previous[0].permalink}}" title="next">
-			<i class="las la-angle-right"></i>
-		</a>
-		{% else -%}
-		<a class="next disabled" title="next">
-			<i class="las la-angle-right"></i>
-		</a>
-		{% endif -%}
-	</div>
+    {{ pager(collection.archive) }}
 </section>
 {% endblock %}
 

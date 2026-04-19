@@ -249,6 +249,9 @@ main {
 		background: $primary;
 		color: $body-background;
 	}
+	a:not(:last-child) {
+		margin-right: 0.5rem;
+	}
 	.disabled {
 		color: #777777;
 		border: 1px solid #777777;
@@ -257,9 +260,6 @@ main {
 		background: $body-background;
 		color: #777777;
 		cursor: not-allowed;
-	}
-	.previous {
-		margin-right: 0.5rem;
 	}
 }
 

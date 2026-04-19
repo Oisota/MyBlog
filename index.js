@@ -83,7 +83,12 @@ Metalsmith(__dirname)
 	blog: {
 		pattern: 'blog/*',
 		sort: 'date:desc',
+        limit: 10, // only show most recent 10 articles on home page
 	},
+    archive: { // same as blog, but with no limit
+		pattern: 'blog/*',
+		sort: 'date:desc',
+    },
 	projects: {
 		pattern: 'projects/*',
 		sort: 'index:asc',
