@@ -1,6 +1,6 @@
 ---
 title: Song Manager
-index: 5
+index: 6
 sourceCodeUrl: "https://github.com/Oisota/song-manager-django"
 ---
 

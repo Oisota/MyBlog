@@ -1,6 +1,6 @@
 ---
 title: Cellular Automata
-index: 3
+index: 4
 sourceCodeUrl: "https://github.com/Oisota/CellularAutomata"
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: archive.njk
-title: Posts
-nav_title: Posts
+title: Archive
+nav_title: Archive
 name: posts
 index: 3
 collection:
