@@ -7,7 +7,7 @@
 		<meta name="description" content="{% block meta_description %}I talk about software, programming and tech related stuff{% endblock %}">
 		<meta name="robots" content="index, follow">
 		<link rel="alternate" type="application/rss+xml" href="{{site.rssUrl}}" />
-		<title>{{title}}</title>
+        <title>{% block title %}{{title}}{% endblock %}</title>
 		{% block styles %}
 		{% endblock %}
 		<link href="/{{fingerprint['css/main.css']}}" rel="stylesheet" type="text/css">

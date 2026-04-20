@@ -2,7 +2,15 @@
 
 {% from "macros.njk" import post_content %}
 
+{% block title %}Derek Morey{% endblock %}
+
 {% block content %}
+<div class="alt-white-grey">
+	<section class="content">
+        <h1>{{ title }}</h1>
+        {{ contents | safe }}
+	</div>
+</div>
 {% for post in collections.blog -%}
 <div class="alt-white-grey">
 	<section class="content">
