@@ -1,0 +1,14 @@
+{% extends "base.njk" %}
+
+{# Standard page base template #}
+
+{% block content %}
+<section class="content">
+    <h1>{% block page_title %}{{title}}{% endblock %}</h1>
+	<hr />
+	<div>{{contents | safe}}</div>
+    {% block page_content %}
+    {# allow child templates to add any additional markup here #}
+    {% endblock %}
+</section>
+{% endblock %}

@@ -1,23 +1,18 @@
-{% extends "base.njk" %}
+{% extends "page.njk" %}
 
 {% block styles %}
 <link href="/{{fingerprint['css/about.css']}}" rel="stylesheet">
 {% endblock %}
 
-{% block content %}
-<div class="content">
-	<h1>{{title}}</h1>
-	<hr />
-	{{contents | safe}}
-	<h2 class="skills-title">Skills</h2>
-	<hr />
-	{% for section in skills %}
-	<h3 class="about-section-title">{{section.title}}</h3>
-	<div class="hbox flexwrap badge-container">
-		{% for item in section.items -%}
-		<span class="badge">{{item}}</span>
-		{%- endfor %}
-	</div>
-	{% endfor %}
+{% block page_content %}
+<h2 class="skills-title">Skills</h2>
+<hr />
+{% for section in skills %}
+<h3 class="about-section-title">{{section.title}}</h3>
+<div class="hbox flexwrap badge-container">
+    {% for item in section.items -%}
+    <span class="badge">{{item}}</span>
+    {%- endfor %}
 </div>
+{% endfor %}
 {% endblock %}

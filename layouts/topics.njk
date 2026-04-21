@@ -1,20 +1,16 @@
-{% extends "base.njk" %}
+{% extends "page.njk" %}
 
 {% block styles %}
 <link href="/{{fingerprint['css/topics.css']}}" rel="stylesheet">
 {% endblock %}
 
-{% block content %}
-<div class="content">
-	<h1>{{title}}</h1>
-	<hr />
-	<div class="topic-list">
-		{% for tag in topics | sort(true, false, 'count') -%}
-		<div class="hbox">
-			<a href="/topics/{{tag.slug}}">#{{tag.name}}</a>
-			<span class="badge" title="article count" style="width: {{tag.percent}}%;">{{tag.count}}</span>
-		</div>
-		{% endfor -%}
-	</div>
+{% block page_content %}
+<div class="topic-list">
+    {% for tag in topics | sort(true, false, 'count') -%}
+    <div class="hbox">
+        <a href="/topics/{{tag.slug}}">#{{tag.name}}</a>
+        <span class="badge" title="article count" style="width: {{tag.percent}}%;">{{tag.count}}</span>
+    </div>
+    {% endfor -%}
 </div>
 {% endblock %}

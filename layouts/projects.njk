@@ -1,25 +1,17 @@
-{% extends "base.njk" %}
+{% extends "page.njk" %}
 
 {% block styles %}
 <link href="/{{fingerprint['css/projects.css']}}" rel="stylesheet">
 {% endblock %}
 
-{% block content %}
-<div class="content">
-
-	<h1>{{title}}</h1>
-	<hr />
-	<div>{{ contents | safe }}</div>
-
-	{% for project in collections.projects -%}
-	<div class="hbox project-header">
-		<h3 class="project-title">{{project.title}}</h3>
-		<a href="{{project.sourceCodeUrl}}">Source</a>
-	</div>
-	<div class="project-description">
-	{{ project.contents | safe }}
-	</div>
-	{% endfor -%}
-
+{% block page_content %}
+{% for project in collections.projects -%}
+<div class="hbox project-header">
+    <h3 class="project-title">{{project.title}}</h3>
+    <a href="{{project.sourceCodeUrl}}">Source</a>
 </div>
+<div class="project-description">
+{{ project.contents | safe }}
+</div>
+{% endfor -%}
 {% endblock %}
