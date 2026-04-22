@@ -1,0 +1,22 @@
+<div class="left vbox">
+    <img height="130px" width="130px" src="/assets/me.png" alt="Me" />
+    <h1>{{site.author}}</h1>
+    <nav class="vbox">
+        {% for link in collections.navlinks -%}
+        {% if link.name == name %}
+        <a class="navlink link-disable" href="/{{link.permalink | safe}}">{{link.nav_title}}</a>
+        {% else %}
+        <a class="navlink" href="/{{link.permalink | safe}}">{{link.nav_title}}</a>
+        {% endif %}
+        {% endfor -%}
+    </nav>
+    <hr class="nav-separator">
+    <footer class="social">
+        {% for link in links.social -%}
+        <span>
+            <i class="{{link.icon}} la-lg"></i>
+            <a href="{{link.url}}">{{link.title}}</a>
+        </span>
+        {% endfor %}
+    </footer>
+</div>

@@ -14,59 +14,8 @@
 		<link rel="stylesheet" type="text/css" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 	</head>
 	<body>
-
-		<div class="topbar">
-			<nav id="topbar-nav" class="hbox">
-				<div class="vbox">
-					{% for link in collections.navlinks -%}
-					{% if link.name == name %}
-					<a class="link-disable" href="/{{link.permalink | safe}}">{{link.nav_title}}</a>
-					{% else %}
-					<a href="/{{link.permalink | safe}}">{{link.nav_title}}</a>
-					{% endif %}
-					{% endfor -%}
-				</div>
-				<div class="vbox social">
-					{% for link in links.social -%}
-					<span>
-						<i class="{{link.icon}} la-lg"></i>
-						<a href="{{link.url}}">{{link.title}}</a>
-					</span>
-					{% endfor %}
-				</div>
-			</nav>
-			<header class="hbox">
-				<span id="menu-btn" class="menu-btn">
-					<div></div>
-					<div></div>
-					<div></div>
-				</span>
-			</header>
-		</div>
-
-		<div class="left vbox">
-			<img height="130px" width="130px" src="/assets/me.png" alt="Me" />
-			<h1>{{site.author}}</h1>
-			<nav class="vbox">
-				{% for link in collections.navlinks -%}
-				{% if link.name == name %}
-				<a class="navlink link-disable" href="/{{link.permalink | safe}}">{{link.nav_title}}</a>
-				{% else %}
-				<a class="navlink" href="/{{link.permalink | safe}}">{{link.nav_title}}</a>
-				{% endif %}
-				{% endfor -%}
-			</nav>
-			<hr class="nav-separator">
-			<footer class="social">
-				{% for link in links.social -%}
-				<span>
-					<i class="{{link.icon}} la-lg"></i>
-					<a href="{{link.url}}">{{link.title}}</a>
-				</span>
-				{% endfor %}
-			</footer>
-		</div>
-
+        {% include "includes/bottom-nav.njk" %}
+        {% include "includes/left-nav.njk" %}
 		<main>
 			{% block content %}
 			{% endblock %}

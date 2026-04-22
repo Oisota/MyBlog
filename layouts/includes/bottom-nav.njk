@@ -1,0 +1,28 @@
+<div class="topbar">
+    <nav id="topbar-nav" class="hbox">
+        <div class="vbox">
+            {% for link in collections.navlinks -%}
+            {% if link.name == name %}
+            <a class="link-disable" href="/{{link.permalink | safe}}">{{link.nav_title}}</a>
+            {% else %}
+            <a href="/{{link.permalink | safe}}">{{link.nav_title}}</a>
+            {% endif %}
+            {% endfor -%}
+        </div>
+        <div class="vbox social">
+            {% for link in links.social -%}
+            <span>
+                <i class="{{link.icon}} la-lg"></i>
+                <a href="{{link.url}}">{{link.title}}</a>
+            </span>
+            {% endfor %}
+        </div>
+    </nav>
+    <header class="hbox">
+        <span id="menu-btn" class="menu-btn">
+            <div></div>
+            <div></div>
+            <div></div>
+        </span>
+    </header>
+</div>
