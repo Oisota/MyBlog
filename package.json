@@ -6,8 +6,8 @@
   "description": "This is a script I use to generate my website",
   "type": "module",
   "scripts": {
-    "build-dev": "export NODE_ENV=development && node --watch-path=./src --watch-path=./layouts index.js",
-    "build-prod": "export NODE_ENV=production && node index.js",
+    "build-dev": "export NODE_ENV=development && node --watch-path=./src src/index.js",
+    "build-prod": "export NODE_ENV=production && node src/index.js",
     "start": "http-server dist",
     "package": "tar -czf dist.tar.gz dist"
   },

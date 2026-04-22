@@ -1,5 +1,4 @@
-import { fileURLToPath } from 'node:url'
-import { dirname } from 'path'
+import path from 'node:path'
 import Metalsmith from 'metalsmith'
 import layouts from '@metalsmith/layouts'
 import collections from '@metalsmith/collections'
@@ -16,14 +15,14 @@ import metafiles from 'metalsmith-metafiles'
 import tags from 'metalsmith-tags'
 import { tagPercents } from './plugins.js'
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
+const parentDir = path.resolve(import.meta.dirname, '..')
 
 const engineOptions = {
 	langPrefix: 'hljs ',
 	highlight: (code, lang) => highlight.highlight(code, {language: lang}).value,
 }
 
-Metalsmith(__dirname)
+Metalsmith(parentDir)
 .metadata({
 	liveReloadEnabled: process.env.NODE_ENV === 'development',
 	commentsEnabled: process.env.NODE_ENV === 'production',
@@ -43,8 +42,8 @@ Metalsmith(__dirname)
 		]
 	},
 })
-.source('src')
-.destination('dist')
+.source('./src/site')
+.destination('./dist')
 .clean(true)
 .use(drafts())
 .use(fileMetadata([
@@ -117,6 +116,7 @@ Metalsmith(__dirname)
 	collection: 'blog'
 }))
 .use(layouts({
+	directory: 'src/layouts',
 	transform: 'nunjucks',
 	pattern: '**/*.html',
 	engineOptions: engineOptions,
