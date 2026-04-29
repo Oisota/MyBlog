@@ -16,6 +16,7 @@ import tags from 'metalsmith-tags'
 import { tagPercents } from './plugins.js'
 
 const parentDir = path.resolve(import.meta.dirname, '..')
+const buildDir = process.env.BUILD_DIR
 
 const engineOptions = {
 	langPrefix: 'hljs ',
@@ -43,7 +44,7 @@ Metalsmith(parentDir)
 	},
 })
 .source('./src/site')
-.destination('./dist')
+.destination(buildDir)
 .clean(true)
 .use(drafts())
 .use(fileMetadata([

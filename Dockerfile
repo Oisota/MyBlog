@@ -1,5 +1,12 @@
 FROM node:24-alpine
 
-WORKDIR /opt/src
+WORKDIR /opt/app
 
-CMD ["/bin/sh"]
+COPY package.json .
+COPY package-lock.json .
+
+RUN npm ci
+
+COPY . .
+
+CMD ["npm", "run", "build-dev"]
