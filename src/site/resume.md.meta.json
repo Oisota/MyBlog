@@ -1,0 +1,144 @@
+{
+	"name": "Derek Morey",
+    "contact": [
+		{
+			"text": "derek.o.morey@gmail.com",
+			"href": "mailto:derek.o.morey@gmail.com"
+		},
+		{
+			"text": "linkedin.com/in/derek-o-morey",
+			"href": "https://linkedin.com/in/derek-o-morey"
+		},
+		{
+			"text": "github.com/oisota",
+			"href": "https://github.com/oisota"
+		}
+    ],
+	"skills": [
+		{
+			"title": "Languages",
+			"items": [
+				"Python",
+				"JavaScript",
+				"TypeScript",
+				"SQL",
+				"Shell Scripting/Bash",
+				"HTML",
+				"CSS",
+				"SASS/SCSS",
+				"C",
+				"LaTex"
+			],
+			"bank": [
+			]
+		},
+		{
+			"title": "Libraries/Frameworks",
+			"items": [
+				"Django",
+				"DjangoCMS",
+				"Flask",
+				"SQLAlchemy",
+				"Vue.js",
+				"HTMX",
+				"Aplpine.js",
+				"Chart.js",
+				"Bootstrap",
+				"Tailwind"
+			],
+			"bank": [
+				"Tornado",
+				"Lodash",
+				"Metalsmith"
+			]
+		},
+		{
+			"title": "Tools",
+			"items": [
+				"Postgres",
+				"MySQL",
+				"SQLite",
+				"Redis",
+				"Nginx",
+				"Linux",
+				"GitHub",
+				"GitLab",
+				"Git",
+				"Neovim",
+				"Tmux",
+				"VSCode",
+				"Docker",
+				"Portainer",
+				"Ansible"
+			],
+			"bank": [
+				"uWSGI"
+			]
+		}
+	],
+	"education": [
+		{
+			"name": "Cleveland State University",
+			"year": "2016",
+			"degree": "Bachelor of Science in Computer and Information Science"
+		}
+	],
+	"experience": [
+		{
+			"employer": "Optifunder",
+			"title": "Software Engineer",
+			"year": "January 2025 - Present",
+			"items": [
+                "Python web application development in a team environment using HTMX, Alpine.js, Django, Flask, and Postgres",
+				"Contribute features and fixes to both a legacy product and a more greenfield codebase maintaining code quality and increasing unit test coverage",
+				"Experience working with both a microservice and monolithic application architecture",
+                "Performed troubleshooting and debugging of applications to fix issues found in production services"
+			]
+		},
+		{
+			"employer": "Cisco Systems Inc.",
+			"title": "Software Engineer",
+			"year": "April 2024 - October 2024",
+			"items": [
+				"Worked on an internal web app used for scanning web apps, API's, and GitHub repositories for security vulnerabilities",
+				"Completed assigned tasks, such as API integration and updating our existing endpoints, while collaborating with team members and ensuring quality code through team code review process",
+				"Implemented new features and bug fixes across multiple repositories and verified functionality in our testing environment"
+			]
+		},
+		{
+			"employer": "Avantia Inc.",
+			"title": "Software Developer",
+			"year": "July 2021 - March 2024",
+			"items": [
+				"Web application development for an ecommerce site using Python and the Django web framework",
+				"Maintained app code and add features such as google calendar integration, SEO optimizations, and custom CMS components for DjangoCMS",
+				"Managed application deployments on AWS Elastic Beanstalk utilizing Gitlab CI",
+				"Handled merging and deploying of feature branches into QA/Staging/Production environments"
+			]
+		},
+		{
+			"employer": "Astec Industries",
+			"title": "Lead Developer",
+			"year": "April 2017 - June 2021",
+			"items": [
+				"Developed telematics software for embedded linux hardware using Python and SocketCAN",
+				"Built fleet management and job data visualisation web applications for paving companies",
+				"Full stack web app development utilizing Python, JavaScript, MySQL, Flask, Vue.js and Nginx",
+				"Managed deployment and maintenance of applications on a cloud Linux server",
+				"Worked directly with clients to deliver on business requirements and provide technical support",
+				"Developed electronic ticketing application to satisfy state DOT specifications"
+			]
+		},
+		{
+			"employer": "JBT Corporation",
+			"title": "IT Intern",
+			"year": "May 2015 - August 2015",
+			"items": [
+				"Provisioned computers for new employees according to company standards ensuring ready prior to employee start date",
+				"Assisted users with computer related issues such as replacing hard drives, fixing software problems and setting up network drive access",
+				"Wrote several utility programs to help users automate various tasks",
+				"Worked with peers on a custom content management solution using Microsoft SharePoint, C#, HTML, CSS, and JavaScript"
+			]
+		}
+	]
+}

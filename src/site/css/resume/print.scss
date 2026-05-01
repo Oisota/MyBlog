@@ -1,0 +1,35 @@
+@import "src/site/css/resume/colors.scss";
+
+@media print {
+	body {
+		font-size: 11pt;
+		width: 8.5in;
+		height: 11in;
+	}
+	main {
+		padding-top: 0.6rem;
+		margin-left: 0.8rem;
+		margin-right: 0.8rem;
+	}
+	.contact {
+		padding-top: 0.7rem;
+	}
+	.resume-header {
+		padding-top: 0rem;
+		padding-bottom: 0rem;
+	}
+	.resume-header h1 {
+		font-size: 2.5rem;
+	}
+	.section-title {
+		font-size: 1.4rem;
+	}
+	.section-content {
+		padding-top: 0.2rem;
+		padding-bottom: 0.1rem;
+	}
+	.badge {
+		background: $white;
+		padding: 0.1rem;
+	}
+}

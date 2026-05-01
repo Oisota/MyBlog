@@ -1,0 +1,64 @@
+{% extends "resume-base.njk" %}
+
+{% block styles %}
+<link href="/{{fingerprint['css/resume/style.css']}}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<header class="resume-header">
+	<h1>{{name}}</h1>
+	<div class="contact">
+        {% for link in contact %}
+		<span><a href="{{link.href}}">{{link.text}}</a></span>
+        {% endfor %}
+	</div>
+</header>
+
+<div class="content-container">
+	<section class="resume-section">
+		<div class="section-heading">
+			<span class="section-title">Experience</span>
+		</div>
+		<div class="section-content">
+			{% for job in experience %}
+			<h3>{{job.title}}{% if job.employer %}, {{job.employer}}{% endif %} <span class="section-year">{{job.year}}</span></h3>
+			<ul>
+				{% for item in job.items %}
+				<li>{{item|safe}}</li>
+				{% endfor %}
+			</ul>
+			{% endfor %}
+		</div>
+	</section>
+
+	<section class="resume-section">
+		<div class="section-heading">
+			<span class="section-title">Skills</span>
+		</div>
+		<div class="section-content">
+			{% for section in skills %}
+			<div class="skills-list">
+				<h3 class="skills-title">{{section.title}}</h3>
+				{% set comma = joiner(',') %}
+				{% for item in section.items -%}
+				<span class="badge">{{item}}</span>
+				{%- endfor %}
+			</div>
+			{% endfor %}
+		</div>
+	</section>
+
+	<section class="resume-section">
+		<div class="section-heading">
+			<span class="section-title">Education</span>
+		</div>
+		<div class="section-content">
+			<ul>
+				{% for school in education %}
+				<li>{{school.degree}}, {{school.name}}</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+</div>
+{% endblock %}

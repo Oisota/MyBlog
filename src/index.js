@@ -76,7 +76,7 @@ Metalsmith(parentDir)
 	extname: '.css',
 }))
 .use(fingerprint({
-	pattern: 'css/*.css',
+	pattern: 'css/**/*.css',
 }))
 .use(excerpts())
 .use(collections({
