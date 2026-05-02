@@ -7,7 +7,7 @@ index: 1
 collection:
   - navlinks
 ---
-I am husband, father, and software developer.
+I am a husband, father, and software developer.
 I live in Ohio with my wife, our daughter, 2 cats and a dog.
 We got married in 2022 and welcomed our wonderful baby girl to the world in 2024.
 I built this website to showcase my skills and projects as well as a place to write about things I find interesting.
