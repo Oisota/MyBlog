@@ -13,7 +13,7 @@ We got married in 2022 and welcomed our wonderful baby girl to the world in 2024
 I built this website to showcase my skills and projects as well as a place to write about things I find interesting.
 
 I mainly build web applications but I dabble in other areas like language design and embedded development.
-I received my bachelor's degree in computer science from Cleveland State University in 2016.
+I earned my bachelor's degree in computer science from Cleveland State University in 2016.
 My go to languages are Python and JavaScript.
 Some of my other interests include music, guitar, gaming, electronics, and woodworking.
 
