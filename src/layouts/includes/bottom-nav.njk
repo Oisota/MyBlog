@@ -1,21 +1,25 @@
 <div class="topbar">
-    <nav id="topbar-nav" class="hbox">
-        <div class="vbox">
-            {% for link in collections.navlinks -%}
-            {% if link.name == name %}
-            <a class="link-disable" href="/{{link.permalink | safe}}">{{link.nav_title}}</a>
-            {% else %}
-            <a href="/{{link.permalink | safe}}">{{link.nav_title}}</a>
-            {% endif %}
-            {% endfor -%}
-        </div>
-        <div class="vbox social">
-            {% for link in links.social -%}
-            <span>
-                <i class="{{link.icon}} la-lg"></i>
-                <a href="{{link.url}}">{{link.title}}</a>
-            </span>
-            {% endfor %}
+    <nav id="topbar-nav" class="vbox items-center">
+        <img height="130px" width="130px" src="/assets/me.png" alt="Me" />
+        <h1>{{site.author}}</h1>
+        <div class="hbox">
+            <div class="vbox">
+                {% for link in collections.navlinks -%}
+                {% if link.name == name %}
+                <a class="link-disable" href="/{{link.permalink | safe}}">{{link.nav_title}}</a>
+                {% else %}
+                <a href="/{{link.permalink | safe}}">{{link.nav_title}}</a>
+                {% endif %}
+                {% endfor -%}
+            </div>
+            <div class="vbox social">
+                {% for link in links.social -%}
+                <span>
+                    <i class="{{link.icon}} la-lg"></i>
+                    <a href="{{link.url}}">{{link.title}}</a>
+                </span>
+                {% endfor %}
+            </div>
         </div>
     </nav>
     <header class="hbox">

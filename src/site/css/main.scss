@@ -103,6 +103,10 @@ hr {
 	flex-wrap: wrap;
 }
 
+.items-center {
+  align-items: center;
+}
+
 .link-disable {
 	pointer-events: none;
 	color: $link-hover-color;
@@ -328,16 +332,20 @@ main {
 			justify-content: center;
 		}
 		h1 {
-			color: $link-color;
 			padding: 0;
 			margin: 0;
-			margin-left: 0.1em;
+            margin-bottom: 1rem;
 		}
 	}
 	#topbar-nav {
 		display: none;
 		background: $nav-background;
 		justify-content: center;
+		img {
+			margin-top: 2rem;
+			margin-bottom: 1rem;
+			border-radius: 50%;
+		}
 		div {
 			padding-left: 1rem;
 			padding-right: 1rem;
