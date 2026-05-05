@@ -25,7 +25,6 @@ const engineOptions = {
 
 Metalsmith(parentDir)
 .metadata({
-	liveReloadEnabled: process.env.NODE_ENV === 'development',
 	commentsEnabled: process.env.NODE_ENV === 'production',
 	site: {
 		title: 'Derek Morey',
@@ -76,7 +75,7 @@ Metalsmith(parentDir)
 	extname: '.css',
 }))
 .use(fingerprint({
-	pattern: 'css/**/*.css',
+	pattern: 'assets/**/*.*',
 }))
 .use(excerpts())
 .use(collections({

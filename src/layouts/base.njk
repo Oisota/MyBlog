@@ -10,7 +10,7 @@
         <title>{% block title %}{{title}}{% endblock %}</title>
 		{% block styles %}
 		{% endblock %}
-		<link href="/{{fingerprint['css/main.css']}}" rel="stylesheet" type="text/css">
+		<link href="/{{fingerprint['assets/css/main.css']}}" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" type="text/css" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 	</head>
 	<body>
@@ -21,25 +21,8 @@
 			{% endblock %}
 		</main>
 
-		<script charset="utf-8">
-(() => {
-	let menuOpen = false;
-	document.getElementById('menu-btn').addEventListener('click', (event) => {
-		const topbar = document.getElementById('topbar-nav');
-		if (menuOpen) {
-			topbar.style.display = 'none';
-			menuOpen = false;
-		} else {
-			topbar.style.display = 'flex';
-			menuOpen = true;
-		}
-	});
-})();
-		</script>
+        <script src="/{{fingerprint['assets/js/navbar.js']}}" charset="utf-8"></script>
 		{% block scripts %}
 		{% endblock %}
-		{% if liveReloadEnabled %}
-		<script src="http://localhost:8081/livereload.js"></script>
-		{% endif %}
 	</body>
 </html>
