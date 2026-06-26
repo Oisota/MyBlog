@@ -87,12 +87,12 @@
 		{
 			"employer": "Optifunder",
 			"title": "Software Engineer",
-			"year": "January 2025 - Present",
+			"year": "January 2025 - June 2026",
 			"items": [
-                "Python web application development in a team environment using HTMX, Alpine.js, Django, Flask, and Postgres",
-				"Contribute features and fixes to both a legacy product and a more greenfield codebase maintaining code quality and increasing unit test coverage",
-				"Experience working with both a microservice and monolithic application architecture",
-                "Performed troubleshooting and debugging of applications to fix issues found in production services"
+        "Python web application development in a team environment using HTMX, Alpine.js, Django, Flask, and Postgres",
+				"Contributeb features and fixes to both a legacy product and a more greenfield codebase maintaining code quality and increasing unit test coverage",
+				"Worked with both microservice and monolithic application architectures",
+        "Performed troubleshooting and debugging of applications to fix issues found in production services"
 			]
 		},
 		{
