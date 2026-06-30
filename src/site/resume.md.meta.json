@@ -89,9 +89,9 @@
 			"title": "Software Engineer",
 			"year": "January 2025 - June 2026",
 			"items": [
-        "Python web application development in a team environment using HTMX, Alpine.js, Django, Flask, and Postgres",
-				"Contributed features and fixes to both a legacy product and a more greenfield codebase maintaining code quality and increasing unit test coverage",
-				"Worked with both microservice and monolithic application architectures",
+        "Full stack web application development in a team environment using Python, Django, Flask, HTMX, Alpine.js, and Postgres",
+				"Contributed features and fixes across multiple products maintaining code quality and increasing unit test coverage",
+				"Used GitHub Copilot during PR reviews to address bugs and other findings and during development of new features",
         "Performed troubleshooting and debugging of applications to fix issues found in production services"
 			]
 		},
@@ -100,7 +100,7 @@
 			"title": "Software Engineer",
 			"year": "April 2024 - October 2024",
 			"items": [
-				"Worked on an internal web app used for scanning web apps, API's, and GitHub repositories for security vulnerabilities",
+				"Worked on an internal web security scanning application that scanned web apps, API's, and GitHub repositories vulnerabilities",
 				"Completed assigned tasks, such as API integration and updating our existing endpoints, while collaborating with team members and ensuring quality code through team code review process",
 				"Implemented new features and bug fixes across multiple repositories and verified functionality in our testing environment"
 			]
@@ -111,7 +111,7 @@
 			"year": "July 2021 - March 2024",
 			"items": [
 				"Web application development for an ecommerce site using Python and the Django web framework",
-				"Maintained app code and add features such as google calendar integration, SEO optimizations, and custom CMS components for DjangoCMS",
+				"Maintained app code and added features such as google calendar integration, SEO optimizations, and custom CMS components for DjangoCMS",
 				"Managed application deployments on AWS Elastic Beanstalk utilizing Gitlab CI",
 				"Handled merging and deploying of feature branches into QA/Staging/Production environments"
 			]
