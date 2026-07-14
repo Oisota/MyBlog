@@ -1,18 +1,18 @@
 {
 	"name": "Derek Morey",
     "contact": [
-		{
-			"text": "derek.o.morey@gmail.com",
-			"href": "mailto:derek.o.morey@gmail.com"
-		},
-		{
-			"text": "linkedin.com/in/derek-o-morey",
-			"href": "https://linkedin.com/in/derek-o-morey"
-		},
-		{
-			"text": "github.com/oisota",
-			"href": "https://github.com/oisota"
-		}
+			{
+				"text": "derek.o.morey@gmail.com",
+				"href": "mailto:derek.o.morey@gmail.com"
+			},
+			{
+				"text": "linkedin.com/in/derek-o-morey",
+				"href": "https://www.linkedin.com/in/derek-o-morey/"
+			},
+			{
+				"text": "github.com/oisota",
+				"href": "https://github.com/oisota"
+			}
     ],
 	"skills": [
 		{
