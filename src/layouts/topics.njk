@@ -8,7 +8,7 @@
 <div class="topic-list">
     {% for tag in topics | sort(true, false, 'count') -%}
     <div class="hbox">
-        <a href="/topics/{{tag.slug}}">#{{tag.name}}</a>
+        <a href="/topics/{{tag.slug}}/">#{{tag.name}}</a>
         <span class="badge" title="article count" style="width: {{tag.percent}}%;">{{tag.count}}</span>
     </div>
     {% endfor -%}

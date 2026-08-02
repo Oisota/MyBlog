@@ -6,7 +6,7 @@
 	</span>
 	<span class="blog-tags">
 	{% for tag in tags %}
-	<a class="tag" href="/topics/{{tag.slug}}">#{{tag.name}}</a>
+	<a class="tag" href="/topics/{{tag.slug}}/">#{{tag.name}}</a>
 	{% endfor %}
 	</span>
 	<h1 class="blog-title"><a href="/{{path | safe}}">{{title}}</a></h1>
