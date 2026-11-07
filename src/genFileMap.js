@@ -26,9 +26,9 @@ const pathRules = {
 
 positionals.forEach((filePath) => {
 	const { data, content } = matter.read(filePath)
-	for (const [rule, func] of Object.entries(pathRules)) {
+	for (const [rule, calcPath] of Object.entries(pathRules)) {
 		if (path.matchesGlob(filePath, rule)) {
-			const dst = func(filePath, data)
+			const dst = calcPath(filePath, data)
 			console.log(`${filePath}:${dst}`)
 			break
 		}
