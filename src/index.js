@@ -13,6 +13,7 @@ import fingerprint from 'metalsmith-fingerprint-ignore'
 import feed from 'metalsmith-feed'
 import metafiles from 'metalsmith-metafiles'
 import tags from 'metalsmith-tags'
+import remove from '@metalsmith/remove'
 import { tagPercents } from './plugins.js'
 
 const parentDir = path.resolve(import.meta.dirname, '..')
@@ -121,6 +122,7 @@ Metalsmith(parentDir)
 	pattern: '**/*.html',
 	engineOptions: engineOptions,
 }))
+.use(remove('projects/*/index.html'))
 .build((err, files) => {
 	if (err) { throw err; } 
 	else { console.log('W00T, it WORKED!'); }
