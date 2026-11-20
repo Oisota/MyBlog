@@ -8,7 +8,6 @@ import inPlace from '@metalsmith/in-place'
 import permalinks from '@metalsmith/permalinks'
 import highlight from 'highlight.js'
 import fileMetadata from 'metalsmith-filemetadata'
-import dateFormatter from 'metalsmith-date-formatter'
 import fingerprint from 'metalsmith-fingerprint-ignore'
 import feed from 'metalsmith-feed'
 import metafiles from 'metalsmith-metafiles'
@@ -80,37 +79,17 @@ Metalsmith(parentDir)
 }))
 .use(excerpts())
 .use(collections({
-	blog: {
-		pattern: 'blog/*',
-		sort: 'date:desc',
-        limit: 10, // only show most recent 10 articles on home page
-	},
-    archive: { // same as blog, but with no limit
-		pattern: 'blog/*',
-		sort: 'date:desc',
-    },
-	projects: {
-		pattern: 'projects/*',
-		sort: 'index:asc',
-	},
-	navlinks: {
-		sort: 'index:asc',
-	},
+	blog: { pattern: 'blog/*', sort: 'date:desc', limit: 10 }, // only show most recent 10 articles on home page
+	archive: { pattern: 'blog/*', sort: 'date:desc' }, // same as blog, but with no limit
+	projects: { pattern: 'projects/*', sort: 'index:asc' },
+	navlinks: { sort: 'index:asc' },
 }))
 .use(permalinks({
-	match: '**/*.html',
 	trailingSlash: true,
-	directoryIndex: 'index.html',
 	linksets: [{
-		trailingSlash: true,
 		match: { collection: 'blog' },
-		pattern: 'blog/:date/:title'
-	}]
-}))
-.use(dateFormatter({
-	dates: [{
-		key: 'date',
-		format: 'YYYY-MM-DD'
+		pattern: 'blog/:date/:title',
+		date: 'YYYY-MM-DD'
 	}]
 }))
 .use(feed({

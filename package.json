@@ -24,7 +24,6 @@
     "jstransformer-nunjucks": "^1.2.0",
     "jstransformer-scss": "^2.0.0",
     "metalsmith": "^2.7.0",
-    "metalsmith-date-formatter": "^1.0.2",
     "metalsmith-feed": "^1.0.0",
     "metalsmith-filemetadata": "^5.1.0",
     "metalsmith-fingerprint-ignore": "^2.0.0",
