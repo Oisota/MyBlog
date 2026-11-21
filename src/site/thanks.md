@@ -1,4 +1,4 @@
 ---
-layout: thanks.njk
+layout: page.njk
 title: Thank You
 ---
