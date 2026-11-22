@@ -25,11 +25,8 @@ const engineOptions = {
 
 Metalsmith(parentDir)
 .metadata({
-	commentsEnabled: process.env.NODE_ENV === 'production',
 	site: {
-		title: 'Derek Morey',
 		author: 'Derek Morey',
-		author_email: 'derek.o.morey@gmail.com',
 		url: 'https://derekmorey.me/',
 		rssUrl: '/rss.xml',
 	},
