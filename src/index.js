@@ -8,12 +8,11 @@ import inPlace from '@metalsmith/in-place'
 import permalinks from '@metalsmith/permalinks'
 import highlight from 'highlight.js'
 import fileMetadata from 'metalsmith-filemetadata'
-import fingerprint from 'metalsmith-fingerprint-ignore'
 import feed from 'metalsmith-feed'
 import metafiles from 'metalsmith-metafiles'
 import tags from 'metalsmith-tags'
 import remove from '@metalsmith/remove'
-import { tagPercents } from './plugins.js'
+import { tagPercents, fingerprint } from './plugins.js'
 
 const parentDir = path.resolve(import.meta.dirname, '..')
 const buildDir = process.env.BUILD_DIR
