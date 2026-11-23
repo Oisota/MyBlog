@@ -27,7 +27,6 @@
     "metalsmith-feed": "^1.0.0",
     "metalsmith-filemetadata": "^5.1.0",
     "metalsmith-metafiles": "^2.0.0",
-    "metalsmith-pagination": "^1.5.0",
     "metalsmith-tags": "^2.1.0",
     "sass": "^1.97.3"
   }
