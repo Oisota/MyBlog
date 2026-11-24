@@ -31,6 +31,9 @@ For reference, my vise is 9"x20".
 There's about 7 inches left of the screw and a little over 8 inches between the screw and guide bar.
 This allows clamping wide boards vertically with ease.
 The vise has about 4 inches of depth from the bench top to the screw which handles most boards I work with easily.
+I also planed a slight taper on the inside face of the jaw such that the bottom is approximately 1/8 inch thinner.
+When clamping, the top of the jaw contacts first with the rest of the jaw contacting as the screw is tightened.
+This prevents the top from opening up due to the slight of amount of wracking inherent in the vise.
 The only downside I've noticed so far in comparison with my leg vise is when it comes to edge planing very wide boards (8+ inches).
 The leg vise had a depth of 10 inches or so to the screw so even a 12 wide board only sat a couple inches above the bench and could be easily planed.
 In the face vise, that would be about 8 inches above the bench which is doable but awkward.
